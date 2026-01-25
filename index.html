@@ -3,51 +3,148 @@
 <head>
   <meta charset="UTF-8">
   <title>Inacio F. Vasquez — Research</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Research on rigidity, information locality, and structural limits of computation and physics.">
-  <link rel="stylesheet" href="assets/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- MathJax for math rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: #f7f8fa;
+      color: #1f2933;
+      line-height: 1.6;
+    }
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 32px 20px;
+      text-align: center;
+    }
+    header h1 { margin: 0; font-size: 28px; }
+    header p { margin: 4px 0 0; color: #6b7280; }
+
+    section {
+      max-width: 900px;
+      margin: 32px auto;
+      background: #ffffff;
+      padding: 32px;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+    }
+    h2 {
+      margin-top: 0;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 6px;
+    }
+    ul, ol { padding-left: 20px; }
+    a { color: #2563eb; }
+    footer {
+      text-align: center;
+      margin: 40px 0;
+      color: #6b7280;
+      font-size: 14px;
+    }
+    pre {
+      background: #111827;
+      color: #e5e7eb;
+      padding: 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+  </style>
 </head>
 <body>
 
 <header>
   <h1>Inacio F. Vasquez</h1>
-  <p>Independent Researcher</p>
+  <p>Independent Researcher — Mathematical Physics & Information Theory</p>
 </header>
 
 <section id="about">
   <h2>About</h2>
   <p>
-  I work on structural limits of computation, physics, and mathematical systems under finite information, locality, and capacity constraints.
-  My research develops invariant-based frameworks showing when refinement, prediction, or control is impossible without external resources.
+    I work on structural limits of computation, physics, and mathematical systems
+    under finite information, locality, and capacity constraints.
+    My research develops invariant-based frameworks showing when refinement,
+    prediction, or control is impossible without external resources.
   </p>
 </section>
 
 <section id="publications">
-  <h2>Publications</h2>
+  <h2>Selected Publications</h2>
   <ol>
-    <li>Finite Capacity and Rigidity — Foundations of Physics</li>
-    <li>Chronos — Foundations of Physics</li>
-    <li>Radiative Rigidity — Foundations of Physics</li>
+    <li>Finite Capacity and Rigidity — <em>Foundations of Physics</em></li>
+    <li>Chronos: EntropyDepth and Sequential Inference — <em>Foundations of Physics</em></li>
+    <li>Radiative Rigidity and Two-Photon Exchange — <em>Foundations of Physics</em></li>
   </ol>
 </section>
 
 <section id="projects">
-  <h2>Projects</h2>
+  <h2>Core Projects</h2>
   <ul>
-    <li>Unified Rigidity Framework</li>
+    <li>Unified Rigidity Framework (URF)</li>
     <li>Chronos / EntropyDepth</li>
     <li>Radiative Rigidity</li>
+    <li>Operational Collapse</li>
+  </ul>
+</section>
+
+<section id="spectral-gap">
+  <h2>Spectral Gap Rigidity Wall (Open Problem)</h2>
+  <p>
+    The single unresolved core lemma of the Unified Rigidity Framework.
+    All structural results reduce to this object.
+  </p>
+
+  <p>
+    <strong>Problem statement (PDF):</strong>
+    <a href="spectral_gap_rigidity_wall.pdf" target="_blank">
+      The Spectral Gap Rigidity Wall — Problem Statement
+    </a>
+  </p>
+
+  <p>
+    Formal statement:
+  </p>
+
+  <pre>
+\[ \mathrm{Spec}(L | \ker(\mathrm{Per})^\perp) \subset [\varepsilon_0, \infty) \]
+  </pre>
+
+  <ul>
+    <li>Proven in trees, bounded treewidth, random lifts.</li>
+    <li>Empirical for dense cycle expanders.</li>
+    <li>Open in deterministic high-cycle overlap graphs.</li>
   </ul>
 </section>
 
 <section id="documents">
   <h2>Documents</h2>
-  <p>PDFs available in the <code>/docs</code> directory.</p>
+  <ul>
+    <li><a href="spectral_gap_rigidity_wall.pdf">Spectral Gap Rigidity Wall (PDF)</a></li>
+    <li><a href="docs/URF-Axioms-Core.pdf">URF Axioms (PDF)</a></li>
+    <li><a href="docs/Chronos.pdf">Chronos (PDF)</a></li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <ul>
+    <li>Email: <a href="mailto:inaciof.vasquez@vasquezresearch.com">inaciof.vasquez@vasquezresearch.com</a></li>
+    <li>GitHub: <a href="https://github.com/inaciovasquez2020" target="_blank">github.com/inaciovasquez2020</a></li>
+  </ul>
 </section>
 
 <footer>
-  <p>© Inacio F. Vasquez</p>
+  <p>© 2026 Inacio F. Vasquez — Independent Research Program</p>
 </footer>
 
 </body>
 </html>
-
