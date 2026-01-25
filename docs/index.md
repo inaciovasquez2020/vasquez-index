@@ -1,3 +1,4 @@
+- Cycle–Local Rigidity — [GitHub Repository](https://github.com/inaciovasquez2020/cycle-local-rigidity)
 # Vasquez Research — Public Index
 
 ## Core Framework
