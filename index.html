@@ -14,49 +14,126 @@
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   <style>
+    :root {
+      --bg-main: #f3f4f6;
+      --bg-header: #ffffff;
+      --bg-section: #ffffff;
+      --bg-code: #111827;
+
+      --text-main: #1f2933;
+      --text-muted: #6b7280;
+      --text-title: #020617;
+
+      --accent: #2563eb;
+      --border: #e5e7eb;
+      --border-soft: #d1d5db;
+      --shadow: 0 8px 28px rgba(0,0,0,0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Inter, system-ui, sans-serif;
-      background: #f7f8fa;
-      color: #1f2933;
-      line-height: 1.6;
+      background: linear-gradient(180deg, #e5e7eb, var(--bg-main) 30%, #e5e7eb);
+      color: var(--text-main);
+      line-height: 1.7;
+      font-size: 16px;
     }
+
     header {
-      background: #ffffff;
-      border-bottom: 1px solid #e5e7eb;
-      padding: 32px 20px;
+      background: linear-gradient(180deg, #ffffff, #f9fafb);
+      border-bottom: 1px solid var(--border);
+      padding: 3.5rem 2rem 2.5rem;
       text-align: center;
     }
-    header h1 { margin: 0; font-size: 28px; }
-    header p { margin: 4px 0 0; color: #6b7280; }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      font-weight: 600;
+      color: var(--text-title);
+      letter-spacing: 0.2px;
+    }
+
+    header p {
+      margin-top: 0.6rem;
+      font-size: 1.05rem;
+      color: var(--text-muted);
+    }
 
     section {
       max-width: 900px;
-      margin: 32px auto;
-      background: #ffffff;
-      padding: 32px;
+      margin: 3rem auto;
+      background: var(--bg-section);
+      padding: 2.2rem 2.4rem;
       border-radius: 10px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow);
     }
+
     h2 {
       margin-top: 0;
-      border-bottom: 1px solid #e5e7eb;
-      padding-bottom: 6px;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--text-title);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.2rem;
     }
-    ul, ol { padding-left: 20px; }
-    a { color: #2563eb; }
-    footer {
-      text-align: center;
-      margin: 40px 0;
-      color: #6b7280;
-      font-size: 14px;
+
+    p {
+      font-size: 1.05rem;
+      color: var(--text-main);
     }
+
+    ul, ol {
+      padding-left: 1.4rem;
+    }
+
+    li {
+      margin-bottom: 0.65rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
     pre {
-      background: #111827;
+      background: var(--bg-code);
       color: #e5e7eb;
-      padding: 16px;
+      padding: 1rem 1.2rem;
       border-radius: 6px;
       overflow-x: auto;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      border: 1px solid #020617;
+    }
+
+    footer {
+      text-align: center;
+      margin: 4rem 0 2rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      section {
+        margin: 2rem auto;
+        padding: 1.6rem 1.4rem;
+      }
     }
   </style>
 </head>
@@ -115,7 +192,7 @@
   </p>
 
   <pre>
-\[ \mathrm{Spec}(L | \ker(\mathrm{Per})^\perp) \subset [\varepsilon_0, \infty) \]
+\[ \mathrm{Spec}(L \mid \ker(\mathrm{Per})^\perp) \subset [\varepsilon_0, \infty) \]
   </pre>
 
   <ul>
