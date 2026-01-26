@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <title>Inacio F. Vasquez — Academic Research & URF Framework</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <meta name="description" content="Academic research page for the Unified Rigidity Framework (URF), spectral gap rigidity, standards, certificates, and executable verification artifacts.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   <style>
     :root {
-      --arxiv-red: #b31b1b; /* The classic Cornell/arXiv red */
+      --arxiv-red: #b31b1b;
       --arxiv-blue: #0000ee;
       --bg-grey: #f5f5f5;
       --border-grey: #cccccc;
@@ -32,7 +32,6 @@
       line-height: 1.6;
     }
 
-    /* --- TOP STRIPE (arXiv style) --- */
     .top-nav {
       background: var(--bg-grey);
       border-bottom: 1px solid var(--border-grey);
@@ -44,7 +43,6 @@
 
     .top-nav a { color: var(--arxiv-blue); text-decoration: none; margin-right: 15px; }
 
-    /* --- HEADER --- */
     header {
       max-width: 1000px;
       margin: 40px auto 20px;
@@ -56,7 +54,6 @@
       margin: 0;
       font-size: 32px;
       font-weight: 700;
-      letter-spacing: -0.5px;
     }
 
     .orcid {
@@ -65,17 +62,15 @@
       font-family: monospace;
     }
 
-    /* --- MAIN CONTENT AREA --- */
     .container {
       max-width: 1000px;
       margin: 0 auto;
       padding: 20px;
       display: grid;
-      grid-template-columns: 3fr 1fr; /* Main content vs Sidebar */
+      grid-template-columns: 3fr 1fr;
       gap: 40px;
     }
 
-    /* --- SECTION STYLING --- */
     .paper-block {
       margin-bottom: 40px;
       border-bottom: 1px solid #eee;
@@ -86,26 +81,15 @@
       font-size: 20px;
       color: var(--arxiv-red);
       margin-bottom: 15px;
-      font-family: var(--sans);
       text-transform: uppercase;
       letter-spacing: 1px;
     }
 
-    .abstract-card {
-      background: #fff;
-      padding: 0;
-    }
-
-    .subject-tag {
-      font-weight: bold;
-      color: #555;
-    }
-
-    /* Mimicking the [pdf, ps, other] look */
     .format-links {
       margin: 10px 0;
       font-size: 14px;
     }
+
     .format-links a {
       background: var(--bg-grey);
       border: 1px solid var(--border-grey);
@@ -115,9 +99,7 @@
       color: var(--arxiv-blue);
       margin-right: 5px;
     }
-    .format-links a:hover { background: #eee; }
 
-    /* --- MATH BOX --- */
     .math-display {
       background: #fcfcfc;
       border: 1px inset #eee;
@@ -127,7 +109,6 @@
       overflow-x: auto;
     }
 
-    /* --- SIDEBAR --- */
     aside h3 {
       font-size: 16px;
       border-bottom: 2px solid var(--text-dark);
@@ -149,7 +130,6 @@
       text-decoration: none;
     }
 
-    /* --- FOOTER --- */
     footer {
       background: var(--bg-grey);
       border-top: 1px solid var(--border-grey);
@@ -165,6 +145,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <nav class="top-nav">
@@ -180,54 +161,88 @@
   <header>
     <h1>Inacio F. Vasquez</h1>
     <div class="orcid">ORCID: 0009-0008-8459-3400</div>
-    <p style="font-style: italic; color: #444;">Mathematical Physics • Information Theory • Computational Rigidity</p>
+    <p style="font-style: italic; color: #444;">
+      Mathematical Physics • Information Theory • Computational Rigidity
+    </p>
   </header>
 
   <div class="container">
-    
+
     <main>
-      
+
       <section class="paper-block">
         <h2>General Program</h2>
-        <div class="abstract-card">
-          <p><strong>Abstract:</strong> I develop and maintain the <strong>Unified Rigidity Framework (URF)</strong>, a formal research program exploring the structural limits of physical and computational systems. The framework posits that finite information capacity and locality act as fundamental obstructions to arbitrary refinement, leading to "rigidity" in model selection and predictive control.</p>
-          <div class="format-links">
-            Download: <a href="docs/URF-Axioms-Core.pdf">pdf</a> <a href="https://github.com/inaciovasquez2020/urf-core">source</a>
-          </div>
+        <p>
+          <strong>Abstract:</strong>
+          I develop and maintain the <strong>Unified Rigidity Framework (URF)</strong>,
+          a formal research program on structural limits of physical and computational systems.
+          All robustness claims are now required to satisfy explicit operator-level audit conditions.
+        </p>
+        <div class="format-links">
+          Download:
+          <a href="docs/URF-Axioms-Core.pdf">pdf</a>
+          <a href="https://github.com/inaciovasquez2020/urf-core">source</a>
+        </div>
+      </section>
+
+      <section class="paper-block">
+        <h2>Block-Exact Standard (Core Rule)</h2>
+        <p>
+          All statements of “stability / robustness under perturbations”
+          are replaced by the block-exact criterion:
+        </p>
+
+        <div class="math-display">
+          \[
+          \Pi V \Pi = 0 \iff |\gamma_k(\varepsilon)-\gamma_k(0)| = O(\varepsilon^2)
+          \]
+          \[
+          \Pi V \Pi \neq 0 \Rightarrow |\gamma_k(\varepsilon)-\gamma_k(0)| = \Theta(|\varepsilon|)
+          \]
+        </div>
+
+        <p>
+          This rule is now a global standard inside URF and is mechanically checkable.
+        </p>
+
+        <div class="format-links">
+          Standard:
+          <a href="https://github.com/inaciovasquez2020/urf-core/tree/main/standards/URF-Block-Exact">
+            URF-Block-Exact v1.0
+          </a>
         </div>
       </section>
 
       <section class="paper-block">
         <h2>Current Open Problem</h2>
-        <div class="abstract-card">
-          <p><span class="subject-tag">Spectral Gap Rigidity Wall:</span> The single unresolved core lemma of the URF. All structural rigidity results reduce to the spectral behavior of this object under high-cycle overlap constraints.</p>
-          
-          <div class="math-display">
-            \[ \mathrm{Spec}(L \mid \ker(\mathrm{Per})^\perp) \subset [\varepsilon_0, \infty) \]
-          </div>
+        <p>
+          <strong>Spectral Gap Rigidity Wall:</strong>
+          The single unresolved structural lemma of URF.
+        </p>
 
-          <ul style="font-size: 14px; color: #555;">
-            <li>Confirmed for trees and bounded treewidth.</li>
-            <li>Open for deterministic high-cycle overlap graphs.</li>
-          </ul>
-          <div class="format-links">
-            Statement: <a href="spectral_gap_rigidity_wall.pdf">pdf</a> <a href="https://inaciovasquez2020.github.io/urf-core/urf-sg-wall.md">markdown (live)</a>
-          </div>
+        <div class="math-display">
+          \[
+          \mathrm{Spec}(\Delta_H \mid \ker(\mathrm{Per})^\perp) \subset [\varepsilon_0,\infty)
+          \]
+        </div>
+
+        <ul style="font-size: 14px; color: #555;">
+          <li>Proved for trees and bounded treewidth.</li>
+          <li>Open for deterministic high-cycle overlap graphs.</li>
+        </ul>
+
+        <div class="format-links">
+          Statement:
+          <a href="spectral_gap_rigidity_wall.pdf">pdf</a>
+          <a href="https://inaciovasquez2020.github.io/urf-core/urf-sg-wall.md">markdown</a>
         </div>
       </section>
 
       <section class="paper-block">
         <h2>Preprints (Selected)</h2>
-        <div class="sidebar-list">
-          <p><strong>1. Finite Capacity and Rigidity</strong><br>
-          <small>Submitted to <em>Foundations of Physics</em>. Explores invariant-based obstructions under finite information.</small></p>
-          
-          <p><strong>2. Chronos: EntropyDepth and Sequential Inference</strong><br>
-          <small>Focuses on information-topological barriers to time-series prediction.</small></p>
-          
-          <p><strong>3. Radiative Rigidity and Two-Photon Exchange</strong><br>
-          <small>Application of URF to operational capacity constraints in particle physics.</small></p>
-        </div>
+        <p><strong>1. Finite Capacity and Rigidity</strong></p>
+        <p><strong>2. Chronos: EntropyDepth and Sequential Inference</strong></p>
+        <p><strong>3. Radiative Rigidity and Two-Photon Exchange</strong></p>
       </section>
 
     </main>
@@ -235,22 +250,24 @@
     <aside>
       <h3>Project Repositories</h3>
       <ul class="sidebar-list">
-        <li><a href="https://github.com/inaciovasquez2020/urc-minimal-blockchain">urc-minimal-blockchain</a><br><small>Nakamoto Consensus Reference</small></li>
-        <li><a href="https://github.com/inaciovasquez2020/urf-core">urf-core</a><br><small>Framework Axioms</small></li>
+        <li><a href="https://github.com/inaciovasquez2020/urf-core">urf-core</a></li>
+        <li><a href="https://github.com/inaciovasquez2020/urc-minimal-blockchain">urc-minimal-blockchain</a></li>
         <li><a href="https://github.com/inaciovasquez2020/cycle-local-rigidity">cycle-local-rigidity</a></li>
       </ul>
 
       <br>
-      <h3>Certificates</h3>
+
+      <h3>Certificates & Standards</h3>
       <ul class="sidebar-list">
-        <li><a href="https://inaciovasquez2020.github.io/urf-core/urf-sg-base-2.json">URF-SG-BASE-2 (JSON)</a></li>
-        <li><a href="#">SHA-256 Verifications</a></li>
+        <li><a href="https://github.com/inaciovasquez2020/urf-core/tree/main/standards/URF-SG">URF-SG</a></li>
+        <li><a href="https://github.com/inaciovasquez2020/urf-core/tree/main/standards/URF-Block-Exact">URF-Block-Exact</a></li>
       </ul>
 
       <br>
+
       <h3>Contact</h3>
       <ul class="sidebar-list">
-        <li><a href="mailto:inaciof.vasquez@vasquezresearch.com">Email</a></li>
+        <li><a href="mailto:inacio@vasquezresearch.com">Email</a></li>
         <li><a href="https://www.vasquezresearch.com">Official Website</a></li>
       </ul>
     </aside>
@@ -258,8 +275,10 @@
   </div>
 
   <footer>
-    <p>Modified from the Cornell University arXiv template style. <br>
-    © 2026 Inacio F. Vasquez. This research is independent and verified by executable artifacts.</p>
+    <p>
+      © 2026 Inacio F. Vasquez.<br>
+      Independent research. All core claims governed by block-exact operator standards.
+    </p>
   </footer>
 
 </body>
