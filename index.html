@@ -2,228 +2,265 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Inacio F. Vasquez — Research</title>
+  <title>Inacio F. Vasquez — Academic Research & URF Framework</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Research on rigidity, information locality, and structural limits of computation and physics.">
-
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- MathJax for math rendering -->
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   <style>
     :root {
-      --bg-main: #f3f4f6;
-      --bg-header: #ffffff;
-      --bg-section: #ffffff;
-      --bg-code: #111827;
-
-      --text-main: #1f2933;
-      --text-muted: #6b7280;
-      --text-title: #020617;
-
-      --accent: #2563eb;
-      --border: #e5e7eb;
-      --border-soft: #d1d5db;
-      --shadow: 0 8px 28px rgba(0,0,0,0.06);
-    }
-
-    * {
-      box-sizing: border-box;
+      --arxiv-red: #b31b1b; /* The classic Cornell/arXiv red */
+      --arxiv-blue: #0000ee;
+      --bg-grey: #f5f5f5;
+      --border-grey: #cccccc;
+      --text-dark: #222222;
+      --serif: 'Libre Baskerville', Georgia, serif;
+      --sans: 'Inter', -apple-system, sans-serif;
     }
 
     body {
       margin: 0;
-      font-family: Inter, system-ui, sans-serif;
-      background: linear-gradient(180deg, #e5e7eb, var(--bg-main) 30%, #e5e7eb);
-      color: var(--text-main);
-      line-height: 1.7;
-      font-size: 16px;
+      padding: 0;
+      font-family: var(--sans);
+      background-color: white;
+      color: var(--text-dark);
+      line-height: 1.6;
     }
 
+    /* --- TOP STRIPE (arXiv style) --- */
+    .top-nav {
+      background: var(--bg-grey);
+      border-bottom: 1px solid var(--border-grey);
+      padding: 8px 20px;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .top-nav a { color: var(--arxiv-blue); text-decoration: none; margin-right: 15px; }
+
+    /* --- HEADER --- */
     header {
-      background: linear-gradient(180deg, #ffffff, #f9fafb);
-      border-bottom: 1px solid var(--border);
-      padding: 3.5rem 2rem 2.5rem;
-      text-align: center;
+      max-width: 1000px;
+      margin: 40px auto 20px;
+      padding: 0 20px;
+      border-left: 5px solid var(--arxiv-red);
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.4rem;
-      font-weight: 600;
-      color: var(--text-title);
-      letter-spacing: 0.2px;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
     }
 
-    header p {
-      margin-top: 0.6rem;
-      font-size: 1.05rem;
-      color: var(--text-muted);
+    .orcid {
+      font-size: 14px;
+      color: #666;
+      font-family: monospace;
     }
 
-    section {
-      max-width: 900px;
-      margin: 3rem auto;
-      background: var(--bg-section);
-      padding: 2.2rem 2.4rem;
-      border-radius: 10px;
-      border: 1px solid var(--border-soft);
-      box-shadow: var(--shadow);
+    /* --- MAIN CONTENT AREA --- */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 3fr 1fr; /* Main content vs Sidebar */
+      gap: 40px;
     }
 
-    h2 {
-      margin-top: 0;
-      font-size: 1.35rem;
-      font-weight: 600;
-      color: var(--text-title);
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.4rem;
-      margin-bottom: 1.2rem;
+    /* --- SECTION STYLING --- */
+    .paper-block {
+      margin-bottom: 40px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 30px;
     }
 
-    p {
-      font-size: 1.05rem;
-      color: var(--text-main);
+    .paper-block h2 {
+      font-size: 20px;
+      color: var(--arxiv-red);
+      margin-bottom: 15px;
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    ul, ol {
-      padding-left: 1.4rem;
+    .abstract-card {
+      background: #fff;
+      padding: 0;
     }
 
-    li {
-      margin-bottom: 0.65rem;
+    .subject-tag {
+      font-weight: bold;
+      color: #555;
     }
 
-    a {
-      color: var(--accent);
+    /* Mimicking the [pdf, ps, other] look */
+    .format-links {
+      margin: 10px 0;
+      font-size: 14px;
+    }
+    .format-links a {
+      background: var(--bg-grey);
+      border: 1px solid var(--border-grey);
+      padding: 2px 8px;
+      border-radius: 3px;
+      text-decoration: none;
+      color: var(--arxiv-blue);
+      margin-right: 5px;
+    }
+    .format-links a:hover { background: #eee; }
+
+    /* --- MATH BOX --- */
+    .math-display {
+      background: #fcfcfc;
+      border: 1px inset #eee;
+      padding: 20px;
+      margin: 15px 0;
+      text-align: center;
+      overflow-x: auto;
+    }
+
+    /* --- SIDEBAR --- */
+    aside h3 {
+      font-size: 16px;
+      border-bottom: 2px solid var(--text-dark);
+      padding-bottom: 5px;
+    }
+
+    .sidebar-list {
+      list-style: none;
+      padding: 0;
+      font-size: 14px;
+    }
+
+    .sidebar-list li {
+      margin-bottom: 12px;
+    }
+
+    .sidebar-list a {
+      color: var(--arxiv-blue);
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
-
-    pre {
-      background: var(--bg-code);
-      color: #e5e7eb;
-      padding: 1rem 1.2rem;
-      border-radius: 6px;
-      overflow-x: auto;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      font-size: 0.9rem;
-      line-height: 1.5;
-      border: 1px solid #020617;
-    }
-
+    /* --- FOOTER --- */
     footer {
+      background: var(--bg-grey);
+      border-top: 1px solid var(--border-grey);
+      padding: 40px 20px;
       text-align: center;
-      margin: 4rem 0 2rem;
-      color: var(--text-muted);
-      font-size: 0.9rem;
+      font-size: 13px;
+      color: #666;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      section {
-        margin: 2rem auto;
-        padding: 1.6rem 1.4rem;
-      }
+    @media (max-width: 800px) {
+      .container { grid-template-columns: 1fr; }
+      header h1 { font-size: 26px; }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Inacio F. Vasquez</h1>
-  <p>Independent Researcher — Mathematical Physics & Information Theory</p>
-</header>
+  <nav class="top-nav">
+    <div>
+      <a href="https://github.com/inaciovasquez2020">GitHub</a>
+      <a href="https://inaciovasquez2020.github.io/vasquez-index/">Index</a>
+    </div>
+    <div>
+      <span>Independent Research Program (2026)</span>
+    </div>
+  </nav>
 
-<section id="about">
-  <h2>About</h2>
-    <p>
-  I develop and maintain the Unified Rigidity Framework (URF), a verified
-  research program on structural limits of computation and physics
-  under finite information, locality, and capacity constraints.
-  The framework combines formal theory with executable verification
-  artifacts and publicly certified invariants.
-   </p>
-</section>
+  <header>
+    <h1>Inacio F. Vasquez</h1>
+    <div class="orcid">ORCID: 0009-0008-8459-3400</div>
+    <p style="font-style: italic; color: #444;">Mathematical Physics • Information Theory • Computational Rigidity</p>
+  </header>
 
-<section id="publications">
-  <h2>Selected Manuscripts (under review)</h2>
-  <ol>
-    <li>Finite Capacity and Rigidity — submitted to <em>Foundations of Physics</em></li>
-    <li>Chronos: EntropyDepth and Sequential Inference — submitted to <em>Foundations of Physics</em></li>
-    <li>Radiative Rigidity and Two-Photon Exchange — submitted to <em>Foundations of Physics</em></li>
-  </ol>
-</section>
+  <div class="container">
+    
+    <main>
+      
+      <section class="paper-block">
+        <h2>General Program</h2>
+        <div class="abstract-card">
+          <p><strong>Abstract:</strong> I develop and maintain the <strong>Unified Rigidity Framework (URF)</strong>, a formal research program exploring the structural limits of physical and computational systems. The framework posits that finite information capacity and locality act as fundamental obstructions to arbitrary refinement, leading to "rigidity" in model selection and predictive control.</p>
+          <div class="format-links">
+            Download: <a href="docs/URF-Axioms-Core.pdf">pdf</a> <a href="https://github.com/inaciovasquez2020/urf-core">source</a>
+          </div>
+        </div>
+      </section>
 
+      <section class="paper-block">
+        <h2>Current Open Problem</h2>
+        <div class="abstract-card">
+          <p><span class="subject-tag">Spectral Gap Rigidity Wall:</span> The single unresolved core lemma of the URF. All structural rigidity results reduce to the spectral behavior of this object under high-cycle overlap constraints.</p>
+          
+          <div class="math-display">
+            \[ \mathrm{Spec}(L \mid \ker(\mathrm{Per})^\perp) \subset [\varepsilon_0, \infty) \]
+          </div>
 
-<section id="projects">
-  <h2>Core Projects</h2>
-  <ul>
-    <li>Unified Rigidity Framework (URF)</li>
-    <li>Chronos / EntropyDepth</li>
-    <li>Radiative Rigidity</li>
-    <li>Operational Collapse</li>
-  </ul>
-</section>
+          <ul style="font-size: 14px; color: #555;">
+            <li>Confirmed for trees and bounded treewidth.</li>
+            <li>Open for deterministic high-cycle overlap graphs.</li>
+          </ul>
+          <div class="format-links">
+            Statement: <a href="spectral_gap_rigidity_wall.pdf">pdf</a> <a href="https://inaciovasquez2020.github.io/urf-core/urf-sg-wall.md">markdown (live)</a>
+          </div>
+        </div>
+      </section>
 
-<section id="spectral-gap">
-  <h2>Spectral Gap Rigidity Wall (Open Problem)</h2>
-  <p>
-    The single unresolved core lemma of the Unified Rigidity Framework.
-    All structural results reduce to this object.
-  </p>
+      <section class="paper-block">
+        <h2>Preprints (Selected)</h2>
+        <div class="sidebar-list">
+          <p><strong>1. Finite Capacity and Rigidity</strong><br>
+          <small>Submitted to <em>Foundations of Physics</em>. Explores invariant-based obstructions under finite information.</small></p>
+          
+          <p><strong>2. Chronos: EntropyDepth and Sequential Inference</strong><br>
+          <small>Focuses on information-topological barriers to time-series prediction.</small></p>
+          
+          <p><strong>3. Radiative Rigidity and Two-Photon Exchange</strong><br>
+          <small>Application of URF to operational capacity constraints in particle physics.</small></p>
+        </div>
+      </section>
 
-  <p>
-    <strong>Problem statement (PDF):</strong>
-    <a href="spectral_gap_rigidity_wall.pdf" target="_blank">
-      The Spectral Gap Rigidity Wall — Problem Statement
-    </a>
-  </p>
+    </main>
 
-  <p>
-    Formal statement:
-  </p>
+    <aside>
+      <h3>Project Repositories</h3>
+      <ul class="sidebar-list">
+        <li><a href="https://github.com/inaciovasquez2020/urc-minimal-blockchain">urc-minimal-blockchain</a><br><small>Nakamoto Consensus Reference</small></li>
+        <li><a href="https://github.com/inaciovasquez2020/urf-core">urf-core</a><br><small>Framework Axioms</small></li>
+        <li><a href="https://github.com/inaciovasquez2020/cycle-local-rigidity">cycle-local-rigidity</a></li>
+      </ul>
 
-  <pre>
-\[ \mathrm{Spec}(L \mid \ker(\mathrm{Per})^\perp) \subset [\varepsilon_0, \infty) \]
-  </pre>
+      <br>
+      <h3>Certificates</h3>
+      <ul class="sidebar-list">
+        <li><a href="https://inaciovasquez2020.github.io/urf-core/urf-sg-base-2.json">URF-SG-BASE-2 (JSON)</a></li>
+        <li><a href="#">SHA-256 Verifications</a></li>
+      </ul>
 
-  <ul>
-    <li>Proven in trees, bounded treewidth, random lifts.</li>
-    <li>Empirical for dense cycle expanders.</li>
-    <li>Open in deterministic high-cycle overlap graphs.</li>
-  </ul>
-</section>
+      <br>
+      <h3>Contact</h3>
+      <ul class="sidebar-list">
+        <li><a href="mailto:inaciof.vasquez@vasquezresearch.com">Email</a></li>
+        <li><a href="https://www.vasquezresearch.com">Official Website</a></li>
+      </ul>
+    </aside>
 
-<section id="documents">
-  <h2>Documents</h2>
-  <ul>
-    <li><a href="spectral_gap_rigidity_wall.pdf">Spectral Gap Rigidity Wall (PDF)</a></li>
-    <li><a href="docs/URF-Axioms-Core.pdf">URF Axioms (PDF)</a></li>
-    <li><a href="docs/Chronos.pdf">Chronos (PDF)</a></li>
-  </ul>
-</section>
+  </div>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <ul>
-    <li>Email: <a href="mailto:inaciof.vasquez@vasquezresearch.com">inaciof.vasquez@vasquezresearch.com</a></li>
-    <li>GitHub: <a href="https://github.com/inaciovasquez2020" target="_blank">github.com/inaciovasquez2020</a></li>
-  </ul>
-</section>
-
-<footer>
-  <p>© 2026 Inacio F. Vasquez — Independent Research Program</p>
-</footer>
+  <footer>
+    <p>Modified from the Cornell University arXiv template style. <br>
+    © 2026 Inacio F. Vasquez. This research is independent and verified by executable artifacts.</p>
+  </footer>
 
 </body>
 </html>
