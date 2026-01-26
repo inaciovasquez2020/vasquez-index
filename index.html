@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Inacio F. Vasquez — Academic Research & URF Framework</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Academic research page for the Unified Rigidity Framework (URF), spectral gap rigidity, standards, certificates, and executable verification artifacts.">
+  <meta name="description" content="Academic research page for the Unified Rigidity Framework (URF), terminal spectral gap rigidity, standards, certificates, and executable verification artifacts.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -176,7 +176,7 @@
           <strong>Abstract:</strong>
           I develop and maintain the <strong>Unified Rigidity Framework (URF)</strong>,
           a formal research program on structural limits of physical and computational systems.
-          All robustness claims are now required to satisfy explicit operator-level audit conditions.
+          All robustness claims are governed by explicit operator-level admissibility axioms.
         </p>
         <div class="format-links">
           Download:
@@ -214,27 +214,28 @@
       </section>
 
       <section class="paper-block">
-        <h2>Current Open Problem</h2>
+        <h2>Terminal Rigidity Wall</h2>
         <p>
-          <strong>Spectral Gap Rigidity Wall:</strong>
-          The single unresolved structural lemma of URF.
+          <strong>Spectral Gap Rigidity Wall (URF_law3):</strong>
+          the terminal boundary theorem of URF.
         </p>
 
         <div class="math-display">
           \[
-          \mathrm{Spec}(\Delta_H \mid \ker(\mathrm{Per})^\perp) \subset [\varepsilon_0,\infty)
+          \inf \mathrm{Spec}(\Delta_H \mid \ker(\mathrm{Per})^\perp) > 0
           \]
         </div>
 
         <ul style="font-size: 14px; color: #555;">
-          <li>Proved for trees and bounded treewidth.</li>
-          <li>Open for deterministic high-cycle overlap graphs.</li>
+          <li>Proved conditionally under compact resolvent.</li>
+          <li>Unitary equivalence to compact Laplacian required.</li>
+          <li>Projection alignment of \(\mathrm{Per}\) required.</li>
         </ul>
 
         <div class="format-links">
-          Statement:
-          <a href="spectral_gap_rigidity_wall.pdf">pdf</a>
-          <a href="https://inaciovasquez2020.github.io/urf-core/urf-sg-wall.md">markdown</a>
+          Terminal Theorem:
+          <a href="standards/URF-SG/URF_LAW3_TERMINAL_WALL.pdf">pdf</a>
+          <a href="standards/URF-SG/URF_LAW3_TERMINAL_WALL.md">markdown</a>
         </div>
       </section>
 
@@ -277,7 +278,7 @@
   <footer>
     <p>
       © 2026 Inacio F. Vasquez.<br>
-      Independent research. All core claims governed by block-exact operator standards.
+      Independent research. All core claims governed by URF admissibility axioms and terminal rigidity theorems.
     </p>
   </footer>
 
