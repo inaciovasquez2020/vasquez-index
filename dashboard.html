@@ -2,166 +2,177 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>URF — Technical Verification Dashboard</title>
+  <title>Inacio F. Vasquez — Research Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   <style>
     :root {
-      --sidebar-bg: #111111;
-      --main-bg: #fcfcfc;
+      --sidebar-bg: #1e2329; 
+      --sidebar-text: #cfd3d8;
+      --sidebar-hover: #2c333a;
+      --main-bg: #f4f5f7; 
       --card-bg: #ffffff;
-      --arxiv-red: #b31b1b;
-      --arxiv-blue: #0000ee;
-      --text-main: #1a1a1a;
-      --text-muted: #666666;
-      --border: #e8e8e8;
-      --green: #2e7d32;
+      --accent-green: #3f9c35; 
+      --accent-blue: #0078d4;
+      --text-main: #2f343b;
+      --text-muted: #69707a;
+      --border: #e0e0e0;
     }
 
     * { box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; margin: 0; background: var(--main-bg); display: flex; min-height: 100vh; color: var(--text-main); }
+    body { margin: 0; font-family: 'Inter', sans-serif; background: var(--main-bg); color: var(--text-main); display: flex; height: 100vh; overflow: hidden; }
 
-    /* Sidebar Navigation */
-    .sidebar { width: 280px; background: var(--sidebar-bg); color: #fff; padding: 35px 25px; display: flex; flex-direction: column; position: fixed; height: 100vh; box-shadow: 4px 0 10px rgba(0,0,0,0.1); }
-    .sidebar h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 2px; color: var(--arxiv-red); margin-bottom: 40px; border-bottom: 1px solid #333; padding-bottom: 12px; font-weight: 700; }
-    .nav-label { font-size: 10px; font-weight: 800; color: #555; text-transform: uppercase; margin-bottom: 15px; display: block; letter-spacing: 1px; }
-    .nav-link { color: #aaa; text-decoration: none; font-size: 13px; display: flex; align-items: center; gap: 12px; margin-bottom: 18px; transition: 0.2s; }
-    .nav-link:hover { color: #fff; }
-    
-    /* Main Panel */
-    .main { margin-left: 280px; flex-grow: 1; padding: 50px; }
-    header.top-bar { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 50px; border-bottom: 1px solid var(--border); padding-bottom: 25px; }
-    .system-status { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--green); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    /* Sidebar */
+    .sidebar { width: 260px; background: var(--sidebar-bg); color: var(--sidebar-text); display: flex; flex-direction: column; padding: 20px 15px; flex-shrink: 0; }
+    .brand { font-size: 18px; font-weight: 700; color: white; margin-bottom: 30px; display: flex; align-items: center; gap: 10px; }
+    .brand i { color: var(--accent-green); }
 
-    /* Content Cards */
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-    .card { background: var(--card-bg); border: 1px solid var(--border); padding: 30px; border-radius: 2px; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
-    .card-title { font-weight: 700; font-size: 15px; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
-    .badge { font-size: 10px; font-weight: 800; padding: 3px 8px; border-radius: 2px; text-transform: uppercase; }
-    .badge-success { background: #e8f5e9; color: var(--green); border: 1px solid #c8e6c9; }
-    
-    .mono { font-family: 'JetBrains Mono', monospace; font-size: 12px; background: #f7f7f7; padding: 2px 5px; border-radius: 3px; border: 1px solid #eee; }
-    
-    /* Witness Styling */
-    .artifact-item { padding: 15px; border-left: 4px solid var(--arxiv-red); background: #fafafa; margin-bottom: 15px; }
-    .artifact-item strong { display: block; margin-bottom: 5px; font-size: 14px; }
-    .json-link { color: var(--arxiv-blue); text-decoration: none; font-size: 12px; font-weight: 600; display: inline-block; margin-top: 8px; }
-    .json-link:hover { text-decoration: underline; }
+    .new-project-btn { background: var(--accent-green); color: white; border: none; padding: 12px; border-radius: 4px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 25px; text-decoration: none; transition: background 0.2s; }
+    .new-project-btn:hover { background: #3da332; }
 
-    /* Tables */
-    table { width: 100%; font-family: 'JetBrains Mono', monospace; font-size: 11px; border-collapse: collapse; margin-top: 25px; }
-    th { text-align: left; color: #888; padding: 12px; border-bottom: 2px solid var(--border); text-transform: uppercase; }
-    td { padding: 15px 12px; border-bottom: 1px solid #f4f4f4; }
+    .nav-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 25px; }
+    .nav-header { text-transform: uppercase; font-size: 11px; font-weight: 700; color: #6c757d; margin-bottom: 8px; padding-left: 10px; }
+    .nav-item { display: flex; align-items: center; gap: 12px; padding: 10px 12px; color: var(--sidebar-text); text-decoration: none; font-size: 14px; border-radius: 4px; transition: 0.2s; }
+    .nav-item:hover, .nav-item.active { background: var(--sidebar-hover); color: white; }
 
-    footer { margin-top: 60px; padding-top: 30px; border-top: 1px solid var(--border); color: #999; font-size: 12px; line-height: 1.8; }
+    /* Main Content */
+    .main-content { flex-grow: 1; display: flex; flex-direction: column; overflow: hidden; }
+    .top-bar { height: 60px; background: white; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 30px; }
+    .dashboard-container { padding: 30px; overflow-y: auto; }
+    .list-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+    .list-header h2 { margin: 0; font-size: 20px; font-weight: 600; }
 
-    @media (max-width: 900px) { .sidebar { display: none; } .main { margin-left: 0; padding: 25px; } }
+    /* Table Logic */
+    .project-table { background: white; border: 1px solid var(--border); border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    .table-head { display: grid; grid-template-columns: 3fr 1fr 1fr 1fr; padding: 12px 20px; border-bottom: 1px solid var(--border); background: #fafafa; font-size: 12px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; }
+    .project-row { display: grid; grid-template-columns: 3fr 1fr 1fr 1fr; padding: 16px 20px; border-bottom: 1px solid var(--border); align-items: center; text-decoration: none; color: inherit; transition: background 0.1s; }
+    .project-row:hover { background-color: #f7f9fa; }
+    .title-cell { display: flex; flex-direction: column; gap: 4px; }
+    .title-main { font-weight: 600; font-size: 15px; display: flex; align-items: center; gap: 10px; }
+    .title-desc { font-size: 12px; color: var(--text-muted); margin-left: 28px; }
+    .meta-cell { font-size: 13px; color: var(--text-muted); }
+    .action-cell a { color: var(--accent-blue); font-size: 13px; text-decoration: none; font-weight: 500; }
+
+    .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 11px; margin-left: 8px; }
+    .tag-green { background: #d3f9d8; color: #2b8a3e; }
+    .tag-blue { background: #e7f5ff; color: #1c7ed6; }
+    .tag-purple { background: #f3f0ff; color: #7950f2; }
+
+    @media (max-width: 900px) {
+      .sidebar { width: 60px; }
+      .brand span, .new-project-btn span, .nav-item span, .nav-header { display: none; }
+      .table-head, .project-row { grid-template-columns: 1fr; gap: 10px; }
+      .meta-cell { display: none; }
+    }
   </style>
 </head>
 <body>
 
   <aside class="sidebar">
-    <h2>Vasquez Core Audit</h2>
-    
-    <span class="nav-label">Research Layers</span>
-    <a href="index.html" class="nav-link"><i class="fa-solid fa-house-user"></i> Academic Profile</a>
-    <a href="https://github.com/inaciovasquez2020/urf-core" class="nav-link"><i class="fa-brands fa-github"></i> Repository Root</a>
-    
-    <span class="nav-label" style="margin-top:30px;">Verification Standards</span>
-    <a href="https://github.com/inaciovasquez2020/urf-core/blob/main/standards/URF-SG.json" class="nav-link"><i class="fa-solid fa-code"></i> URF-SG.json (Schema)</a>
-    <a href="#" class="nav-link"><i class="fa-solid fa-microchip"></i> Operator Benchmarks</a>
+    <div class="brand">
+      <i class="fa-solid fa-layer-group"></i>
+      <span>VASQUEZ LAB</span>
+    </div>
 
-    <div style="margin-top: auto; font-family: 'JetBrains Mono'; font-size: 10px; color: #555;">
-      BUILD_REF: 2026.01.27<br>
-      MODE: DETERMINISTIC_AUDIT
+    <a href="mailto:inaciovasquez2020@gmail.com" class="new-project-btn">
+      <i class="fa-solid fa-plus"></i>
+      <span>New Submission</span>
+    </a>
+
+    <div class="nav-group">
+      <div class="nav-header">Research</div>
+      <a href="#" class="nav-item active"><i class="fa-regular fa-folder-open"></i><span>All Artifacts</span></a>
+      <a href="https://github.com/inaciovasquez2020/urf-core/tree/main/standards" class="nav-item"><i class="fa-solid fa-code"></i><span>Standards</span></a>
+      <a href="https://github.com/inaciovasquez2020/urf-core/tree/main/instances" class="nav-item"><i class="fa-solid fa-certificate"></i><span>Certificates</span></a>
+    </div>
+
+    <div class="nav-group">
+      <div class="nav-header">External</div>
+      <a href="https://github.com/inaciovasquez2020" class="nav-item"><i class="fa-brands fa-github"></i><span>GitHub Repo</span></a>
+      <a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i><span>Public Index</span></a>
     </div>
   </aside>
 
-  <main class="main">
+  <main class="main-content">
     <header class="top-bar">
-      <div>
-        <h1 style="margin:0; font-size: 26px; font-weight: 700; letter-spacing: -0.5px;">Technical Verification Dashboard</h1>
-        <p style="color: var(--text-muted); font-size: 14px; margin-top: 8px;">Proof-of-Result (PoR) for the Unified Rigidity Framework.</p>
+      <div style="font-size: 13px; color: var(--text-muted); font-weight: 500;">
+        Build: 2026.01.27 / Deterministic Audit
       </div>
-      <div class="system-status">
-        <i class="fa-solid fa-shield-check"></i> EXTERNAL_WITNESSES_VERIFIED
+      <div class="user-profile">
+        <span>Inacio F. Vasquez</span>
+        <div class="avatar" style="width:32px; height:32px; background:#5c6bc0; color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; margin-left:10px;">IV</div>
       </div>
     </header>
 
-    <div class="grid">
-      <div class="card" style="grid-column: span 2;">
-        <span class="card-title">Verified External Witnesses (Law 3)</span>
-        <p style="font-size: 14px; color: #555; margin-bottom: 25px;">Non-artificial, real-system witnesses of intrinsic spectral rigidity audited against the URF-SG standard.</p>
-        
-        <div class="artifact-item">
-          <strong>EXT-1: Heisenberg nilmanifold horizontal sub-Laplacian</strong>
-          <span class="mono">Gap: λ₁ ≥ 4π > 0</span> | Measured on orthogonal complement of Period Kernel.
-          <br><a href="https://github.com/inaciovasquez2020/urf-core/blob/main/instances/EXT-1-Heisenberg.json" class="json-link">View JSON Instance Data &rarr;</a>
-        </div>
-        
-        <div class="artifact-item">
-          <strong>EXT-2: Ornstein–Uhlenbeck operator on L²(ℝ,γ)</strong>
-          <span class="mono">Gap: λ₁ = 1 > 0</span> | Standard witness for statistical physics stability.
-          <br><a href="https://github.com/inaciovasquez2020/urf-core/blob/main/instances/EXT-2-Ornstein-Uhlenbeck.json" class="json-link">View JSON Instance Data &rarr;</a>
-        </div>
+    <div class="dashboard-container">
+      <div class="list-header">
+        <h2>Active Artifact Registry</h2>
+        <div style="font-size: 13px; color: var(--text-muted);">Status: Core Mathematically Closed</div>
       </div>
 
-      <div class="card">
-        <span class="card-title">Mathematical Closure <span class="badge badge-success">Closed</span></span>
-        <ul style="font-size: 13px; color: #444; line-height: 2; padding-left: 18px;">
-          <li><strong>Bounded Treewidth:</strong> Closed ($k \ge f(tw)$)</li>
-          <li><strong>Subexponential Growth:</strong> Verified</li>
-          <li><strong>Expander Regime:</strong> Isolated (Obstruction Set)</li>
-          <li><strong>Finite Capacity:</strong> Certified</li>
-        </ul>
+      <div class="project-table">
+        <div class="table-head">
+          <div>Artifact Name</div>
+          <div>Regime</div>
+          <div>Logic Dependency</div>
+          <div>Verification</div>
+        </div>
+
+        <div class="project-row">
+          <div class="title-cell">
+            <div class="title-main"><i class="fa-solid fa-file-pdf" style="color: #d9534f;"></i> EXT-1: Heisenberg Nilmanifold <span class="tag tag-green">Verified</span></div>
+            <div class="title-desc">Spectral Gap: \( \lambda_1(\Delta_H \mid \ker(\mathrm{Per})^\perp) \ge 4\pi \)</div>
+          </div>
+          <div class="meta-cell">Geometric</div>
+          <div class="meta-cell">Sub-Laplacian</div>
+          <div class="action-cell"><a href="https://github.com/inaciovasquez2020/urf-core/blob/main/instances/EXT-1-Heisenberg.json">Open JSON</a></div>
+        </div>
+
+        <div class="project-row">
+          <div class="title-cell">
+            <div class="title-main"><i class="fa-solid fa-file-pdf" style="color: #d9534f;"></i> EXT-2: Ornstein–Uhlenbeck <span class="tag tag-green">Verified</span></div>
+            <div class="title-desc">Operator on \( L^2(\mathbb{R},\gamma) \) | Gap \( = 1.0 \)</div>
+          </div>
+          <div class="meta-cell">Statistical</div>
+          <div class="meta-cell">O-U Operator</div>
+          <div class="action-cell"><a href="https://github.com/inaciovasquez2020/urf-core/blob/main/instances/EXT-2-Ornstein-Uhlenbeck.json">Open JSON</a></div>
+        </div>
+
+        <div class="project-row">
+          <div class="title-cell">
+            <div class="title-main"><i class="fa-solid fa-network-wired" style="color: var(--accent-blue);"></i> Logic-Width Mapping <span class="tag tag-purple">High Priority</span></div>
+            <div class="title-desc">Resolution for \( tw \le t \) regimes: \( k \ge f(t) \)</div>
+          </div>
+          <div class="meta-cell">Structural</div>
+          <div class="meta-cell">Closed</div>
+          <div class="action-cell"><a href="https://github.com/inaciovasquez2020/urf-core">View Repo</a></div>
+        </div>
+
+        <div class="project-row">
+          <div class="title-cell">
+            <div class="title-main"><i class="fa-solid fa-code" style="color: #f0b429;"></i> URF-SG Standard <span class="tag tag-blue">Schema</span></div>
+            <div class="title-desc">JSON-Schema contract for Machine-Verifiable Rigidity.</div>
+          </div>
+          <div class="meta-cell">Audit</div>
+          <div class="meta-cell">v1.0-alpha</div>
+          <div class="action-cell"><a href="https://github.com/inaciovasquez2020/urf-core/blob/main/standards/URF-SG.json">View Code</a></div>
+        </div>
+
+      </div>
+      
+      <div style="margin-top: 40px; border-top: 1px solid var(--border); padding-top: 20px; font-size: 12px; color: var(--text-muted); line-height: 1.6;">
+        © 2026 Inacio F. Vasquez — ORCID: 0009-0008-8459-3400<br>
+        <em>Institutional uptake remains the primary external uncertainty. Core requirements verified.</em>
       </div>
     </div>
-
-    <section style="margin-top: 50px;">
-      <h3 style="font-size: 11px; text-transform: uppercase; color: #888; border-bottom: 2px solid var(--border); padding-bottom: 10px; letter-spacing: 1px;">Audit Log & Deterministic Witnesses</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Timestamp</th>
-            <th>Artifact ID</th>
-            <th>Operator Type</th>
-            <th>Certification</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>2026.01.27</td>
-            <td><strong>EXT-1</strong></td>
-            <td>sub-Laplacian</td>
-            <td style="color: var(--green); font-weight:700;">SUCCESS (Audit Passed)</td>
-          </tr>
-          <tr>
-            <td>2026.01.27</td>
-            <td><strong>EXT-2</strong></td>
-            <td>Ornstein–Uhlenbeck</td>
-            <td style="color: var(--green); font-weight:700;">SUCCESS (Audit Passed)</td>
-          </tr>
-          <tr>
-            <td>2026.01.20</td>
-            <td><strong>URF-CORE-BTW</strong></td>
-            <td>Logic-Width Mapping</td>
-            <td style="color: var(--green); font-weight:700;">CLOSED (Deterministic)</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <footer>
-      <p>&copy; 2026 Inacio F. Vasquez. Verified via deterministic audit. <br>
-      ORCID: 0009-0008-8459-3400 | All core mathematical requirements are closed. <br>
-      <em>Remaining uncertainty is external (adoption, citation, institutional uptake).</em></p>
-    </footer>
   </main>
 
 </body>
