@@ -9,11 +9,135 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   <style>
-    /* unchanged */
+    :root {
+      --arxiv-red: #b31b1b; 
+      --arxiv-blue: #0000ee;
+      --bg-grey: #f5f5f5;
+      --border-grey: #cccccc;
+      --text-dark: #222222;
+      --sans: 'Inter', -apple-system, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--sans);
+      background-color: white;
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    .top-nav {
+      background: var(--bg-grey);
+      border-bottom: 1px solid var(--border-grey);
+      padding: 8px 20px;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .top-nav a { color: var(--arxiv-blue); text-decoration: none; margin-right: 15px; }
+
+    header {
+      max-width: 1000px;
+      margin: 40px auto 20px;
+      padding: 0 20px;
+      border-left: 5px solid var(--arxiv-red);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .orcid {
+      font-size: 14px;
+      color: #666;
+      font-family: monospace;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 40px;
+    }
+
+    .paper-block {
+      margin-bottom: 40px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 30px;
+    }
+
+    .paper-block h2 {
+      font-size: 18px;
+      color: var(--arxiv-red);
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .format-links {
+      margin: 10px 0;
+      font-size: 14px;
+    }
+
+    .format-links a {
+      background: var(--bg-grey);
+      border: 1px solid var(--border-grey);
+      padding: 2px 8px;
+      border-radius: 3px;
+      text-decoration: none;
+      color: var(--arxiv-blue);
+      margin-right: 5px;
+    }
+
+    .math-display {
+      background: #fcfcfc;
+      border: 1px inset #eee;
+      padding: 20px;
+      margin: 15px 0;
+      text-align: center;
+      overflow-x: auto;
+    }
+
+    aside h3 {
+      font-size: 15px;
+      border-bottom: 2px solid var(--text-dark);
+      padding-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    .sidebar-list {
+      list-style: none;
+      padding: 0;
+      font-size: 14px;
+    }
+
+    .sidebar-list li { margin-bottom: 10px; }
+    .sidebar-list a { color: var(--arxiv-blue); text-decoration: none; }
+
+    footer {
+      background: var(--bg-grey);
+      border-top: 1px solid var(--border-grey);
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+    }
+
+    @media (max-width: 800px) {
+      .container { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 
@@ -22,7 +146,6 @@
   <nav class="top-nav">
     <div>
       <a href="https://github.com/inaciovasquez2020">GitHub</a>
-      <!-- FIX: your actual index repo -->
       <a href="https://inaciovasquez2020.github.io/vasquez-index/">Index</a>
     </div>
     <div>
@@ -41,7 +164,6 @@
   <div class="container">
 
     <main>
-
       <section class="paper-block">
         <h2>General Program</h2>
         <p>
@@ -52,14 +174,12 @@
         </p>
         <div class="format-links">
           Download:
-          <!-- FIX: docs folder does not exist publicly -->
           <a href="https://github.com/inaciovasquez2020/urf-core">source</a>
         </div>
       </section>
 
       <section class="paper-block">
         <h2>Block-Exact Standard (Core Rule)</h2>
-
         <div class="math-display">
           \[
           \Pi V \Pi = 0 \iff |\gamma_k(\varepsilon)-\gamma_k(0)| = O(\varepsilon^2)
@@ -68,7 +188,6 @@
           \Pi V \Pi \neq 0 \Rightarrow |\gamma_k(\varepsilon)-\gamma_k(0)| = \Theta(|\varepsilon|)
           \]
         </div>
-
         <div class="format-links">
           Standard:
           <a href="https://github.com/inaciovasquez2020/urf-core/tree/main/standards/URF-Block-Exact">
@@ -79,16 +198,13 @@
 
       <section class="paper-block">
         <h2>Terminal Rigidity Wall</h2>
-
         <div class="math-display">
           \[
           \inf \mathrm{Spec}(\Delta_H \mid \ker(\mathrm{Per})^\perp) > 0
           \]
         </div>
-
         <div class="format-links">
           Terminal Theorem:
-          <!-- FIX: PDF path not public, markdown is -->
           <a href="https://github.com/inaciovasquez2020/urf-core/blob/main/urf-sg-wall.md">markdown</a>
         </div>
       </section>
@@ -99,7 +215,6 @@
         <p><strong>2. Chronos: EntropyDepth and Sequential Inference</strong></p>
         <p><strong>3. Radiative Rigidity and Two-Photon Exchange</strong></p>
       </section>
-
     </main>
 
     <aside>
@@ -111,7 +226,6 @@
       </ul>
 
       <br>
-
       <h3>Certificates & Standards</h3>
       <ul class="sidebar-list">
         <li><a href="https://github.com/inaciovasquez2020/urf-core/tree/main/standards/URF-SG">URF-SG</a></li>
@@ -119,11 +233,9 @@
       </ul>
 
       <br>
-
       <h3>Contact</h3>
       <ul class="sidebar-list">
         <li><a href="mailto:inacio@vasquezresearch.com">Email</a></li>
-        <!-- FIX: your actual domain resolves, keep -->
         <li><a href="https://vasquezresearch.com">Official Website</a></li>
       </ul>
     </aside>
