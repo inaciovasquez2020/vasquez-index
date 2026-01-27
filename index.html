@@ -5,13 +5,12 @@
   <title>Inacio F. Vasquez — Unified Rigidity Framework (URF)</title>
   
   <meta name="description" content="Academic portfolio of Inacio F. Vasquez. Research on Computational Rigidity, Information Theory, and the Unified Rigidity Framework (URF).">
-  <meta name="keywords" content="Inacio Vasquez, URF, Rigidity, Spectral Gap, Finite Model Theory, Expander Exclusion">
-  <meta property="og:title" content="Inacio F. Vasquez — URF Research Portfolio">
+  <meta name="keywords" content="Inacio Vasquez, URF, Rigidity, Spectral Gap, Finite Model Theory, Expander Exclusion, Logic-Width Dependency">
+  <meta property="og:title" content="Inacio F. Vasquez — URF Research Profile">
   <meta property="og:description" content="Local→Global rigidity results for bounded-degree systems.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -24,49 +23,45 @@
       --text-muted: #555555;
       --bg-light: #fcfcfc;
       --border: #eeeeee;
-      --sans: 'Inter', sans-serif;
-      --serif: 'Libre Baskerville', serif;
     }
 
     * { box-sizing: border-box; }
-    body { font-family: var(--sans); margin: 0; background: #fff; color: var(--text-main); line-height: 1.6; scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; margin: 0; background: #fff; color: var(--text-main); line-height: 1.7; scroll-behavior: smooth; }
     
     /* Navigation Bar */
     nav.main-nav {
       position: sticky; top: 0; background: rgba(255,255,255,0.98);
-      border-bottom: 1px solid var(--border); padding: 12px 20px;
-      display: flex; justify-content: center; gap: 40px; z-index: 100; 
-      font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+      border-bottom: 1px solid var(--border); padding: 14px 20px;
+      display: flex; justify-content: center; gap: 40px; z-index: 1000; 
+      font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px;
     }
-    nav.main-nav a { color: var(--text-main); text-decoration: none; transition: color 0.2s; }
+    nav.main-nav a { color: var(--text-main); text-decoration: none; transition: 0.2s; }
     nav.main-nav a:hover { color: var(--arxiv-red); }
 
-    header { max-width: 850px; margin: 60px auto 40px; border-left: 5px solid var(--arxiv-red); padding-left: 30px; }
-    header h1 { margin: 0; font-size: 2.6rem; font-family: var(--serif); letter-spacing: -1px; }
-    .orcid { font-family: monospace; color: #888; margin-top: 10px; font-size: 14px; }
+    header { max-width: 850px; margin: 60px auto 40px; border-left: 6px solid var(--arxiv-red); padding-left: 30px; }
+    header h1 { margin: 0; font-size: 2.8rem; font-family: 'Libre Baskerville', serif; letter-spacing: -1px; }
+    .orcid { font-family: monospace; color: #777; margin-top: 10px; font-size: 14px; }
 
     section { max-width: 850px; margin: 0 auto 80px; padding: 0 20px; }
-    h2 { color: var(--arxiv-red); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; border-bottom: 1px solid var(--border); padding-bottom: 12px; margin-bottom: 30px; }
+    h2 { color: var(--arxiv-red); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; border-bottom: 2px solid var(--border); padding-bottom: 12px; margin-bottom: 30px; }
 
-    .abstract-intro { font-size: 1.15rem; color: #333; margin-top: 25px; line-height: 1.7; font-weight: 400; }
+    .abstract-intro { font-size: 1.15rem; color: #333; margin-top: 25px; line-height: 1.8; }
     
-    /* Project/Manuscript Blocks */
-    .item-card { margin-bottom: 40px; padding: 25px; border: 1px solid var(--border); background: var(--bg-light); border-radius: 4px; }
-    .status-tag { font-size: 10px; font-weight: 800; text-transform: uppercase; padding: 3px 8px; border-radius: 3px; background: #e0e0e0; color: #444; vertical-align: middle; }
+    /* Manuscript Blocks */
+    .manuscript-card { margin-bottom: 40px; padding: 25px; border: 1px solid var(--border); background: #f9f9f9; border-radius: 4px; }
+    .status-tag { font-size: 10px; font-weight: 800; text-transform: uppercase; padding: 3px 8px; border-radius: 3px; background: #e0e0e0; color: #444; }
     .status-active { background: #fff3e0; color: #e65100; }
-    .status-closed { background: #e8f5e9; color: #2e7d32; }
 
     /* Theorem Display */
-    .theorem-card { background: #fff; border: 1px solid var(--arxiv-red); padding: 40px; margin: 30px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; }
-    .theorem-card span { font-size: 0.8rem; color: #999; text-transform: uppercase; display: block; margin-bottom: 20px; }
+    .theorem-display { background: #fff; border: 1px solid var(--arxiv-red); padding: 40px; margin: 30px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.04); text-align: center; }
 
-    .cta-link { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; color: var(--arxiv-blue); margin-top: 20px; text-decoration: none; border-bottom: 2px solid transparent; transition: 0.2s; }
-    .cta-link:hover { border-bottom-color: var(--arxiv-blue); }
+    .link-action { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; color: var(--arxiv-blue); margin-top: 20px; text-decoration: none; transition: 0.2s; }
+    .link-action:hover { text-decoration: underline; }
 
-    footer { text-align: center; padding: 80px 20px; border-top: 1px solid var(--border); background: #f9f9f9; font-size: 0.85rem; color: #777; }
+    footer { text-align: center; padding: 80px 20px; border-top: 1px solid var(--border); background: #fcfcfc; font-size: 0.85rem; color: #777; line-height: 2; }
     
     @media (max-width: 600px) {
-      header h1 { font-size: 1.8rem; }
+      header h1 { font-size: 2rem; }
       nav.main-nav { gap: 15px; font-size: 10px; }
     }
   </style>
@@ -77,8 +72,8 @@
     <a href="#about">Profile</a>
     <a href="#framework">URF Framework</a>
     <a href="#manuscripts">Manuscripts</a>
-    <a href="https://github.com/inaciovasquez2020/urf-core">Source</a>
-    <a href="./dashboard.html">Dashboard</a>
+    <a href="https://github.com/inaciovasquez2020/urf-core">GitHub Repository</a>
+    <a href="./dashboard.html">Artifact Dashboard</a>
   </nav>
 
   <header id="about">
@@ -87,69 +82,68 @@
     <p class="abstract-intro">
       Independent Research Program (2026). Specializing in <strong>Computational Rigidity</strong>, 
       <strong>Finite Model Theory</strong>, and <strong>Information Topology</strong>. 
-      My work focuses on the formal closure of Local&rarr;Global correspondence in finite systems.
+      My work focuses on the formal closure of Local&rarr;Global correspondence in finite information-bearing systems.
     </p>
   </header>
 
   <section id="framework">
     <h2>Unified Rigidity Framework (URF)</h2>
     <p>
-      The URF establishes the axiomatic boundaries of structural stability. It identifies why specific classes of 
-      networks maintain global invariants despite local perturbations, while others (expanders) fail.
+      The URF establishes the axiomatic boundaries of structural stability. By characterizing the 
+      <strong>Expander Obstruction</strong>, we establish that local homogeneity forces global rigidity 
+      in structures satisfying the terminal rigidity wall.
     </p>
 
-    <div class="theorem-card">
-      <span>The Terminal Rigidity Wall (Canonical Statement)</span>
+    <div class="theorem-display">
+      <div style="font-size: 0.8rem; color: #999; text-transform: uppercase; margin-bottom: 20px;">URF_law3 — Spectral Gap Rigidity</div>
       $$ \inf \mathrm{Spec}(\Delta_H \mid \ker(\mathrm{Per})^\perp) > 0 $$
-      <p style="font-size: 14px; color: #666; margin-top: 20px;">
-        Certified deterministic rigidity for $tw \le t$ given $FO^k_R$-local homogeneity.
+      <p style="font-size: 13px; color: #666; margin-top: 25px; font-style: italic;">
+        Formally closed for $tw \le t$ given $k \ge f(t)$.
       </p>
     </div>
 
     <p>
-      <strong>Current Status:</strong> URF Core is mathematically closed. The <em>Expander Exclusion Axiom</em> 
-      isolates expansion as the sole obstruction to deterministic local control.
+      <strong>Verified Witnesses:</strong> The framework has been audited against real-system operators, including the 
+      <em>Heisenberg nilmanifold</em> ($\ge 4\pi$) and the <em>Ornstein–Uhlenbeck</em> operator ($= 1.0$).
     </p>
     
-    <a href="./dashboard.html" class="cta-link">
-      Access the Research Artifact Dashboard &rarr;
+    <a href="./dashboard.html" class="link-action">
+      &#10142; Access Technical Verification Dashboard & Artifacts
     </a>
   </section>
 
   <section id="manuscripts">
     <h2>Manuscript Pipeline</h2>
     
-    <div class="item-card">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px;">
+    <div class="manuscript-card">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
         <strong style="font-size: 1.1rem;">The Expander Obstruction and Logic-Width Dependency</strong>
-        <span class="status-tag status-active">Preprint</span>
+        <span class="status-tag status-active">Preprint (2026)</span>
       </div>
-      <p style="font-size: 14px; color: #444;">
+      <p style="font-size: 14px; color: #444; margin-top: 15px;">
         <strong>Abstract:</strong> We characterize the failure of $FO^k$ local types to bound global structural invariants 
-        in spectral expanders. We prove that while high-girth expanders are locally indistinguishable from trees, 
-        their cycle complexity remains unbounded. We resolve this by introducing a constructive bound $k \ge f(tw)$, 
+        in spectral expanders. We resolve this by introducing the <em>Logic-Width Dependency</em> $k \ge f(tw)$, 
         establishing that for bounded-treewidth systems, local homogeneity forces global rigidity.
       </p>
     </div>
 
-    <div class="item-card">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px;">
+    <div class="manuscript-card">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
         <strong style="font-size: 1.1rem;">Finite Capacity and Rigidity in Operator Systems</strong>
-        <span class="status-tag">In Prep</span>
+        <span class="status-tag">In Preparation</span>
       </div>
-      <p style="font-size: 14px; color: #444;">
-        <strong>Abstract:</strong> This paper applies URF rigidity bounds to real-world operator systems. 
-        We establish that systems satisfying the spectral gap wall are robust against information decay, 
-        providing a deterministic guarantee of capacity retention in homogeneous finite structures.
+      <p style="font-size: 14px; color: #444; margin-top: 15px;">
+        Applications of URF rigidity bounds to real-world operator systems, ensuring deterministic 
+        capacity retention in homogeneous finite structures.
       </p>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2026 Inacio F. Vasquez. Unified Rigidity Framework: Mathematically Closed Core.</p>
-    <p>Verified via Deterministic Audit • ORCID: 0009-0008-8459-3400</p>
-    <p style="font-size: 10px; margin-top: 20px; opacity: 0.6;">
-      $k \ge f(t)$ | $\mathcal{O} = \{\text{Expanders Only}\}$
+    <p>&copy; 2026 Inacio F. Vasquez. Independent Research Program.</p>
+    <p>Unified Rigidity Framework: Core Mathematically Closed | ORCID: 0009-0008-8459-3400</p>
+    <p style="font-size: 11px; font-style: italic; opacity: 0.8;">
+      Remaining uncertainty is external (adoption, citation, institutional uptake).
     </p>
   </footer>
 
