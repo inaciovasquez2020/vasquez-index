@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Inacio F. Vasquez — Academic Research & URF Framework</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Academic research page for the Unified Rigidity Framework (URF), externally verified spectral gap rigidity, standards, certificates, and executable verification artifacts.">
+  <meta name="description" content="Academic research page for the Unified Rigidity Framework (URF), corrected core axioms, expander exclusion boundary, and certified deterministic rigidity instances.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -146,7 +146,7 @@
   <nav class="top-nav">
     <div>
       <a href="https://github.com/inaciovasquez2020">GitHub</a>
-      <a href="https://inaciovasquez2020.github.io/vasquez-index/">Index</a>
+      <a href="./dashboard.html">Interactive Dashboard</a>
     </div>
     <div>
       <span>Independent Research Program (2026)</span>
@@ -157,7 +157,7 @@
     <h1>Inacio F. Vasquez</h1>
     <div class="orcid">ORCID: 0009-0008-8459-3400</div>
     <p style="font-style: italic; color: #444;">
-      Mathematical Physics • Information Theory • Computational Rigidity
+      Mathematical Physics • Finite Model Theory • Unified Rigidity Framework
     </p>
   </header>
 
@@ -168,36 +168,43 @@
         <h2>General Program</h2>
         <p>
           <strong>Abstract:</strong>
-          I develop and maintain the <strong>Unified Rigidity Framework (URF)</strong>,
-          a formal research program on structural limits of physical and computational systems.
-          All robustness claims are governed by explicit operator-level admissibility axioms.
+          I develop and maintain the <strong>Unified Rigidity Framework (URF)</strong>, 
+          a research program dedicated to the structural limits of finite information-bearing systems. 
+          By synthesizing spectral graph theory and finite model theory, the framework establishes the conditions 
+          under which local symmetry (homogeneity) implies global simplicity.
         </p>
         <p>
           <strong>Status:</strong>
-          URF_law3 (Spectral Gap Rigidity) is externally verified via real-system instances
-          (Heisenberg sub-Laplacian, Ornstein–Uhlenbeck operator).
+          URF Core is formally closed under the <strong>Expander Exclusion Axiom</strong>. 
+          The framework provides certified deterministic rigidity for classes where the logic depth $k$ is 
+          sufficient to resolve the global decomposition width.
         </p>
         <div class="format-links">
-          Download:
-          <a href="https://github.com/inaciovasquez2020/urf-core">source</a>
+          Resources:
+          <a href="https://github.com/inaciovasquez2020/urf-core">source-code</a>
+          <a href="./dashboard.html">project-manifest</a>
         </div>
       </section>
 
       <section class="paper-block">
-        <h2>Block-Exact Standard (Core Rule)</h2>
+        <h2>URF Core Boundary (Canonical)</h2>
         <div class="math-display">
           \[
-          \Pi V \Pi = 0 \iff |\gamma_k(\varepsilon)-\gamma_k(0)| = O(\varepsilon^2)
+          \mathcal O_{\mathrm{LG}} = \{\text{Expanders only}\}
           \]
           \[
-          \Pi V \Pi \neq 0 \Rightarrow |\gamma_k(\varepsilon)-\gamma_k(0)| = \Theta(|\varepsilon|)
+          \mathrm{tw}(G)\le t \;\wedge\; \text{FO}^{k}_{R}\text{-homogeneous}
+          \Rightarrow \mathsf{CycRank}_{R}(G)=O(1),\quad \text{for } k\ge f(t)
           \]
         </div>
+        <p style="font-size: 14px; color: #555;">
+          This boundary defines the <strong>Local&rarr;Global Transition</strong>. On bounded treewidth graphs, 
+          local $FO^k$ homogeneity forces global rigidity, provided the logic depth $k$ scales with treewidth $t$.
+        </p>
         <div class="format-links">
-          Standard:
-          <a href="https://github.com/inaciovasquez2020/urf-core/tree/main/standards/URF-Block-Exact">
-            URF-Block-Exact v1.0
-          </a>
+          Axiom Reference:
+          <a href="https://github.com/inaciovasquez2020/urf-core">URF-Core-EX</a>
+          <a href="https://github.com/inaciovasquez2020/urf-core">URF-Core-LG-BTW</a>
         </div>
       </section>
 
@@ -205,27 +212,29 @@
         <h2>Terminal Rigidity Wall</h2>
         <div class="math-display">
           \[
-          \inf \mathrm{Spec}(\Delta_H \mid \ker(\mathrm{Per})^\perp) > 0
+          \lambda_{\min}(\Delta_H \mid \ker(\mathrm{Per})^\perp) \ge \alpha > 0
           \]
         </div>
         <div class="format-links">
-          Terminal Theorem:
-          <a href="https://github.com/inaciovasquez2020/urf-core/tree/main/standards/URF-SG/examples">
-            external certified instances
+          Verification Artifacts:
+          <a href="https://github.com/inaciovasquez2020/urf-core/tree/main/standards/URF-SG">
+            spectral certificates [JSON]
           </a>
         </div>
       </section>
 
       <section class="paper-block">
-        <h2>Preprints (Selected)</h2>
-        <p><strong>1. Finite Capacity and Rigidity</strong></p>
-        <p><strong>2. Chronos: EntropyDepth and Sequential Inference</strong></p>
-        <p><strong>3. Radiative Rigidity and Two-Photon Exchange</strong></p>
+        <h2>Selected Preprints & Documentation</h2>
+        <ul style="list-style-type: square; font-size: 15px;">
+          <li><strong>Finite Capacity and Structural Rigidity:</strong> Axiomatic limits on state-space expansion.</li>
+          <li><strong>Chronos:</strong> EntropyDepth and sequential inference in homogeneous structures.</li>
+          <li><strong>The Expander Obstruction:</strong> Why local logic fails to bound global complexity in spectral expanders.</li>
+        </ul>
       </section>
     </main>
 
     <aside>
-      <h3>Project Repositories</h3>
+      <h3>Core Repositories</h3>
       <ul class="sidebar-list">
         <li><a href="https://github.com/inaciovasquez2020/urf-core">urf-core</a></li>
         <li><a href="https://github.com/inaciovasquez2020/urc-minimal-blockchain">urc-minimal-blockchain</a></li>
@@ -233,17 +242,17 @@
       </ul>
 
       <br>
-      <h3>Certificates & Standards</h3>
+      <h3>Standards</h3>
       <ul class="sidebar-list">
-        <li><a href="https://github.com/inaciovasquez2020/urf-core/tree/main/standards/URF-SG">URF-SG (External)</a></li>
-        <li><a href="https://github.com/inaciovasquez2020/urf-core/tree/main/standards/URF-Block-Exact">URF-Block-Exact</a></li>
+        <li><a href="https://github.com/inaciovasquez2020/urf-core/tree/main/standards/URF-SG">URF-SG Schema</a></li>
+        <li><a href="https://github.com/inaciovasquez2020/urf-core/tree/main/standards/URF-Block-Exact">Block-Exact</a></li>
       </ul>
 
       <br>
       <h3>Contact</h3>
       <ul class="sidebar-list">
-        <li><a href="mailto:inacio@vasquezresearch.com">Email</a></li>
-        <li><a href="https://vasquezresearch.com">Official Website</a></li>
+        <li><a href="mailto:inacio@vasquezresearch.com">Research Inquiry</a></li>
+        <li><a href="https://vasquezresearch.com">Official Portal</a></li>
       </ul>
     </aside>
 
@@ -252,7 +261,8 @@
   <footer>
     <p>
       © 2026 Inacio F. Vasquez.<br>
-      Independent research. URF core closed; terminal spectral rigidity externally verified.
+      URF Core status: Formally closed under Expander Exclusion.<br>
+      Independent research program supported by deterministic verification.
     </p>
   </footer>
 
