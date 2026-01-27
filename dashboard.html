@@ -2,24 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Inacio F. Vasquez — Research Dashboard</title>
+  <title>Artifact Registry — Vasquez Lab</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   <style>
     :root {
       --sidebar-bg: #1e2329; 
       --sidebar-text: #cfd3d8;
-      --sidebar-hover: #2c333a;
       --main-bg: #f4f5f7; 
-      --card-bg: #ffffff;
       --accent-green: #3f9c35; 
       --accent-blue: #0078d4;
       --text-main: #2f343b;
@@ -35,42 +31,37 @@
     .brand { font-size: 18px; font-weight: 700; color: white; margin-bottom: 30px; display: flex; align-items: center; gap: 10px; }
     .brand i { color: var(--accent-green); }
 
-    .new-project-btn { background: var(--accent-green); color: white; border: none; padding: 12px; border-radius: 4px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 25px; text-decoration: none; transition: background 0.2s; }
-    .new-project-btn:hover { background: #3da332; }
-
     .nav-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 25px; }
     .nav-header { text-transform: uppercase; font-size: 11px; font-weight: 700; color: #6c757d; margin-bottom: 8px; padding-left: 10px; }
     .nav-item { display: flex; align-items: center; gap: 12px; padding: 10px 12px; color: var(--sidebar-text); text-decoration: none; font-size: 14px; border-radius: 4px; transition: 0.2s; }
-    .nav-item:hover, .nav-item.active { background: var(--sidebar-hover); color: white; }
+    .nav-item:hover, .nav-item.active { background: #2c333a; color: white; }
 
     /* Main Content */
     .main-content { flex-grow: 1; display: flex; flex-direction: column; overflow: hidden; }
     .top-bar { height: 60px; background: white; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 30px; }
     .dashboard-container { padding: 30px; overflow-y: auto; }
-    .list-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-    .list-header h2 { margin: 0; font-size: 20px; font-weight: 600; }
 
     /* Table Logic */
     .project-table { background: white; border: 1px solid var(--border); border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
     .table-head { display: grid; grid-template-columns: 3fr 1fr 1fr 1fr; padding: 12px 20px; border-bottom: 1px solid var(--border); background: #fafafa; font-size: 12px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; }
-    .project-row { display: grid; grid-template-columns: 3fr 1fr 1fr 1fr; padding: 16px 20px; border-bottom: 1px solid var(--border); align-items: center; text-decoration: none; color: inherit; transition: background 0.1s; }
+    .project-row { display: grid; grid-template-columns: 3fr 1fr 1fr 1fr; padding: 16px 20px; border-bottom: 1px solid var(--border); align-items: center; text-decoration: none; color: inherit; }
     .project-row:hover { background-color: #f7f9fa; }
+    
     .title-cell { display: flex; flex-direction: column; gap: 4px; }
     .title-main { font-weight: 600; font-size: 15px; display: flex; align-items: center; gap: 10px; }
     .title-desc { font-size: 12px; color: var(--text-muted); margin-left: 28px; }
-    .meta-cell { font-size: 13px; color: var(--text-muted); }
-    .action-cell a { color: var(--accent-blue); font-size: 13px; text-decoration: none; font-weight: 500; }
-
-    .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 11px; margin-left: 8px; }
+    
+    .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: 700; }
     .tag-green { background: #d3f9d8; color: #2b8a3e; }
     .tag-blue { background: #e7f5ff; color: #1c7ed6; }
     .tag-purple { background: #f3f0ff; color: #7950f2; }
 
+    .action-link { color: var(--accent-blue); text-decoration: none; font-size: 13px; font-weight: 600; }
+
     @media (max-width: 900px) {
       .sidebar { width: 60px; }
-      .brand span, .new-project-btn span, .nav-item span, .nav-header { display: none; }
-      .table-head, .project-row { grid-template-columns: 1fr; gap: 10px; }
-      .meta-cell { display: none; }
+      .brand span, .nav-item span, .nav-header { display: none; }
+      .table-head, .project-row { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -81,96 +72,86 @@
       <i class="fa-solid fa-layer-group"></i>
       <span>VASQUEZ LAB</span>
     </div>
-
-    <a href="mailto:inaciovasquez2020@gmail.com" class="new-project-btn">
-      <i class="fa-solid fa-plus"></i>
-      <span>New Submission</span>
-    </a>
-
     <div class="nav-group">
-      <div class="nav-header">Research</div>
-      <a href="#" class="nav-item active"><i class="fa-regular fa-folder-open"></i><span>All Artifacts</span></a>
-      <a href="https://github.com/inaciovasquez2020/urf-core/tree/main/standards" class="nav-item"><i class="fa-solid fa-code"></i><span>Standards</span></a>
-      <a href="https://github.com/inaciovasquez2020/urf-core/tree/main/instances" class="nav-item"><i class="fa-solid fa-certificate"></i><span>Certificates</span></a>
+      <div class="nav-header">Verification</div>
+      <a href="#" class="nav-item active"><i class="fa-solid fa-list-check"></i><span>Active Registry</span></a>
+      <a href="https://github.com/inaciovasquez2020/urf-core" class="nav-item"><i class="fa-solid fa-database"></i><span>Core Logic</span></a>
     </div>
-
     <div class="nav-group">
       <div class="nav-header">External</div>
-      <a href="https://github.com/inaciovasquez2020" class="nav-item"><i class="fa-brands fa-github"></i><span>GitHub Repo</span></a>
-      <a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i><span>Public Index</span></a>
+      <a href="../index.html" class="nav-item"><i class="fa-solid fa-arrow-left"></i><span>Back to Profile</span></a>
     </div>
   </aside>
 
   <main class="main-content">
     <header class="top-bar">
-      <div style="font-size: 13px; color: var(--text-muted); font-weight: 500;">
-        Build: 2026.01.27 / Deterministic Audit
+      <div style="font-size: 13px; font-weight: 600; color: var(--text-muted);">
+        STATUS: CORE MATHEMATICALLY CLOSED (2026)
       </div>
-      <div class="user-profile">
-        <span>Inacio F. Vasquez</span>
-        <div class="avatar" style="width:32px; height:32px; background:#5c6bc0; color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; margin-left:10px;">IV</div>
+      <div style="display:flex; align-items:center; gap:10px; font-size:14px;">
+        Inacio F. Vasquez <div style="width:30px; height:30px; background:#5c6bc0; color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px;">IV</div>
       </div>
     </header>
 
     <div class="dashboard-container">
-      <div class="list-header">
-        <h2>Active Artifact Registry</h2>
-        <div style="font-size: 13px; color: var(--text-muted);">Status: Core Mathematically Closed</div>
+      <div style="margin-bottom: 25px;">
+        <h2 style="margin:0; font-size:22px;">Active Artifact Registry</h2>
+        <p style="color:var(--text-muted); font-size:14px; margin-top:5px;">Deterministic Audit Log for the Unified Rigidity Framework (URF).</p>
       </div>
 
       <div class="project-table">
         <div class="table-head">
-          <div>Artifact Name</div>
-          <div>Regime</div>
-          <div>Logic Dependency</div>
+          <div>Artifact Name / Logic</div>
+          <div>Registry ID</div>
+          <div>Status</div>
           <div>Verification</div>
         </div>
 
         <div class="project-row">
           <div class="title-cell">
-            <div class="title-main"><i class="fa-solid fa-file-pdf" style="color: #d9534f;"></i> EXT-1: Heisenberg Nilmanifold <span class="tag tag-green">Verified</span></div>
-            <div class="title-desc">Spectral Gap: \( \lambda_1(\Delta_H \mid \ker(\mathrm{Per})^\perp) \ge 4\pi \)</div>
+            <div class="title-main"><i class="fa-brands fa-bitcoin" style="color: #f7931a;"></i> URC-Minimal-Blockchain</div>
+            <div class="title-desc">Distributed Capacity Retention via Nakamoto Consensus.</div>
           </div>
-          <div class="meta-cell">Geometric</div>
-          <div class="meta-cell">Sub-Laplacian</div>
-          <div class="action-cell"><a href="https://github.com/inaciovasquez2020/urf-core/blob/main/instances/EXT-1-Heisenberg.json">Open JSON</a></div>
+          <div style="font-family:monospace; font-size:13px;">ART-BC-01</div>
+          <div><span class="tag tag-green">VERIFIED</span></div>
+          <div><a href="https://github.com/inaciovasquez2020/urc-minimal-blockchain" class="action-link">View Repo</a></div>
         </div>
 
         <div class="project-row">
           <div class="title-cell">
-            <div class="title-main"><i class="fa-solid fa-file-pdf" style="color: #d9534f;"></i> EXT-2: Ornstein–Uhlenbeck <span class="tag tag-green">Verified</span></div>
-            <div class="title-desc">Operator on \( L^2(\mathbb{R},\gamma) \) | Gap \( = 1.0 \)</div>
+            <div class="title-main"><i class="fa-solid fa-link" style="color: var(--accent-green);"></i> Heisenberg Nilmanifold</div>
+            <div class="title-desc">Spectral Rigidity: \( \lambda_1 \ge 4\pi \)</div>
           </div>
-          <div class="meta-cell">Statistical</div>
-          <div class="meta-cell">O-U Operator</div>
-          <div class="action-cell"><a href="https://github.com/inaciovasquez2020/urf-core/blob/main/instances/EXT-2-Ornstein-Uhlenbeck.json">Open JSON</a></div>
+          <div style="font-family:monospace; font-size:13px;">EXT-1-GEO</div>
+          <div><span class="tag tag-green">VERIFIED</span></div>
+          <div><a href="https://github.com/inaciovasquez2020/urf-core/blob/main/instances/EXT-1-Heisenberg.json" class="action-link">Open JSON</a></div>
         </div>
 
         <div class="project-row">
           <div class="title-cell">
-            <div class="title-main"><i class="fa-solid fa-network-wired" style="color: var(--accent-blue);"></i> Logic-Width Mapping <span class="tag tag-purple">High Priority</span></div>
+            <div class="title-main"><i class="fa-solid fa-wave-square" style="color: var(--accent-blue);"></i> Ornstein–Uhlenbeck</div>
+            <div class="title-desc">Operator on \( L^2(\mathbb{R},\gamma) \) | Gap = 1.0</div>
+          </div>
+          <div style="font-family:monospace; font-size:13px;">EXT-2-STAT</div>
+          <div><span class="tag tag-green">VERIFIED</span></div>
+          <div><a href="https://github.com/inaciovasquez2020/urf-core/blob/main/instances/EXT-2-Ornstein-Uhlenbeck.json" class="action-link">Open JSON</a></div>
+        </div>
+
+        <div class="project-row">
+          <div class="title-cell">
+            <div class="title-main"><i class="fa-solid fa-microchip" style="color: var(--tag-purple);"></i> Logic-Width Dependency</div>
             <div class="title-desc">Resolution for \( tw \le t \) regimes: \( k \ge f(t) \)</div>
           </div>
-          <div class="meta-cell">Structural</div>
-          <div class="meta-cell">Closed</div>
-          <div class="action-cell"><a href="https://github.com/inaciovasquez2020/urf-core">View Repo</a></div>
-        </div>
-
-        <div class="project-row">
-          <div class="title-cell">
-            <div class="title-main"><i class="fa-solid fa-code" style="color: #f0b429;"></i> URF-SG Standard <span class="tag tag-blue">Schema</span></div>
-            <div class="title-desc">JSON-Schema contract for Machine-Verifiable Rigidity.</div>
-          </div>
-          <div class="meta-cell">Audit</div>
-          <div class="meta-cell">v1.0-alpha</div>
-          <div class="action-cell"><a href="https://github.com/inaciovasquez2020/urf-core/blob/main/standards/URF-SG.json">View Code</a></div>
+          <div style="font-family:monospace; font-size:13px;">CORE-LW-01</div>
+          <div><span class="tag tag-purple">HIGH PRIO</span></div>
+          <div><a href="https://github.com/inaciovasquez2020/urf-core" class="action-link">Audit Logic</a></div>
         </div>
 
       </div>
       
-      <div style="margin-top: 40px; border-top: 1px solid var(--border); padding-top: 20px; font-size: 12px; color: var(--text-muted); line-height: 1.6;">
-        © 2026 Inacio F. Vasquez — ORCID: 0009-0008-8459-3400<br>
-        <em>Institutional uptake remains the primary external uncertainty. Core requirements verified.</em>
+      <div style="margin-top:40px; font-size:11px; color:var(--text-muted); line-height:1.6;">
+        © 2026 Inacio F. Vasquez | ORCID: 0009-0008-8459-3400<br>
+        <em>Institutional uptake remains the primary external uncertainty. Core mathematical results verified.</em>
       </div>
     </div>
   </main>
