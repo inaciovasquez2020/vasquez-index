@@ -49,5 +49,20 @@ For formal audits or institutional inquiries:
 * **Web:** [www.vasquezresearch.com](https://www.vasquezresearch.com)
 * **ORCID:** [0009-0008-8459-3400](https://orcid.org/0009-0008-8459-3400)
 
----
-© 2026 Inacio F. Vasquez. Independent Research Program.
+
+```markdown
+## Research Status
+
+This index aggregates the Unified Rigidity Framework and its certified submodules.
+All entries are traceable to primary repositories with explicit status labeling.
+
+## Citation
+
+```bibtex
+@manual{Vasquez_Index_2026,
+  author       = {Vasquez, Inacio F.},
+  title        = {Vasquez Research Index — Canonical Program Hub},
+  institution  = {Independent Research Program},
+  year         = {2026},
+  url          = {https://github.com/inaciovasquez2020/vasquez-index}
+}
