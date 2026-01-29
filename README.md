@@ -3,7 +3,7 @@
 
 ---
 
-### 🛡️ Institutional Verification
+###  Institutional Verification
 * **Repository Role:** Primary Research Index & Citable Hub
 * **Framework Alignment:** Unified Rigidity Framework (URF)
 * **Status:** Core Logic Closed / Institutional Uptake Active
@@ -66,3 +66,4 @@ All entries are traceable to primary repositories with explicit status labeling.
   year         = {2026},
   url          = {https://github.com/inaciovasquez2020/vasquez-index}
 }
+
