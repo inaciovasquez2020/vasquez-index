@@ -10,19 +10,25 @@
   <meta property="og:description" content="Establishing formal closure for spectral rigidity in finite systems.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   <style>
+    /* Updated Dark-Tech Root */
     :root {
-      --slate-bg: #1e2329;
-      --accent-green: #3f9c35;
-      --text-main: #2f343b;
-      --text-muted: #69707a;
-      --border-light: #eef0f2;
-      --white: #ffffff;
+      --bg-main: #0b1220;
+      --bg-header: #0f172a;
+      --bg-section: #0e1626;
+      --text-main: #e5e7eb;
+      --text-muted: #9aa5b1;
+      --text-title: #f8fafc;
+      --accent: #38bdf8;
+      --accent-soft: #7dd3fc;
+      --border: #1f2933;
+      --border-soft: #2a3644;
+      --success: #10b981;
     }
 
     * { box-sizing: border-box; }
@@ -30,14 +36,15 @@
       margin: 0; 
       font-family: 'Inter', sans-serif; 
       color: var(--text-main); 
-      background-color: #f8f9fa; 
-      line-height: 1.6;
+      background: linear-gradient(180deg, #060b16, var(--bg-main) 40%, #060b16);
+      line-height: 1.7;
       scroll-behavior: smooth;
     }
 
     /* --- Navigation --- */
     nav {
-      background: var(--slate-bg);
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(10px);
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
@@ -45,85 +52,96 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-bottom: 1px solid var(--border);
     }
-    .nav-brand { color: var(--white); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 10px; }
-    .nav-brand i { color: var(--accent-green); }
+    .nav-brand { color: var(--text-title); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+    .nav-brand i { color: var(--accent); }
     .nav-links { display: flex; gap: 25px; }
-    .nav-links a { color: #cfd3d8; text-decoration: none; font-size: 13px; font-weight: 500; transition: 0.2s; }
-    .nav-links a:hover { color: var(--white); }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 13px; font-weight: 500; transition: 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
 
     /* --- Hero --- */
-    .hero {
-      background: var(--white);
-      border-bottom: 1px solid var(--border-light);
-      padding: 80px 20px;
+    header.hero {
+      background: linear-gradient(135deg, #060b16, #0f172a);
+      padding: 4.5rem 2rem 3rem;
       text-align: center;
+      border-bottom: 1px solid var(--border);
     }
     .hero h1 { 
       font-family: 'Libre Baskerville', serif; 
-      font-size: 2.8rem; 
+      font-size: 2.9rem; 
       margin: 0; 
-      color: var(--slate-bg);
+      color: var(--text-title);
       letter-spacing: -1px;
     }
     .hero p { max-width: 700px; margin: 20px auto; font-size: 1.1rem; color: var(--text-muted); }
     
     .orcid-badge {
-      display: inline-flex; align-items: center; gap: 8px; background: #f1f3f5;
+      display: inline-flex; align-items: center; gap: 8px; background: rgba(56, 189, 248, 0.05);
+      border: 1px solid var(--border);
       padding: 6px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;
-      color: #555; text-decoration: none;
+      color: var(--accent-soft); text-decoration: none;
     }
 
-    /* --- Container --- */
+    /* --- Sections & Cards --- */
     .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-    section { margin-bottom: 80px; }
+    section { 
+      margin-bottom: 3.5rem; 
+      padding: 2.2rem 2.4rem;
+      background: var(--bg-section);
+      border: 1px solid var(--border-soft);
+      border-radius: 6px;
+    }
     h2.section-label { 
-      font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; 
-      color: var(--accent-green); border-bottom: 2px solid var(--border-light);
-      padding-bottom: 10px; margin-bottom: 30px;
+      font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; 
+      color: var(--accent); border-bottom: 1px solid var(--border);
+      padding-bottom: 0.45rem; margin-bottom: 1.3rem;
     }
 
-    /* --- Significance Card --- */
-    .sig-card {
-      background: var(--white);
-      border: 1px solid var(--border-light);
-      padding: 40px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-    }
     .sig-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px; }
-    .sig-feature h4 { margin: 0 0 10px 0; font-size: 1rem; color: var(--slate-bg); }
+    .sig-feature h4 { margin: 0 0 10px 0; font-size: 1rem; color: var(--text-title); }
     .sig-feature p { font-size: 14px; margin: 0; color: var(--text-muted); }
 
-    /* --- Project Cards --- */
     .project-card {
-      background: var(--white);
-      border: 1px solid var(--border-light);
+      background: #050910;
+      border: 1px solid var(--border);
       padding: 25px;
-      border-radius: 6px;
+      border-radius: 4px;
       transition: 0.2s;
       text-decoration: none;
       color: inherit;
       display: block;
       margin-bottom: 20px;
     }
-    .project-card:hover { transform: translateY(-3px); border-color: var(--accent-green); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-    .status-badge { font-size: 10px; font-weight: 800; text-transform: uppercase; padding: 3px 10px; border-radius: 12px; background: #eee; }
-    .status-closed { background: #d3f9d8; color: #2b8a3e; }
+    .project-card:hover { border-color: var(--accent); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+    
+    .status-badge { font-size: 10px; font-weight: 800; text-transform: uppercase; padding: 3px 10px; border-radius: 4px; border: 1px solid var(--border); }
+    .status-closed { color: var(--success); border-color: var(--success); background: rgba(16, 185, 129, 0.1); }
 
-    /* --- Footer --- */
+    /* --- Code / Math --- */
+    .mono-box { 
+      font-family: 'JetBrains Mono', monospace; 
+      font-size: 13px; 
+      background: #050910; 
+      padding: 15px; 
+      border-radius: 4px; 
+      margin-top: 15px; 
+      border: 1px solid var(--border);
+      color: var(--accent-soft);
+    }
+
     footer {
-      background: var(--slate-bg);
-      color: #9aa0a6;
-      padding: 60px 20px;
+      background: var(--bg-header);
+      color: var(--text-muted);
+      padding: 4.5rem 2rem;
       text-align: center;
       font-size: 13px;
+      border-top: 1px solid var(--border);
     }
 
     @media (max-width: 768px) {
       .sig-grid { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 2rem; }
+      .hero h1 { font-size: 2.2rem; }
     }
   </style>
 </head>
@@ -131,22 +149,22 @@
 
   <nav>
     <a href="#" class="nav-brand">
-      <i class="fa-solid fa-layer-group"></i>
-      <span>VASQUEZ LAB</span>
+      <i class="fa-solid fa-microchip"></i>
+      <span>VASQUEZ_LAB</span>
     </a>
     <div class="nav-links">
       <a href="#significance">Significance</a>
       <a href="#research">Research</a>
-      <a href="dashboard.html">Artifact Dashboard</a>
-      <a href="https://github.com/inaciovasquez2020">GitHub</a>
+      <a href="dashboard.html">Technical Dashboard</a>
+      <a href="publications.html">Manuscripts</a>
     </div>
   </nav>
 
   <header class="hero">
     <h1>Inacio F. Vasquez</h1>
-    <p>Independent Research Program (2026). Specialized in Computational Rigidity, Information Topology, and Finite Model Theory.</p>
+    <p>Lead Architect: Unified Rigidity Framework (URF). Establishing formal closure for spectral rigidity in finite systems.</p>
     <a href="https://orcid.org/0009-0008-8459-3400" class="orcid-badge" target="_blank">
-      <i class="fa-brands fa-orcid" style="color: #A6CE39;"></i> 0009-0008-8459-3400
+      <i class="fa-brands fa-orcid"></i> 0009-0008-8459-3400
     </a>
   </header>
 
@@ -154,64 +172,62 @@
     
     <section id="significance">
       <h2 class="section-label">Core Achievement</h2>
-      <div class="sig-card">
-        <div style="text-align: center; margin-bottom: 30px;">
-          <h3 style="font-family: 'Libre Baskerville', serif; font-size: 1.8rem; margin: 0;">The URF Closure</h3>
-          <p style="font-weight: 600; color: var(--accent-green);">Deterministic Verification of Local&rarr;Global Structural Stability</p>
+      <div style="text-align: center; margin-bottom: 30px;">
+        <h3 style="font-family: 'Libre Baskerville', serif; font-size: 1.8rem; margin: 0; color: var(--text-title);">The URF Closure</h3>
+        <p style="font-weight: 600; color: var(--accent);">Deterministic Verification of Structural Stability</p>
+      </div>
+      
+      <p>The <strong>Unified Rigidity Framework (URF)</strong> resolves a fundamental impasse in Finite Model Theory: the inability of local logic ($FO^k$) to characterize global structural stability in the presence of expander obstructions.</p>
+      
+      <div class="sig-grid">
+        <div class="sig-feature">
+          <h4><i class="fa-solid fa-code-branch" style="color: var(--accent);"></i> Logic-Width Dependency</h4>
+          <p>Established the threshold $k \ge f(tw)$ where local homogeneity forces global rigidity—shifting the field from statistical probability to mathematical certainty.</p>
         </div>
-        
-        <p>The <strong>Unified Rigidity Framework (URF)</strong> resolves a fundamental impasse in Finite Model Theory: the inability of local logic ($FO^k$) to characterize global structural stability in the presence of expander obstructions.</p>
-        
-        <div class="sig-grid">
-          <div class="sig-feature">
-            <h4><i class="fa-solid fa-microchip" style="color: var(--accent-green);"></i> Computational Determinism</h4>
-            <p>By establishing the <strong>Logic-Width Dependency</strong> $k \ge f(tw)$, this work defines the threshold where local homogeneity forces global rigidity—mathematical certainty over statistical probability.</p>
-          </div>
-          <div class="sig-feature">
-            <h4><i class="fa-solid fa-shield-halved" style="color: var(--accent-green);"></i> Machine-Verification</h4>
-            <p>Moving beyond prose-based proofs via the <strong>URF-SG Standard</strong>. Machine-readable artifacts allow for the <strong>Deterministic Auditing</strong> of complex operators in milliseconds.</p>
-          </div>
+        <div class="sig-feature">
+          <h4><i class="fa-solid fa-shield-check" style="color: var(--accent);"></i> Deterministic Audit</h4>
+          <p>Verified structural artifacts via the <strong>URF-SG Standard</strong>. Machine-readable witnesses allow for the real-time auditing of complex operator systems.</p>
         </div>
       </div>
     </section>
 
     <section id="research">
-      <h2 class="section-label">Research Pipeline</h2>
+      <h2 class="section-label">Tier A Repositories</h2>
       
       <a href="dashboard.html" class="project-card">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-          <span style="font-weight:700; font-size:1.1rem;">Unified Rigidity Framework (Core)</span>
-          <span class="status-badge status-closed">Mathematically Closed</span>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+          <span style="font-weight:700; font-size:1.1rem; color:var(--text-title);">urf-core</span>
+          <span class="status-badge status-closed">Closed Framework</span>
         </div>
         <p style="font-size:14px; color:var(--text-muted);">
           Resolution of the Local&rarr;Global correspondence problem. Audited against Heisenberg and Ornstein–Uhlenbeck witnesses.
         </p>
-        <div style="font-family:monospace; font-size:12px; background:#f8f9fa; padding:8px; border-radius:4px; margin-top:10px; border:1px solid #eee;">
+        <div class="mono-box">
           $$ \inf \mathrm{Spec}(\Delta_H \mid \ker(\mathrm{Per})^\perp) > 0 $$
         </div>
       </a>
 
       <a href="https://github.com/inaciovasquez2020/urc-minimal-blockchain" class="project-card">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-          <span style="font-weight:700; font-size:1.1rem;">URC Minimal Blockchain</span>
-          <span class="status-badge">Active Repo</span>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+          <span style="font-weight:700; font-size:1.1rem; color:var(--text-title);">urc-blockchain</span>
+          <span class="status-badge" style="color:var(--accent); border-color:var(--accent);">Active Development</span>
         </div>
-        <p style="font-size:14px; color:var(--text-muted);">Implementation of Nakamoto consensus optimized for deterministic capacity retention.</p>
+        <p style="font-size:14px; color:var(--text-muted);">Consensus implementation optimized for deterministic capacity retention and audit transparency.</p>
       </a>
     </section>
 
     <section id="contact">
       <h2 class="section-label">Technical Correspondence</h2>
-      <p>For institutional inquiries or verification audit requests:</p>
-      <a href="mailto:inaciovasquez2020@gmail.com" style="color: var(--accent-green); font-weight: 700; text-decoration: none; font-size: 1.1rem;">inaciovasquez2020@gmail.com</a>
+      <p>Inquiries regarding URF closure or verification audit requests:</p>
+      <a href="mailto:inaciovasquez2020@gmail.com" style="color: var(--accent); font-weight: 700; text-decoration: none; font-size: 1.1rem; font-family: 'JetBrains Mono', monospace;">inaciovasquez2020@gmail.com</a>
     </section>
 
   </div>
 
   <footer>
     <p>&copy; 2026 Inacio F. Vasquez. Independent Research Program.</p>
-    <p>ORCID: 0009-0008-8459-3400 | Core Mathematically Closed</p>
-    <p style="font-style: italic; opacity: 0.6; max-width: 600px; margin: 15px auto 0;">
+    <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; margin-top: 10px;">OPERATIONAL STATUS: MATHEMATICALLY CLOSED | DETERMINISTIC AUDIT ENABLED</p>
+    <p style="font-style: italic; opacity: 0.5; max-width: 600px; margin: 25px auto 0;">
       Remaining uncertainty is external (adoption, citation, institutional uptake).
     </p>
   </footer>
