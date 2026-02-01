@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Inacio F. Vasquez — Independent Research Program</title>
+  <title>Inacio F. Vasquez — URF Closure & The CCL Wall</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <meta name="description" content="Official portal for the Unified Rigidity Framework (URF). Deterministic Verification of Local→Global Structural Stability.">
-  <meta property="og:title" content="Inacio F. Vasquez — URF Closure">
-  <meta property="og:description" content="Establishing formal closure for spectral rigidity in finite systems.">
+  <meta name="description" content="Official portal for the Unified Rigidity Framework (URF). Reduction of global stability to the Clause Contraction Lemma (CCL).">
+  <meta property="og:title" content="Inacio F. Vasquez — The CCL Wall">
+  <meta property="og:description" content="Terminal reduction of spectral rigidity in finite systems.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -28,6 +28,7 @@
       --border: #1f2933;
       --border-soft: #2a3644;
       --success: #10b981;
+      --warning: #ef4444;
     }
 
     * { box-sizing: border-box; }
@@ -62,23 +63,23 @@
     /* --- Hero --- */
     header.hero {
       background: linear-gradient(135deg, #060b16, #0f172a);
-      padding: 4.5rem 2rem 3rem;
+      padding: 5.5rem 2rem 4rem;
       text-align: center;
       border-bottom: 1px solid var(--border);
     }
     .hero h1 { 
       font-family: 'Libre Baskerville', serif; 
-      font-size: 2.9rem; 
+      font-size: 3rem; 
       margin: 0; 
       color: var(--text-title);
       letter-spacing: -1px;
     }
-    .hero p { max-width: 700px; margin: 20px auto; font-size: 1.1rem; color: var(--text-muted); }
+    .hero p { max-width: 750px; margin: 25px auto; font-size: 1.15rem; color: var(--text-muted); }
     
     .orcid-badge {
       display: inline-flex; align-items: center; gap: 8px; background: rgba(56, 189, 248, 0.05);
       border: 1px solid var(--border);
-      padding: 6px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;
+      padding: 8px 18px; border-radius: 20px; font-size: 12px; font-weight: 600;
       color: var(--accent-soft); text-decoration: none;
     }
 
@@ -94,12 +95,8 @@
     h2.section-label { 
       font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; 
       color: var(--accent); border-bottom: 1px solid var(--border);
-      padding-bottom: 0.45rem; margin-bottom: 1.3rem;
+      padding-bottom: 0.45rem; margin-bottom: 1.8rem;
     }
-
-    .sig-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px; }
-    .sig-feature h4 { margin: 0 0 10px 0; font-size: 1rem; color: var(--text-title); }
-    .sig-feature p { font-size: 14px; margin: 0; color: var(--text-muted); }
 
     .project-card {
       background: #050910;
@@ -110,52 +107,37 @@
       text-decoration: none;
       color: inherit;
       display: block;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
-    .project-card:hover { border-color: var(--accent); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+    .project-card:hover { border-color: var(--accent); transform: translateY(-2px); }
     
     .status-badge { font-size: 10px; font-weight: 800; text-transform: uppercase; padding: 3px 10px; border-radius: 4px; border: 1px solid var(--border); }
     .status-closed { color: var(--success); border-color: var(--success); background: rgba(16, 185, 129, 0.1); }
-
-    /* Publication Styles */
-    .artifact-link {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px;
-      background: #050910;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      text-decoration: none;
-      transition: 0.2s;
-    }
-    .artifact-link:hover { border-color: var(--accent); }
-    .artifact-title { color: var(--text-title); font-weight: 600; font-size: 15px; }
-    .artifact-doi { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent); }
+    .status-open { color: var(--warning); border-color: var(--warning); background: rgba(239, 68, 68, 0.1); }
 
     .mono-box { 
       font-family: 'JetBrains Mono', monospace; 
-      font-size: 13px; 
-      background: #050910; 
-      padding: 15px; 
+      font-size: 14px; 
+      background: #0b1220; 
+      padding: 18px; 
       border-radius: 4px; 
       margin-top: 15px; 
-      border: 1px solid var(--border);
+      border: 1px solid var(--border-soft);
       color: var(--accent-soft);
+      text-align: center;
     }
 
     footer {
       background: var(--bg-header);
       color: var(--text-muted);
-      padding: 4.5rem 2rem;
+      padding: 5rem 2rem;
       text-align: center;
       font-size: 13px;
       border-top: 1px solid var(--border);
     }
 
     @media (max-width: 768px) {
-      .sig-grid { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 2.2rem; }
+      .hero h1 { font-size: 2.4rem; }
     }
   </style>
 </head>
@@ -167,16 +149,16 @@
       <span>VASQUEZ_LAB</span>
     </a>
     <div class="nav-links">
-      <a href="#significance">Significance</a>
-      <a href="#research">Research</a>
-      <a href="#manuscripts">Manuscripts</a>
-      <a href="dashboard.html">Technical Dashboard</a>
+      <a href="#reduction">The Reduction</a>
+      <a href="#repos">Repositories</a>
+      <a href="dashboard.html">Artifacts</a>
+      <a href="mailto:inacio@vasquezresearch.com">Contact</a>
     </div>
   </nav>
 
   <header class="hero">
     <h1>Inacio F. Vasquez</h1>
-    <p>Lead Architect: Unified Rigidity Framework (URF). Establishing formal closure for spectral rigidity in finite systems.</p>
+    <p>Established the <strong>Unified Rigidity Framework (URF)</strong>. Currently hosting the terminal reduction of spectral gap verification for complex finite systems.</p>
     <a href="https://orcid.org/0009-0008-8459-3400" class="orcid-badge" target="_blank">
       <i class="fa-brands fa-orcid"></i> 0009-0008-8459-3400
     </a>
@@ -184,73 +166,69 @@
 
   <div class="container">
     
-    <section id="significance">
-      <h2 class="section-label">Core Achievement</h2>
-      <div style="text-align: center; margin-bottom: 30px;">
-        <h3 style="font-family: 'Libre Baskerville', serif; font-size: 1.8rem; margin: 0; color: var(--text-title);">The URF Closure</h3>
-        <p style="font-weight: 600; color: var(--accent);">Deterministic Verification of Structural Stability</p>
-      </div>
+    <section id="reduction">
+      <h2 class="section-label">Terminal Status: The Wall</h2>
+      <p style="margin-bottom: 25px;">The URF program has reached its irreducible mathematical form. All global rigidity markers are now formally tied to the behavior of a single local coefficient.</p>
       
-      <p>The <strong>Unified Rigidity Framework (URF)</strong> resolves a fundamental impasse in Finite Model Theory: the inability of local logic ($FO^k$) to characterize global structural stability in the presence of expander obstructions.</p>
-      
-      <div class="sig-grid">
-        <div class="sig-feature">
-          <h4><i class="fa-solid fa-code-branch" style="color: var(--accent);"></i> Logic-Width Dependency</h4>
-          <p>Established the threshold $k \ge f(tw)$ where local homogeneity forces global rigidity—shifting the field from statistical probability to mathematical certainty.</p>
+      <div class="project-card" style="border-left: 4px solid var(--warning);">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+          <span style="font-weight:700; font-size:1.1rem; color:var(--text-title);">Clause Contraction Lemma (CCL)</span>
+          <span class="status-badge status-open">Unique Obstruction</span>
         </div>
-        <div class="sig-feature">
-          <h4><i class="fa-solid fa-shield-check" style="color: var(--accent);"></i> Deterministic Audit</h4>
-          <p>Verified structural artifacts via the <strong>URF-SG Standard</strong>. Machine-readable witnesses allow for the real-time auditing of complex operator systems.</p>
+        <p style="font-size:14px; color:var(--text-muted);">
+          Global stability is contingent upon local TV-contraction. URF_law3 holds if and only if the heat-bath kernel strictly contracts boundary influence.
+        </p>
+        <div class="mono-box">
+          $$ (\Delta-1)(k-1)\rho < 1 $$
         </div>
+        <p style="font-size: 12px; margin-top: 15px; color: var(--warning); font-family: 'JetBrains Mono', monospace;">
+          &gt; Status: Proof pending local resampling audit.
+        </p>
       </div>
     </section>
 
-    <section id="research">
-      <h2 class="section-label">Tier A Repositories</h2>
+    <section id="repos">
+      <h2 class="section-label">Core Repositories</h2>
       
-      <a href="dashboard.html" class="project-card">
+      <a href="https://github.com/inaciovasquez2020/urf-core" class="project-card">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
           <span style="font-weight:700; font-size:1.1rem; color:var(--text-title);">urf-core</span>
-          <span class="status-badge status-closed">Closed Framework</span>
+          <span class="status-badge status-closed">Mathematically Closed</span>
         </div>
         <p style="font-size:14px; color:var(--text-muted);">
-          Resolution of the Local&rarr;Global correspondence problem. Audited against Heisenberg and Ornstein–Uhlenbeck witnesses.
+          Resolution of the Local&rarr;Global correspondence. Proof of spectral stability for $H$-complexes via the Rank Dichotomy Theorem.
         </p>
-        <div class="mono-box">
-          $$ \inf \mathrm{Spec}(\Delta_H \mid \ker(\mathrm{Per})^\perp) > 0 $$
+        <div class="mono-box" style="color: var(--success);">
+          $$ \inf \mathrm{Spec}(\Delta_H \mid \ker(\Pi)^\perp) > 0 $$
         </div>
       </a>
 
       <a href="https://github.com/inaciovasquez2020/urc-minimal-blockchain" class="project-card">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
           <span style="font-weight:700; font-size:1.1rem; color:var(--text-title);">urc-blockchain</span>
-          <span class="status-badge" style="color:var(--accent); border-color:var(--accent);">Active Development</span>
+          <span class="status-badge" style="color:var(--accent); border-color:var(--accent);">Active</span>
         </div>
-        <p style="font-size:14px; color:var(--text-muted);">Consensus implementation optimized for deterministic capacity retention and audit transparency.</p>
+        <p style="font-size:14px; color:var(--text-muted);">Physical implementation of deterministic capacity. Utilizing URF witnesses for real-time consensus auditing.</p>
       </a>
     </section>
 
     <section id="manuscripts">
-      <h2 class="section-label">Formal Manuscripts</h2>
-      <a href="https://doi.org/10.5281/zenodo.18450375" class="artifact-link" target="_blank">
-        <span class="artifact-title">Rank Dichotomy Theorem (CAT(0) cube complexes)</span>
-        <span class="artifact-doi">DOI:10.5281/zenodo.18450375</span>
+      <h2 class="section-label">Formal Manuscript</h2>
+      <a href="https://doi.org/10.5281/zenodo.18450375" target="_blank" style="text-decoration: none; display: flex; justify-content: space-between; align-items: center; padding: 20px; background: #050910; border: 1px solid var(--border); border-radius: 4px;">
+        <span style="color: var(--text-title); font-weight: 600;">Rank Dichotomy Theorem (CAT(0) complexes)</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent);">DOI:10.5281/zenodo.18450375</span>
       </a>
-    </section>
-
-    <section id="contact">
-      <h2 class="section-label">Technical Correspondence</h2>
-      <p>Inquiries regarding URF closure or verification audit requests:</p>
-      <a href="mailto:inacio@vasquezresearch.com" style="color: var(--accent); font-weight: 700; text-decoration: none; font-size: 1.1rem; font-family: 'JetBrains Mono', monospace;">inacio@vasquezresearch.com</a>
     </section>
 
   </div>
 
   <footer>
-    <p>&copy; 2026 Inacio F. Vasquez. Independent Research Program.</p>
-    <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; margin-top: 10px;">OPERATIONAL STATUS: MATHEMATICALLY CLOSED | DETERMINISTIC AUDIT ENABLED</p>
-    <p style="font-style: italic; opacity: 0.5; max-width: 600px; margin: 25px auto 0;">
-      Remaining uncertainty is external (adoption, citation, institutional uptake).
+    <p>&copy; 2026 Inacio F. Vasquez. Unified Rigidity Framework Program.</p>
+    <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; margin-top: 15px; color: var(--accent);">
+      [SYSTEM STATE: REDUCED TO CCL] | [DETERMINISTIC_AUDIT: ENABLED]
+    </p>
+    <p style="font-style: italic; opacity: 0.5; max-width: 600px; margin: 30px auto 0;">
+      "The global is the local, iterated until the boundary vanishes."
     </p>
   </footer>
 
