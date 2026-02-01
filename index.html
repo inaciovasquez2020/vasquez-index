@@ -1,4 +1,4 @@
-z<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -16,7 +16,6 @@ z<!DOCTYPE html>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   <style>
-    /* Updated Dark-Tech Root */
     :root {
       --bg-main: #0b1220;
       --bg-header: #0f172a;
@@ -118,7 +117,22 @@ z<!DOCTYPE html>
     .status-badge { font-size: 10px; font-weight: 800; text-transform: uppercase; padding: 3px 10px; border-radius: 4px; border: 1px solid var(--border); }
     .status-closed { color: var(--success); border-color: var(--success); background: rgba(16, 185, 129, 0.1); }
 
-    /* --- Code / Math --- */
+    /* Publication Styles */
+    .artifact-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      background: #050910;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .artifact-link:hover { border-color: var(--accent); }
+    .artifact-title { color: var(--text-title); font-weight: 600; font-size: 15px; }
+    .artifact-doi { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent); }
+
     .mono-box { 
       font-family: 'JetBrains Mono', monospace; 
       font-size: 13px; 
@@ -155,8 +169,8 @@ z<!DOCTYPE html>
     <div class="nav-links">
       <a href="#significance">Significance</a>
       <a href="#research">Research</a>
+      <a href="#manuscripts">Manuscripts</a>
       <a href="dashboard.html">Technical Dashboard</a>
-      <a href="publications.html">Manuscripts</a>
     </div>
   </nav>
 
@@ -213,6 +227,14 @@ z<!DOCTYPE html>
           <span class="status-badge" style="color:var(--accent); border-color:var(--accent);">Active Development</span>
         </div>
         <p style="font-size:14px; color:var(--text-muted);">Consensus implementation optimized for deterministic capacity retention and audit transparency.</p>
+      </a>
+    </section>
+
+    <section id="manuscripts">
+      <h2 class="section-label">Formal Manuscripts</h2>
+      <a href="https://doi.org/10.5281/zenodo.18450375" class="artifact-link" target="_blank">
+        <span class="artifact-title">Rank Dichotomy Theorem (CAT(0) cube complexes)</span>
+        <span class="artifact-doi">DOI:10.5281/zenodo.18450375</span>
       </a>
     </section>
 
