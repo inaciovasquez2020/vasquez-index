@@ -26,5 +26,5 @@ Citation
   author       = {Vasquez, Inacio F.},
   title        = {Vasquez Index: Canonical Repository Registry and Dashboard},
   year         = {2026},
-  url          = {https://inaciovasquez2020.github.io/vasquez-index/}
+  url          = {[https://inaciovasquez2020.github.io/vasquez-index/](https://inaciovasquez2020.github.io/vasquez-index/#)}
 }
