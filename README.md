@@ -12,12 +12,24 @@ To provide a single canonical registry of enabled repositories, stable reference
 Enabled Repositories and DOIs
 
 Repository Handle	DOI Reference
-inaciovasquez2020/chronos-urf-rr	10.5281/zenodo.18403707
-inaciovasquez2020/rank-dichotomy-cat0	10.5281/zenodo.18450375
-inaciovasquez2020/scientific-infrastructure	10.5281/zenodo.18442204
-inaciovasquez2020/support-drift	10.5281/zenodo.18434555
-inaciovasquez2020/urf-axioms	10.5281/zenodo.18442235
-inaciovasquez2020/urf-core	10.5281/zenodo.18437927
+inaciovasquez2020/chronos-urf-rr	
+10.5281/zenodo.18403707
+
+inaciovasquez2020/rank-dichotomy-cat0	
+10.5281/zenodo.18450375
+
+inaciovasquez2020/scientific-infrastructure	
+10.5281/zenodo.18442204
+
+inaciovasquez2020/support-drift	
+10.5281/zenodo.18434555
+
+inaciovasquez2020/urf-axioms	
+10.5281/zenodo.18442235
+
+inaciovasquez2020/urf-core	
+10.5281/zenodo.18437927
+
 Implementation Notes
 
 Zenodo Connectivity: If repositories do not appear in Zenodo, ensure third-party access is enabled within the Zenodo integration settings.
