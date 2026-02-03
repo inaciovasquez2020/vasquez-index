@@ -20,12 +20,6 @@ urf-axioms	10.5281/zenodo.18442235
 urf-core	10.5281/zenodo.18437927
 Implementation Notes
 
-Zenodo Connectivity: If repositories do not appear in Zenodo, ensure third-party access is enabled within the Zenodo integration settings.
-
-Access Control: Private repositories are not supported by this index.
-
-Execution Status: This is an index and registry repository. It contains metadata and configuration for the dashboard but no executable research code.
-
 Citation
 
 Code snippet
