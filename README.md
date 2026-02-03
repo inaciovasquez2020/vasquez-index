@@ -7,7 +7,7 @@ Dashboard
 
 Purpose: To provide a single, authoritative registry of enabled repositories, stable version references, and reproducibility links for the Vasquez research ecosystem.
 
-📂 Enabled Repositories & DOIs
+Enabled Repositories & DOIs
 
 The following repositories are currently indexed. Each DOI link points to a stable, citable version on Zenodo.
 
@@ -18,7 +18,7 @@ scientific-infrastructure	10.5281/zenodo.18442204
 support-drift	10.5281/zenodo.18434555
 urf-axioms	10.5281/zenodo.18442235
 urf-core	10.5281/zenodo.18437927
-📝 Technical Notes
+Technical Notes
 
 Zenodo Integration: If a repository does not appear in the registry, ensure that third-party access is enabled in your GitHub/Zenodo settings.
 
@@ -26,7 +26,7 @@ Visibility: Only public repositories are supported.
 
 Execution: This repository contains registry data and metadata only; it does not contain executable code.
 
-📜 Citation
+Citation
 
 If you use this index or the referenced repositories in your research, please use the following citation:
 
