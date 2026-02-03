@@ -1,15 +1,15 @@
 Vasquez Index — Canonical Registry Dashboard
-This repository serves as the central backbone for the registry pages hosted at:
+This repository backs the registry pages at:
 
 Main Registry
 
 Dashboard
 
-Purpose: To provide a single, authoritative registry of enabled repositories, stable version references, and reproducibility links for the Vasquez research ecosystem.
+Purpose
 
-Enabled Repositories & DOIs
+To provide a single canonical registry of enabled repositories, stable references, and reproducibility links.
 
-The following repositories are currently indexed. Each DOI link points to a stable, citable version on Zenodo.
+Enabled Repositories and DOIs
 
 Repository	DOI Reference
 chronos-urf-rr	10.5281/zenodo.18403707
@@ -18,17 +18,15 @@ scientific-infrastructure	10.5281/zenodo.18442204
 support-drift	10.5281/zenodo.18434555
 urf-axioms	10.5281/zenodo.18442235
 urf-core	10.5281/zenodo.18437927
-Technical Notes
+Implementation Notes
 
-Zenodo Integration: If a repository does not appear in the registry, ensure that third-party access is enabled in your GitHub/Zenodo settings.
+Zenodo Connectivity: If repositories do not appear in Zenodo, ensure third-party access is enabled within the Zenodo integration settings.
 
-Visibility: Only public repositories are supported.
+Access Control: Private repositories are not supported by this index.
 
-Execution: This repository contains registry data and metadata only; it does not contain executable code.
+Execution Status: This is an index and registry repository. It contains metadata and configuration for the dashboard but no executable research code.
 
 Citation
-
-If you use this index or the referenced repositories in your research, please use the following citation:
 
 Code snippet
 @manual{Vasquez_Index_2026,
