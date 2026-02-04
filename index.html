@@ -28,6 +28,15 @@
       margin-bottom: 6px;
       color: #f8fafc;
     }
+    h2 {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #3b82f6;
+      margin-top: 40px;
+      border-left: 3px solid #3b82f6;
+      padding-left: 15px;
+    }
     .sub {
       color: #9ca3af;
       margin-bottom: 50px;
@@ -58,6 +67,16 @@
       font-size: 14px;
       margin-top: 8px;
     }
+    .status-tag {
+      font-size: 10px;
+      background: rgba(16, 185, 129, 0.1);
+      color: #10b981;
+      border: 1px solid #10b981;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
     footer {
       margin-top: 80px;
       padding-top: 20px;
@@ -66,39 +85,52 @@
       font-size: 12px;
       text-align: center;
     }
+    .barrier-link {
+        display: inline-block;
+        margin-top: 10px;
+        color: #3b82f6;
+        text-decoration: none;
+        font-weight: bold;
+        border-bottom: 1px solid transparent;
+    }
+    .barrier-link:hover {
+        border-bottom: 1px solid #3b82f6;
+    }
   </style>
 </head>
 <body>
 <main>
   <h1>Vasquez Research</h1>
-  <div class="sub">Public Network Index · Canonical Endpoints</div>
+  <div class="sub">Public Network Index · Canonical Endpoints · 2026.Q1</div>
 
   <div class="link-block">
-    <a href="https://inaciovasquez2020.github.io/" target="_blank">inaciovasquez2020.github.io</a>
-    <div class="desc">Primary Research Portal: The CCL Wall & Unified Rigidity Framework.</div>
+    <a href="https://inaciovasquez2020.github.io/" target="_blank">inaciovasquez2020.github.io</a> <span class="status-tag">CORE CLOSED</span>
+    <div class="desc">Primary Research Portal: Final Wall (CLR) resolution and the Unified Rigidity Framework (URF).</div>
   </div>
 
   <div class="link-block">
     <a href="https://inaciovasquez2020.github.io/capacity-locality-certification/" target="_blank">capacity-locality-certification</a>
-    <div class="desc">CLC Protocol: Public standard for certifying structural unreliability in predictive AI.</div>
+    <div class="desc">CLC Protocol: Public standard for certifying structural unreliability in predictive AI systems under information limits.</div>
   </div>
 
   <div class="link-block">
     <a href="https://github.com/inaciovasquez2020/" target="_blank">github.com/inaciovasquez2020</a>
-    <div class="desc">Infrastructure layer: Core repositories and active URF implementations.</div>
+    <div class="desc">Infrastructure layer: Formal repository for the <strong>Cycle–Orbit Splitting Lemma (v1.1)</strong> and active URF implementations.</div>
   </div>
-<h2>Local–Global Information Barrier</h2>
-<p>
-Formal FO<sup>k</sup> structural theorem establishing limits of locality-based inference.
-</p>
-<p>
-<a href="https://github.com/inaciovasquez2020/final-wall-fo-k-locality/blob/main/docs/local-global-barrier.pdf">
-Source (PDF)
-</a>
-</p>
+
+  <h2>Local–Global Information Barrier</h2>
+  <div style="padding: 10px 0;">
+    <p class="desc" style="color: #e5e7eb;">
+      Formal FO<sup>k</sup> structural theorem establishing limits of locality-based inference. 
+      Previously described in clause contraction terms; now resolved at the structural level by <strong>Cycle Local Rigidity (CLR)</strong>.
+    </p>
+    <a href="https://github.com/inaciovasquez2020/final-wall-fo-k-locality/blob/main/docs/local-global-barrier.pdf" class="barrier-link">
+      <i class="fa-solid fa-file-pdf"></i> Verified Proof (PDF)
+    </a>
+  </div>
 
   <footer>
-    Vasquez Research · Public Interface Layer · 2026
+    Vasquez Research · Public Interface Layer · STATUS: MATHEMATICALLY CLOSED (2026)
   </footer>
 </main>
 </body>
