@@ -8,6 +8,12 @@ This repository backs the registry pages at:
 To provide a single canonical registry of enabled repositories, stable references, and reproducibility links.
 
 ---
+## Local–Global Information Barrier
+
+Formal FO^k structural theorem establishing limits of locality-based inference.
+
+Source:
+https://github.com/inaciovasquez2020/final-wall-fo-k-locality/blob/main/docs/local-global-barrier.tex
 
 ## Enabled Repositories and DOIs
 
