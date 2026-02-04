@@ -94,7 +94,7 @@
     .tag { display: inline-block; padding: 2px 10px; border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase; border: 1px solid transparent; }
     .tag-green { color: var(--success); border-color: var(--success); background: rgba(16, 185, 129, 0.1); }
     .tag-blue { color: var(--accent); border-color: var(--accent); background: rgba(56, 189, 248, 0.1); }
-    .tag-red { color: var(--warning); border-color: var(--warning); background: rgba(239, 68, 68, 0.1); }
+    .tag-closed { color: var(--success); border-color: var(--success); background: rgba(16, 185, 129, 0.1); }
 
     .id-mono { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent-soft); }
     .action-link { color: var(--accent); text-decoration: none; font-size: 11px; font-weight: 700; display: flex; align-items: center; gap: 5px; text-transform: uppercase; }
@@ -131,7 +131,7 @@
   <main class="main-content">
     <header class="top-bar">
       <div style="font-size: 11px; font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--success);">
-        <i class="fa-solid fa-circle-check"></i> REDUCTION_COMPLETE // FEB_2026
+        <i class="fa-solid fa-circle-check"></i> PROGRAM_MATHEMATICALLY_CLOSED // FEB_2026
       </div>
       <div style="display:flex; align-items:center; gap:12px; font-size:13px; font-weight: 600;">
         Inacio F. Vasquez <div style="width:32px; height:32px; background:var(--accent); color:var(--bg-main); border-radius:4px; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight: 800;">IV</div>
@@ -152,14 +152,14 @@
           <div>Verification</div>
         </div>
 
-        <div class="project-row" style="background: rgba(239, 68, 68, 0.04); border-left: 4px solid var(--warning);">
+        <div class="project-row" style="background: rgba(16, 185, 129, 0.04); border-left: 4px solid var(--success);">
           <div class="title-cell">
-            <div class="title-main"><i class="fa-solid fa-door-closed" style="color: var(--warning);"></i> Clause Contraction Lemma (CCL)</div>
-            <div class="title-desc">Final analytic obstruction: Local TV-Contraction verification.</div>
+            <div class="title-main"><i class="fa-solid fa-lock" style="color: var(--success);"></i> Clause Contraction Lemma (CCL)</div>
+            <div class="title-desc">Resolved by Cycle–Orbit Splitting Lemma (CLR) — published v1.1.</div>
           </div>
           <div class="id-mono">WALL-CCL-01</div>
-          <div><span class="tag tag-red">OPEN_BOUNDARY</span></div>
-          <div><a href="https://github.com/inaciovasquez2020/urf-axioms/tree/main/last-door" class="action-link" style="color: var(--warning);" target="_blank">AUDIT_WALL <i class="fa-solid fa-terminal"></i></a></div>
+          <div><span class="tag tag-closed">CLOSED</span></div>
+          <div><a href="https://github.com/inaciovasquez2020/urf-axioms/releases/tag/v1.1" class="action-link" style="color: var(--success);" target="_blank">VIEW_RELEASE <i class="fa-solid fa-tag"></i></a></div>
         </div>
 
         <div class="project-row">
@@ -215,8 +215,8 @@
       </div> 
       
       <div style="margin-top:45px; font-family: 'JetBrains Mono', monospace; font-size:11px; color:var(--text-muted); border-top: 1px solid var(--border); padding-top: 25px;">
-        VASQUEZ_RESEARCH_PROGRAM // STATUS: REDUCED_TO_LOCAL_INEQUALITY <br>
-        <span style="opacity: 0.6;">All global spectral gap questions now terminate at the CCL local contraction bound. System state remains RIGID pending external counterexample verification.</span>
+        VASQUEZ_RESEARCH_PROGRAM // STATUS: CORE_MATHEMATICALLY_CLOSED <br>
+        <span style="opacity: 0.6;">Local rigidity established via CLR reduction. System state remains RIGID. Verification witnesses are cryptographically tethered to URF-Core v1.1.</span>
       </div>
     </div> 
   </main>
