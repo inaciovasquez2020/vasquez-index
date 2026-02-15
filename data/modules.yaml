@@ -1,0 +1,5 @@
+- name: ncr-new-computational-regime
+  repo: inaciovasquez2020/ncr-new-computational-regime
+  status: sealed
+  artifact: executable-regime
+
