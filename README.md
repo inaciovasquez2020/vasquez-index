@@ -29,6 +29,12 @@ The following repositories are currently indexed. DOI links resolve to stable ve
 | inaciovasquez2020/urf-core | [10.5281/zenodo.18437927](https://doi.org/10.5281/zenodo.18437927) |
 
 ---
+Suggested order:
+1. scientific-infrastructure
+2. urf-core
+3. urf-spine
+4. chronos-urf-rr
+5. Application repositories
 
 ## Technical Notes
 * **Zenodo Integration:** If repositories do not appear in the registry, verify that third-party access is enabled for the Zenodo integration. 
