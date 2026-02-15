@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Formal Manuscripts — Inacio F. Vasquez</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formal manuscripts by Inacio F. Vasquez. Artifact-backed structural proofs developed within the Unified Rigidity Framework." />
+  <meta name="theme-color" content="#0b1220" />
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -62,7 +64,15 @@
       margin: 0 0 1rem 0;
       letter-spacing: -1px;
     }
-    .page-subtitle { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 3rem; }
+    .page-subtitle { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 0.5rem; }
+    
+    .scope-disclaimer {
+      margin-bottom: 3rem;
+      font-size: 12px;
+      color: var(--text-muted);
+      max-width: 700px;
+      line-height: 1.5;
+    }
 
     /* Publication Card */
     .pub-card { 
@@ -151,11 +161,17 @@
 
     <header>
       <h1>Formal Manuscripts</h1>
-      <p class="page-subtitle">Deterministic resolutions and structural proofs within the URF program.</p>
+      <p class="page-subtitle">Deterministic structural results and artifact-backed proofs within the URF program.</p>
+      <div class="scope-disclaimer">
+        All manuscripts listed here represent formally complete results under explicitly stated assumptions. No implicit generalization beyond the stated scope is asserted.
+      </div>
     </header>
     
     <div class="pub-card">
-      <a href="https://doi.org/10.5281/zenodo.18450375" class="pub-title" target="_blank">
+      <a href="https://doi.org/10.5281/zenodo.18450375" 
+         class="pub-title" 
+         target="_blank" 
+         rel="noopener noreferrer">
         Rank Dichotomy Theorem (CAT(0) cube complexes)
       </a>
       
@@ -172,21 +188,26 @@
           <span class="meta-label">Framework</span>
           <span class="meta-value">URF_RIGIDITY</span>
         </div>
+        <div class="meta-item">
+          <span class="meta-label">Verification</span>
+          <span class="meta-value">Artifact-backed</span>
+        </div>
       </div>
 
       <p class="abstract">
-        A formal resolution within <strong>CAT(0) geometry</strong> established under the Unified Rigidity Framework. 
-        Addresses the classification of combinatorial complexes via rank-dependent stability markers, establishing 
-        the necessary conditions for global rigidity in high-rank complexes where local homogeneity is preserved.
+        A formal result in <strong>CAT(0) geometry</strong> developed under the Unified Rigidity Framework. 
+        The work classifies combinatorial complexes using rank-dependent stability markers and establishes 
+        structural rigidity criteria under explicitly stated assumptions. All conclusions are formal, 
+        non-heuristic, and internally complete within the stated framework.
       </p>
 
       <div class="status-badge">
-        <i class="fa-solid fa-check-double"></i> Mathematically Closed
+        <i class="fa-solid fa-check-double"></i> Structurally Closed
       </div>
     </div>
 
     <footer>
-      VASQUEZ_RESEARCH // ORCID: 0009-0008-8459-3400 // 2026
+      VASQUEZ_RESEARCH // FORMAL MANUSCRIPTS // ORCID: 0009-0008-8459-3400 // 2026
     </footer>
   </div>
 
