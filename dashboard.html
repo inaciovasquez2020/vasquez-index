@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Artifact Registry — Vasquez Lab</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Artifact registry for bounded verification and structural rigidity results within the Unified Rigidity Framework (URF)." />
+  <meta name="theme-color" content="#0b1220" />
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -91,7 +93,7 @@
     .title-desc { font-size: 12px; color: var(--text-muted); margin-left: 32px; }
     
     /* Tags */
-    .tag { display: inline-block; padding: 2px 10px; border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase; border: 1px solid transparent; }
+    .tag { display: inline-block; padding: 2px 10px; border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase; border: 1px solid transparent; white-space: nowrap; }
     .tag-green { color: var(--success); border-color: var(--success); background: rgba(16, 185, 129, 0.1); }
     .tag-blue { color: var(--accent); border-color: var(--accent); background: rgba(56, 189, 248, 0.1); }
     .tag-closed { color: var(--success); border-color: var(--success); background: rgba(16, 185, 129, 0.1); }
@@ -123,7 +125,7 @@
     <div class="nav-group">
       <div class="nav-header">External</div>
       <a href="https://inaciovasquez2020.github.io/vasquez-index/publications.html" class="nav-item"><i class="fa-solid fa-book"></i><span>Manuscripts</span></a>
-      <a href="https://github.com/inaciovasquez2020" class="nav-item"><i class="fa-brands fa-github"></i><span>Repositories</span></a>
+      <a href="https://github.com/inaciovasquez20" class="nav-item" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i><span>Repositories</span></a>
       <a href="https://inaciovasquez2020.github.io/vasquez-index/contact.html" class="nav-item"><i class="fa-solid fa-envelope"></i><span>Contact</span></a>
     </div>
   </aside>
@@ -131,7 +133,7 @@
   <main class="main-content">
     <header class="top-bar">
       <div style="font-size: 11px; font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--success);">
-        <i class="fa-solid fa-circle-check"></i> PROGRAM_MATHEMATICALLY_CLOSED // FEB_2026
+        <i class="fa-solid fa-circle-check"></i> PROGRAM_STRUCTURALLY_CLOSED // BOUNDED_VERIFICATION // FEB_2026
       </div>
       <div style="display:flex; align-items:center; gap:12px; font-size:13px; font-weight: 600;">
         Inacio F. Vasquez <div style="width:32px; height:32px; background:var(--accent); color:var(--bg-main); border-radius:4px; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight: 800;">IV</div>
@@ -141,7 +143,9 @@
     <div class="dashboard-container">
       <div style="margin-bottom: 35px;">
         <h2 style="margin:0; font-size:24px; color: var(--text-title);">Active Artifact Registry</h2>
-        <p style="color:var(--text-muted); font-size:14px; margin-top:8px;">Public verification audit logs for the Unified Rigidity Framework (URF).</p>
+        <div style="margin-top:10px; font-size:12px; color:var(--text-muted); max-width: 680px;">
+          All entries in this registry correspond to bounded, explicitly scoped verification artifacts. No unbounded, asymptotic, or universal claims are asserted on this page.
+        </div>
       </div>
 
       <div class="project-table">
@@ -152,24 +156,34 @@
           <div>Verification</div>
         </div>
 
+        <div class="project-row">
+          <div class="title-cell">
+            <div class="title-main"><i class="fa-solid fa-fingerprint" style="color: var(--accent);"></i> URF Artifact Index</div>
+            <div class="title-desc">Canonical registry mapping artifacts to verification parameters and hashes.</div>
+          </div>
+          <div class="id-mono">META-ART-00</div>
+          <div><span class="tag tag-blue">INDEXED</span></div>
+          <div><a href="https://github.com/inaciovasquez2020/urf-core" class="action-link" target="_blank" rel="noopener noreferrer">OPEN_INDEX <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+        </div>
+
         <div class="project-row" style="background: rgba(16, 185, 129, 0.04); border-left: 4px solid var(--success);">
           <div class="title-cell">
             <div class="title-main"><i class="fa-solid fa-lock" style="color: var(--success);"></i> Clause Contraction Lemma (CCL)</div>
-            <div class="title-desc">Resolved by Cycle–Orbit Splitting Lemma (CLR), establishing structural rigidity — published v1.1.</div>
+            <div class="title-desc">Reduced to Cycle–Orbit Splitting (CLR) under bounded verification; no asymptotic claims.</div>
           </div>
           <div class="id-mono">WALL-CCL-01</div>
-          <div><span class="tag tag-closed">CLOSED</span></div>
-          <div><a href="https://github.com/inaciovasquez2020/urf-core/blob/main/toolkit/URF-Core/final-wall-fo-k-locality/lemmas/cycle_orbit_splitting.tex" class="action-link" style="color: var(--success);" target="_blank">AUDIT_PROOF <i class="fa-solid fa-file-contract"></i></a></div>
+          <div><span class="tag tag-closed">STRUCTURALLY CLOSED</span></div>
+          <div><a href="https://github.com/inaciovasquez2020/urf-core/blob/main/toolkit/URF-Core/final-wall-fo-k-locality/lemmas/cycle_orbit_splitting.tex" class="action-link" style="color: var(--success);" target="_blank" rel="noopener noreferrer">AUDIT_PROOF <i class="fa-solid fa-file-contract"></i></a></div>
         </div>
 
         <div class="project-row">
           <div class="title-cell">
             <div class="title-main"><i class="fa-solid fa-shield-nodes" style="color: var(--success);"></i> URF-Core Spectral Stability</div>
-            <div class="title-desc">Verification of global rigidity for \( H \)-complexes.</div>
+            <div class="title-desc">Artifact-backed verification of spectral rigidity under URF-Core constraints.</div>
           </div>
           <div class="id-mono">CORE-URF-01</div>
           <div><span class="tag tag-green">VERIFIED</span></div>
-          <div><a href="https://github.com/inaciovasquez2020/urf-core" class="action-link" target="_blank">AUDIT_REPO <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+          <div><a href="https://github.com/inaciovasquez2020/urf-core" class="action-link" target="_blank" rel="noopener noreferrer">AUDIT_REPO <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
         </div>
 
         <div class="project-row">
@@ -179,7 +193,7 @@
           </div>
           <div class="id-mono">ART-BC-01</div>
           <div><span class="tag tag-green">VERIFIED</span></div>
-          <div><a href="https://github.com/inaciovasquez2020/urc-minimal-blockchain" class="action-link" target="_blank">EXPLORE_SOURCE <i class="fa-solid fa-code"></i></a></div>
+          <div><a href="https://github.com/inaciovasquez2020/urc-minimal-blockchain" class="action-link" target="_blank" rel="noopener noreferrer">EXPLORE_SOURCE <i class="fa-solid fa-code"></i></a></div>
         </div>
 
         <div class="project-row">
@@ -188,18 +202,18 @@
             <div class="title-desc">Dark Fluid Model with Minimal Kinetic Coupling.</div>
           </div>
           <div class="id-mono">EXT-COS-01</div>
-          <div><span class="tag tag-blue">PUBLISHED</span></div>
-          <div><a href="https://github.com/inaciovasquez2020/dfm-mkc-cosmology" class="action-link" target="_blank">VIEW_MODEL <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+          <div><span class="tag tag-blue">PUBLIC MODEL</span></div>
+          <div><a href="https://github.com/inaciovasquez20/dfm-mkc-cosmology" class="action-link" target="_blank" rel="noopener noreferrer">VIEW_MODEL <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
         </div>
 
         <div class="project-row">
           <div class="title-cell">
             <div class="title-main"><i class="fa-solid fa-link" style="color: var(--success);"></i> Heisenberg Nilmanifold</div>
-            <div class="title-desc">Spectral Rigidity Witness: \( \lambda_1 \ge 4\pi \)</div>
+            <div class="title-desc">Certified spectral gap witness (\( \lambda_1 \ge 4\pi \)) under URF-SG instance.</div>
           </div>
           <div class="id-mono">EXT-1-GEO</div>
           <div><span class="tag tag-green">VERIFIED</span></div>
-          <div><a href="https://github.com/inaciovasquez2020/urf-core/blob/main/instances/EXT-1-Heisenberg.json" class="action-link" target="_blank">OPEN_JSON <i class="fa-solid fa-file-code"></i></a></div>
+          <div><a href="https://github.com/inaciovasquez2020/urf-core/blob/main/instances/EXT-1-Heisenberg.json" class="action-link" target="_blank" rel="noopener noreferrer">OPEN_JSON <i class="fa-solid fa-file-code"></i></a></div>
         </div>
 
         <div class="project-row">
@@ -209,14 +223,14 @@
           </div>
           <div class="id-mono">EXT-2-STAT</div>
           <div><span class="tag tag-green">VERIFIED</span></div>
-          <div><a href="https://github.com/inaciovasquez2020/urf-core/blob/main/instances/EXT-2-Ornstein-Uhlenbeck.json" class="action-link" target="_blank">OPEN_JSON <i class="fa-solid fa-file-code"></i></a></div>
+          <div><a href="https://github.com/inaciovasquez2020/urf-core/blob/main/instances/EXT-2-Ornstein-Uhlenbeck.json" class="action-link" target="_blank" rel="noopener noreferrer">OPEN_JSON <i class="fa-solid fa-file-code"></i></a></div>
         </div>
 
       </div> 
       
       <div style="margin-top:45px; font-family: 'JetBrains Mono', monospace; font-size:11px; color:var(--text-muted); border-top: 1px solid var(--border); padding-top: 25px;">
-        VASQUEZ_RESEARCH_PROGRAM // STATUS: CORE_MATHEMATICALLY_CLOSED <br>
-        <span style="opacity: 0.6;">Local rigidity established via CLR reduction (Cycle–Orbit Splitting). System state remains RIGID. Verification witnesses are cryptographically tethered to URF-Core v1.1.</span>
+        VASQUEZ_RESEARCH_PROGRAM // STATUS: STRUCTURALLY_CLOSED · ARTIFACT_VERIFIED <br>
+        <span style="opacity: 0.6;">Local rigidity established via CLR reduction under bounded verification. All verification claims are explicitly scoped and artifact-backed. System state remains RIGID.</span>
       </div>
     </div> 
   </main>
