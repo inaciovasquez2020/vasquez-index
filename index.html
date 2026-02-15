@@ -4,16 +4,27 @@
   <meta charset="utf-8" />
   <title>Vasquez Research — Public Network Index</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Vasquez Research public index. Canonical endpoints for bounded verification and URF infrastructure." />
+  <meta name="theme-color" content="#030712" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=JetBrains+Mono&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --bg: #030712;
+      --surface: #0b1220;
+      --text-main: #e5e7eb;
+      --text-dim: #9ca3af;
+      --accent: #3b82f6;
+      --border: rgba(255, 255, 255, 0.08);
+      --success: #10b981;
+    }
     body {
       margin: 0;
-      background: #030712;
-      color: #e5e7eb;
+      background: var(--bg);
+      color: var(--text-main);
       font-family: 'JetBrains Mono', monospace;
       line-height: 1.6;
     }
@@ -32,69 +43,76 @@
       font-size: 1.1rem;
       text-transform: uppercase;
       letter-spacing: 1px;
-      color: #3b82f6;
+      color: var(--accent);
       margin-top: 40px;
-      border-left: 3px solid #3b82f6;
+      border-left: 3px solid var(--accent);
       padding-left: 15px;
     }
     .sub {
-      color: #9ca3af;
+      color: var(--text-dim);
       margin-bottom: 50px;
       font-size: 14px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid var(--border);
       padding-bottom: 10px;
     }
+    .legend {
+      font-size: 11px;
+      margin-top: -40px;
+      margin-bottom: 40px;
+      color: var(--text-dim);
+    }
     .link-block {
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid var(--border);
       border-radius: 12px;
       padding: 22px;
       margin-bottom: 20px;
       transition: all 0.2s ease;
     }
     .link-block:hover {
-      background: #0b1220;
-      border-color: #3b82f6;
+      background: var(--surface);
+      border-color: var(--accent);
     }
     .link-block a {
-      color: #3b82f6;
+      color: var(--accent);
       text-decoration: none;
       font-size: 18px;
       word-break: break-all;
       font-weight: 700;
     }
     .desc {
-      color: #9ca3af;
+      color: var(--text-dim);
       font-size: 14px;
       margin-top: 8px;
     }
     .status-tag {
       font-size: 10px;
       background: rgba(16, 185, 129, 0.1);
-      color: #10b981;
-      border: 1px solid #10b981;
+      color: var(--success);
+      border: 1px solid var(--success);
       padding: 2px 8px;
       border-radius: 4px;
       margin-left: 10px;
       vertical-align: middle;
+      white-space: nowrap;
     }
     footer {
       margin-top: 80px;
       padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,0.08);
+      border-top: 1px solid var(--border);
       color: #6b7280;
       font-size: 12px;
       text-align: center;
     }
     .barrier-link {
-        display: inline-block;
-        margin-top: 10px;
-        color: #3b82f6;
-        text-decoration: none;
-        font-weight: bold;
-        border-bottom: 1px solid transparent;
+      display: inline-block;
+      margin-top: 10px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+      border-bottom: 1px solid transparent;
     }
     .barrier-link:hover {
-        border-bottom: 1px solid #3b82f6;
+      border-bottom: 1px solid var(--accent);
     }
   </style>
 </head>
@@ -103,34 +121,52 @@
   <h1>Vasquez Research</h1>
   <div class="sub">Public Network Index · Canonical Endpoints · 2026.Q1</div>
 
-  <div class="link-block">
-    <a href="https://inaciovasquez2020.github.io/" target="_blank">inaciovasquez2020.github.io</a> <span class="status-tag">CORE CLOSED</span>
-    <div class="desc">Primary Research Portal: Final Wall (CLR) resolution and the Unified Rigidity Framework (URF).</div>
+  <div class="legend">
+    <span style="color: var(--success)">●</span> CORE CLOSED: Development Finalized 
+    <span style="margin-left:15px; color: var(--success)">●</span> BOUNDED VERIFIED: Validated for n ≤ 7
   </div>
 
   <div class="link-block">
-    <a href="https://inaciovasquez2020.github.io/capacity-locality-certification/" target="_blank">capacity-locality-certification</a>
-    <div class="desc">CLC Protocol: Public standard for certifying structural unreliability in predictive AI systems under information limits.</div>
+    <a href="https://inaciovasquez2020.github.io/" target="_blank" rel="noopener noreferrer">inaciovasquez2020.github.io</a> 
+    <span class="status-tag">CORE CLOSED</span>
+    <div class="desc">Primary Research Portal: Unified Rigidity Framework (URF) and bounded verification artifacts (n ≤ 7).</div>
   </div>
 
   <div class="link-block">
-    <a href="https://github.com/inaciovasquez2020/" target="_blank">github.com/inaciovasquez2020</a>
-    <div class="desc">Infrastructure layer: Formal repository for the <strong>Cycle–Orbit Splitting Lemma (v1.1)</strong> and active URF implementations.</div>
+    <a href="https://github.com/inaciovasquez2020/cycle-local-rigidity/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer">cycle-local-rigidity · v0.1.0</a> 
+    <span class="status-tag">BOUNDED VERIFIED</span>
+    <div class="desc">Deterministic bounded verification with artifacts, checksums, and CI validation.</div>
+  </div>
+
+  <div class="link-block">
+    <a href="https://inaciovasquez2020.github.io/capacity-locality-certification/" target="_blank" rel="noopener noreferrer">capacity-locality-certification</a>
+    <div class="desc">CLC Protocol: Public standard for certifying structural unreliability in predictive systems under information limits.</div>
+  </div>
+
+  <div class="link-block">
+    <a href="https://github.com/inaciovasquez2020/cycle-local-rigidity/tree/main/counterexamples" target="_blank" rel="noopener noreferrer">counterexamples</a>
+    <div class="desc">Indexed record of exhaustive counterexample search (none found within n ≤ 7 bounds).</div>
+  </div>
+
+  <div class="link-block">
+    <a href="https://github.com/inaciovasquez2020/" target="_blank" rel="noopener noreferrer">github.com/inaciovasquez2020</a>
+    <div class="desc">Infrastructure layer: Formal repository for the <strong>Cycle–Orbit Splitting Lemma (v1.1)</strong> and CITATION.cff.</div>
   </div>
 
   <h2>Local–Global Information Barrier</h2>
   <div style="padding: 10px 0;">
     <p class="desc" style="color: #e5e7eb;">
-      Formal FO<sup>k</sup> structural theorem establishing limits of locality-based inference. 
-      Previously described in clause contraction terms; now resolved at the structural level by <strong>Cycle Local Rigidity (CLR)</strong>.
+      Formal FO<sup>k</sup> structural result supported by bounded verification (n ≤ 7). 
+      This establishes limits of locality-based inference; no asymptotic claims are made.
     </p>
-    <a href="https://github.com/inaciovasquez2020/final-wall-fo-k-locality/blob/main/docs/local-global-barrier.pdf" class="barrier-link">
-      <i class="fa-solid fa-file-pdf"></i> Verified Proof (PDF)
+    <a href="https://github.com/inaciovasquez2020/final-wall-fo-k-locality/blob/main/docs/local-global-barrier.pdf" 
+       class="barrier-link" target="_blank" rel="noopener noreferrer" aria-label="View Verified Proof PDF">
+      Verified Proof (PDF)
     </a>
   </div>
 
   <footer>
-    Vasquez Research · Public Interface Layer · STATUS: MATHEMATICALLY CLOSED (2026)
+    Vasquez Research · Public Interface Layer · STATUS: STRUCTURALLY CLOSED · BOUNDED VERIFIED (2026)
   </footer>
 </main>
 </body>
