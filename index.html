@@ -20,6 +20,7 @@
       --accent: #3b82f6;
       --border: rgba(255, 255, 255, 0.08);
       --success: #10b981;
+      --warning: #f59e0b;
     }
     body {
       margin: 0;
@@ -44,7 +45,7 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       color: var(--accent);
-      margin-top: 40px;
+      margin-top: 60px;
       border-left: 3px solid var(--accent);
       padding-left: 15px;
     }
@@ -95,9 +96,14 @@
       vertical-align: middle;
       white-space: nowrap;
     }
+    .tag-foundational {
+      color: var(--warning);
+      border-color: var(--warning);
+      background: rgba(245, 158, 11, 0.1);
+    }
     footer {
       margin-top: 80px;
-      padding-top: 20px;
+      padding: 40px 0;
       border-top: 1px solid var(--border);
       color: #6b7280;
       font-size: 12px;
@@ -122,25 +128,35 @@
   <div class="sub">Public Network Index · Canonical Endpoints · 2026.Q1</div>
 
   <div class="legend">
-    <span style="color: var(--success)">●</span> CORE CLOSED: Development Finalized 
-    <span style="margin-left:15px; color: var(--success)">●</span> BOUNDED VERIFIED: Validated for n ≤ 7
+    <span style="color: var(--success)">●</span> STRUCTURALLY CLOSED: Results Finalized under Scoped Assumptions 
+    <span style="margin-left:15px; color: var(--success)">●</span> ARTIFACT VERIFIED: Validated for n ≤ 7
   </div>
+
+  <h2>Core Infrastructure</h2>
 
   <div class="link-block">
     <a href="https://inaciovasquez2020.github.io/" target="_blank" rel="noopener noreferrer">inaciovasquez2020.github.io</a> 
-    <span class="status-tag">CORE CLOSED</span>
-    <div class="desc">Primary Research Portal: Unified Rigidity Framework (URF) and bounded verification artifacts (n ≤ 7).</div>
+    <span class="status-tag">STRUCTURALLY CLOSED</span>
+    <div class="desc">Primary Research Portal: Unified Rigidity Framework (URF) manuscripts and bounded verification artifacts.</div>
   </div>
 
   <div class="link-block">
     <a href="https://github.com/inaciovasquez2020/cycle-local-rigidity/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer">cycle-local-rigidity · v0.1.0</a> 
-    <span class="status-tag">BOUNDED VERIFIED</span>
-    <div class="desc">Deterministic bounded verification with artifacts, checksums, and CI validation.</div>
+    <span class="status-tag">ARTIFACT VERIFIED</span>
+    <div class="desc">Deterministic bounded verification for cycle-local systems; includes checksums and CI validation records.</div>
   </div>
 
   <div class="link-block">
+    <a href="https://github.com/inaciovasquez2020/urf-core/blob/main/docs/foundations/unified_capacity_locality_problem.md" target="_blank" rel="noopener noreferrer">Unified Capacity–Locality Problem</a>
+    <span class="status-tag tag-foundational">FOUNDATIONAL</span>
+    <div class="desc">Foundational inquiry: Investigating if polynomial-time computation is universally constrained by local information capacity. Either resolution requires a significant revision of complexity theory.</div>
+  </div>
+
+  <h2>Methodology & Proofs</h2>
+
+  <div class="link-block">
     <a href="https://inaciovasquez2020.github.io/capacity-locality-certification/" target="_blank" rel="noopener noreferrer">capacity-locality-certification</a>
-    <div class="desc">CLC Protocol: Public standard for certifying structural unreliability in predictive systems under information limits.</div>
+    <div class="desc">CLC Protocol: Public standard for certifying structural limits in predictive systems under rigorous information constraints.</div>
   </div>
 
   <div class="link-block">
@@ -150,14 +166,14 @@
 
   <div class="link-block">
     <a href="https://github.com/inaciovasquez2020/" target="_blank" rel="noopener noreferrer">github.com/inaciovasquez2020</a>
-    <div class="desc">Infrastructure layer: Formal repository for the <strong>Cycle–Orbit Splitting Lemma (v1.1)</strong> and CITATION.cff.</div>
+    <div class="desc">The Infrastructure layer: Formal repository for the <strong>Cycle–Orbit Splitting Lemma (v1.1)</strong> and CITATION.cff metadata.</div>
   </div>
 
   <h2>Local–Global Information Barrier</h2>
   <div style="padding: 10px 0;">
     <p class="desc" style="color: #e5e7eb;">
       Formal FO<sup>k</sup> structural result supported by bounded verification (n ≤ 7). 
-      This establishes limits of locality-based inference; no asymptotic claims are made.
+      This establishes limits of locality-based inference within the declared scope.
     </p>
     <a href="https://github.com/inaciovasquez2020/final-wall-fo-k-locality/blob/main/docs/local-global-barrier.pdf" 
        class="barrier-link" target="_blank" rel="noopener noreferrer" aria-label="View Verified Proof PDF">
@@ -166,7 +182,7 @@
   </div>
 
   <footer>
-    Vasquez Research · Public Interface Layer · STATUS: STRUCTURALLY CLOSED · BOUNDED VERIFIED (2026)
+    Vasquez Research · Public Interface Layer · STATUS: STRUCTURALLY CLOSED · ARTIFACT VERIFIED (2026)
   </footer>
 </main>
 </body>
