@@ -1,213 +1,122 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Vasquez Research — Public Network Index</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Vasquez Research public index. Canonical endpoints for bounded verification and URF infrastructure." />
-  <meta name="theme-color" content="#030712" />
-
+  <meta charset="UTF-8">
+  <title>Inacio F. Vasquez — Unified Rigidity Framework (URF)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Official portal for the Unified Rigidity Framework (URF).">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   <style>
     :root {
-      --bg: #030712;
-      --surface: #0b1220;
-      --text-main: #e5e7eb;
-      --text-dim: #9ca3af;
-      --accent: #3b82f6;
-      --border: rgba(255, 255, 255, 0.08);
-      --success: #10b981;
-      --warning: #f59e0b;
-      --danger: #ef4444; /* Added for disclaimer */
+      --bg-main: #0b1220; --bg-header: #0f172a; --bg-section: #0e1626;
+      --text-main: #e5e7eb; --text-muted: #9aa5b1; --text-title: #f8fafc;
+      --accent: #38bdf8; --accent-soft: #7dd3fc; --border: #1f2933;
+      --border-soft: #2a3644; --success: #10b981;
     }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text-main);
-      font-family: 'JetBrains Mono', monospace;
-      line-height: 1.6;
-    }
-    main {
-      max-width: 900px;
-      margin: 70px auto;
-      padding: 0 24px;
-    }
-    h1 {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 36px;
-      margin-bottom: 6px;
-      color: #f8fafc;
-    }
-    h2 {
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--accent);
-      margin-top: 60px;
-      border-left: 3px solid var(--accent);
-      padding-left: 15px;
-    }
-    .sub {
-      color: var(--text-dim);
-      margin-bottom: 50px;
-      font-size: 14px;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 10px;
-    }
-    .legend {
-      font-size: 11px;
-      margin-top: -40px;
-      margin-bottom: 40px;
-      color: var(--text-dim);
-    }
-    .hard-disclaimer {
-      font-size: 11px;
-      color: var(--danger);
-      margin-top: 15px;
-      font-weight: bold;
-      border: 1px solid rgba(239, 68, 68, 0.2);
-      padding: 8px;
-      display: inline-block;
-      border-radius: 4px;
-    }
-    .link-block {
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 22px;
-      margin-bottom: 20px;
-      transition: all 0.2s ease;
-    }
-    .link-block:hover {
-      background: var(--surface);
-      border-color: var(--accent);
-    }
-    .link-block a {
-      color: var(--accent);
-      text-decoration: none;
-      font-size: 18px;
-      word-break: break-all;
-      font-weight: 700;
-    }
-    .desc {
-      color: var(--text-dim);
-      font-size: 14px;
-      margin-top: 8px;
-    }
-    .status-tag {
-      font-size: 10px;
-      background: rgba(16, 185, 129, 0.1);
-      color: var(--success);
-      border: 1px solid var(--success);
-      padding: 2px 8px;
-      border-radius: 4px;
-      margin-left: 10px;
-      vertical-align: middle;
-      white-space: nowrap;
-    }
-    footer {
-      margin-top: 80px;
-      padding: 40px 0;
-      border-top: 1px solid var(--border);
-      color: #6b7280;
-      font-size: 12px;
-      text-align: center;
-    }
-    .barrier-link {
-      display: inline-block;
-      margin-top: 10px;
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: bold;
-      border-bottom: 1px solid transparent;
-    }
-    .barrier-link:hover {
-      border-bottom: 1px solid var(--accent);
-    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Inter', sans-serif; color: var(--text-main); background: linear-gradient(180deg, #060b16, var(--bg-main) 40%, #060b16); line-height: 1.6; }
+    nav { background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border); }
+    .nav-brand { color: var(--text-title); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+    .nav-brand i { color: var(--accent); }
+    .nav-links { display: flex; gap: 25px; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+    .hero { background: linear-gradient(135deg, #060b16, #0f172a); padding: 80px 20px; text-align: center; border-bottom: 1px solid var(--border); }
+    .hero h1 { font-family: 'Libre Baskerville', serif; font-size: 2.8rem; margin: 0; color: var(--text-title); letter-spacing: -1px; }
+    .hero .subtitle { max-width: 700px; margin: 20px auto; font-size: 1.1rem; color: var(--text-muted); }
+    .orcid-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(56, 189, 248, 0.05); border: 1px solid var(--border); padding: 6px 15px; border-radius: 20px; font-size: 12px; font-weight: 600; color: var(--accent-soft); text-decoration: none; }
+    .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+    section { margin-bottom: 60px; }
+    h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-bottom: 30px; }
+    .project-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    .project-card { background: var(--bg-section); border: 1px solid var(--border-soft); padding: 25px; border-radius: 6px; transition: 0.2s; text-decoration: none; color: inherit; display: block; }
+    .project-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+    .project-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+    .project-title { font-weight: 700; font-size: 1.2rem; color: var(--text-title); }
+    .status-badge { font-size: 10px; font-weight: 800; text-transform: uppercase; padding: 3px 10px; border-radius: 4px; border: 1px solid var(--border); }
+    .status-closed { color: var(--success); border-color: var(--success); background: rgba(16, 185, 129, 0.1); }
+    .status-standard { color: var(--accent-soft); border-color: var(--accent-soft); background: rgba(56, 189, 248, 0.1); }
+    .status-validating { color: #f59e0b; border-color: #f59e0b; background: rgba(245, 158, 11, 0.1); }
+    .module-mini-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+    .module-tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-muted); background: #050910; padding: 4px 8px; border-radius: 4px; border: 1px solid var(--border); }
+    footer { background: var(--bg-header); color: var(--text-muted); padding: 60px 20px; text-align: center; font-size: 13px; border-top: 1px solid var(--border); }
+    .registry-list { list-style: none; padding: 0; }
+    .registry-list li { margin-bottom: 15px; padding: 15px; background: #050910; border-radius: 4px; border: 1px solid var(--border); }
+    .registry-list a { color: var(--accent-soft); text-decoration: none; font-weight: 600; font-family: 'JetBrains Mono', monospace; font-size: 13px; }
   </style>
 </head>
 <body>
-<main>
-  <h1>Vasquez Research</h1>
-  <div class="sub">Public Network Index · Canonical Endpoints · 2026.Q1</div>
-
-  <div class="legend">
-    <div><span style="color: var(--success)">●</span> STRUCTURALLY CLOSED: Results Finalized under Scoped Assumptions</div>
-    <div style="margin-top:5px;"><span style="color: var(--success)">●</span> ARTIFACT VERIFIED: Validated for $n \le 7$</div>
-    
-    <div class="hard-disclaimer">
-      All results are finite, scoped, and artifact-backed. 
-      No asymptotic, universal, or unbounded claims are asserted.
+  <nav>
+    <a href="./index.html" class="nav-brand"><i class="fa-solid fa-microchip"></i><span>VASQUEZ_LAB</span></a>
+    <div class="nav-links">
+      <a href="https://inaciovasquez2020.github.io/vasquez-index/">Network Index</a>
+      <a href="./publications.html">Manuscripts</a>
+      <a href="https://github.com/inaciovasquez2020">GitHub</a>
     </div>
-  </div>
+  </nav>
 
-  <h2>Core Infrastructure</h2>
+  <header class="hero">
+    <h1>Inacio F. Vasquez</h1>
+    <p class="subtitle">Architect of the Unified Rigidity Framework (URF). Focused on structural rigidity, information topology, and finite model theory.</p>
+    <a href="https://orcid.org/0009-0008-8459-3400" class="orcid-badge" target="_blank"><i class="fa-brands fa-orcid"></i> 0009-0008-8459-3400</a>
+  </header>
 
-  <div class="link-block">
-    <a href="https://inaciovasquez2020.github.io/" target="_blank" rel="noopener noreferrer">
-      inaciovasquez2020.github.io
-    </a> 
-    <span class="status-tag">STRUCTURALLY CLOSED</span>
-    <div class="desc">
-      Primary Research Portal: Unified Rigidity Framework (URF) manuscripts and bounded verification artifacts.
-    </div>
-  </div>
+  <div class="container">
+    <section id="research">
+      <h2>Foundational Programs (Tier A)</h2>
+      <div class="project-grid">
+        <a href="https://github.com/inaciovasquez2020/urf-core" class="project-card" data-scope="bounded" data-status="closed">
+          <div class="project-header"><span class="project-title">Unified Rigidity Framework (Core)</span><span class="status-badge status-closed">Structurally Closed</span></div>
+          <p style="font-size: 14px; color: var(--text-muted);">Structural resolution of the Local–Global correspondence problem under explicitly stated assumptions.</p>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; background: #050910; padding: 12px; border-radius: 4px; margin-top: 10px; border: 1px solid var(--border); color: var(--success);">
+            $$ \inf \mathrm{Spec}(\Delta_H \mid \ker(\mathrm{Per})^\perp) > 0 $$
+          </div>
+        </a>
 
-  <div class="link-block">
-    <a href="https://github.com/inaciovasquez2020/urf-core/blob/main/docs/foundations/unified_capacity_locality_problem.md"
-       target="_blank" rel="noopener noreferrer">
-      Unified Capacity–Locality Problem (UCLP)
-    </a>
-    <span class="status-tag">STRUCTURALLY CLOSED</span>
-    <div class="desc">
-      Decision resolved in the negative for an explicit constant-width SAT family. 
-      Establishes that fixed-radius local transcripts require $\Omega(n)$ total information.
-    </div>
-    <a href="https://github.com/inaciovasquez2020/overlap-rigidity-counterexamples" 
-       class="barrier-link" target="_blank" rel="noopener noreferrer">
-      Supporting Artifact & Proof (Linear TC Lower Bound)
-    </a>
-  </div>
+        <a href="https://github.com/inaciovasquez2020/final-wall-fo-k-locality" class="project-card" data-scope="bounded" data-status="closed">
+          <div class="project-header"><span class="project-title">Final Wall (CLR)</span><span class="status-badge status-closed">Structurally Closed</span></div>
+          <p style="font-size: 14px; color: var(--text-muted);">Terminal obstruction reduced to the Cycle–Orbit Splitting Lemma (CLR).</p>
+        </a>
 
-  <h2>Methodology & Proofs</h2>
+        <a href="https://github.com/inaciovasquez2020/chronos-entropydepth" class="project-card" data-scope="active" data-status="validating">
+          <div class="project-header"><span class="project-title">Chronos: Entropy-Depth Integration</span><span class="status-badge status-validating">Externally Validating</span></div>
+          <p style="font-size: 14px; color: var(--text-muted);">Temporal rigidity markers in high-complexity finite models. <span style="display:block; font-size:12px; margin-top:5px; color:var(--accent-soft);">Closed internally · pending external adoption</span></p>
+        </a>
 
-  <div class="link-block">
-    <a href="https://inaciovasquez2020.github.io/capacity-locality-certification/" 
-       target="_blank" rel="noopener noreferrer">
-      capacity-locality-certification
-    </a>
-    <div class="desc">
-      CLC Protocol: Public standard for certifying structural limits in predictive systems under rigorous information constraints.
-    </div>
-  </div>
+        <a href="https://inaciovasquez2020.github.io/capacity-locality-certification/" class="project-card"><div class="project-header"><span class="project-title">Capacity–Locality Certification (CLC)</span><span class="status-badge status-standard">Public Standard</span></div></a>
 
-  <div class="link-block">
-    <a href="https://github.com/inaciovasquez2020/cycle-local-rigidity/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer">
-      cycle-local-rigidity · v0.1.0
-    </a> 
-    <span class="status-tag">ARTIFACT VERIFIED</span>
-    <div class="desc">
-      Deterministic bounded verification for cycle-local systems; includes checksums and CI validation records for $n \le 7$.
-    </div>
-  </div>
+        <a href="https://github.com/inaciovasquez2020/dfm-mkc-cosmology" class="project-card">
+          <div class="project-header"><span class="project-title">DFM–MKC Cosmology</span><span class="status-badge status-standard">Public Model</span></div>
+          <p style="font-size: 14px; color: var(--text-muted);">Dark Fluid Model resolving cosmological tension via Minimal Kinetic Coupling.</p>
+        </a>
+      </div>
+    </section>
 
-  <h2>Local–Global Information Barrier</h2>
-  <div style="padding: 10px 0;">
-    <p class="desc" style="color: #e5e7eb;">
-      Formal FO$^k$ structural result supported by bounded verification. 
-      Establishes the hard limit of locality-based inference within the declared scope.
-    </p>
-    <a href="https://github.com/inaciovasquez2020/final-wall-fo-k-locality/blob/main/docs/local-global-barrier.pdf" 
-       class="barrier-link" target="_blank" rel="noopener noreferrer">
-      Verified Proof (PDF)
-    </a>
+    <section id="engineering">
+      <h2>Engineering Layer (Tier B)</h2>
+      <div class="project-grid">
+        <a href="https://github.com/inaciovasquez2020/urc-minimal-blockchain" class="project-card">
+          <div class="project-header"><span class="project-title">URC Minimal Blockchain</span><span class="status-badge">Active Spec</span></div>
+          <p style="font-size: 14px; color: var(--text-muted);">Nakamoto-based implementation for deterministic capacity retention.</p>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Formal Registry</h2>
+      <ul class="registry-list">
+        <li><a href="https://doi.org/10.5281/zenodo.18450375" target="_blank">[DOI] Rank Dichotomy Theorem &rarr; 10.5281/zenodo.18450375</a></li>
+      </ul>
+    </section>
   </div>
 
   <footer>
-    Vasquez Research · Public Interface Layer · STATUS: STRUCTURALLY CLOSED · ARTIFACT VERIFIED (2026)
+    <p>&copy; 2026 Inacio F. Vasquez. Independent Research Program.</p>
+    <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent-soft);">STATUS: MIXED — STRUCTURALLY CLOSED MODULES · ACTIVE RESEARCH TRACKS</p>
+    <p style="margin-top: 15px;"><a href="./CANONICALITY.md" style="font-size:11px; color:var(--accent-soft); text-decoration:none; border: 1px solid var(--border); padding: 4px 8px; border-radius: 4px;"><i class="fa-solid fa-gavel"></i> Canonicality Doctrine</a></p>
   </footer>
-</main>
 </body>
 </html>
