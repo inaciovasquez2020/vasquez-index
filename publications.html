@@ -2,226 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Formal Manuscripts — Vasquez Research</title>
+  <title>Manuscripts & Reports — URF</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Formal manuscripts by Inacio F. Vasquez. Artifact-backed structural proofs developed within the Unified Rigidity Framework." />
-  <meta name="theme-color" content="#0b1220" />
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
   <style>
-    :root {
-      --bg-main: #0b1220;
-      --bg-card: #0e1626;
-      --text-main: #e5e7eb;
-      --text-muted: #9aa5b1;
-      --text-title: #f8fafc;
-      --accent: #38bdf8;
-      --accent-green: #10b981;
-      --border: #1f2933;
-      --danger: #ef4444;
-    }
-
-    * { box-sizing: border-box; }
-    body { 
-      background: var(--bg-main); 
-      color: var(--text-main); 
-      font-family: 'Inter', sans-serif; 
-      margin: 0; 
-      padding: 0;
-      line-height: 1.6;
-    }
-
-    .container { max-width: 850px; margin: 0 auto; padding: 4rem 2rem; }
-
-    /* Navigation */
-    .nav-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 4rem;
-    }
-    .nav-back { 
-      text-decoration: none; 
-      color: var(--accent); 
-      font-size: 12px; 
-      font-weight: 700; 
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      display: flex; 
-      align-items: center; 
-      gap: 8px; 
-      transition: 0.2s;
-    }
-    .nav-back:hover { opacity: 0.8; transform: translateX(-4px); }
-
-    /* Page Titles */
-    h1 { 
-      font-family: 'Libre Baskerville', serif; 
-      font-size: 2.5rem; 
-      color: var(--text-title);
-      margin: 0 0 1rem 0;
-      letter-spacing: -1px;
-    }
-    .page-subtitle { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 0.5rem; }
-    
-    .scope-disclaimer {
-      margin-bottom: 3rem;
-      font-size: 12px;
-      color: var(--text-muted);
-      max-width: 700px;
-      line-height: 1.5;
-      border-left: 2px solid var(--border);
-      padding-left: 15px;
-    }
-
-    /* Publication Card */
-    .pub-card { 
-      background: var(--bg-card); 
-      border: 1px solid var(--border); 
-      padding: 2.5rem; 
-      border-radius: 8px; 
-      margin-top: 2rem;
-      position: relative;
-      transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .pub-card:hover { border-color: var(--accent); }
-
-    .pub-title { 
-      font-family: 'Libre Baskerville', serif;
-      font-size: 1.5rem; 
-      font-weight: 700; 
-      color: var(--text-title); 
-      margin-bottom: 1rem; 
-      display: block; 
-      text-decoration: none; 
-      line-height: 1.3;
-    }
-    .pub-title:hover { color: var(--accent); }
-
-    .meta-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      margin-bottom: 1.5rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-    .meta-item { display: flex; flex-direction: column; gap: 4px; }
-    .meta-label { color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-size: 10px; }
-    .meta-value { color: var(--accent); font-weight: 700; }
-    .meta-value.status-published { color: var(--accent-green); }
-
-    .abstract { 
-      font-size: 15px; 
-      color: var(--text-muted); 
-      margin-top: 1rem; 
-      line-height: 1.7; 
-    }
-    .abstract strong { color: var(--text-main); font-weight: 600; }
-
-    /* Status Badge */
-    .status-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(16, 185, 129, 0.1);
-      color: var(--accent-green);
-      border: 1px solid var(--accent-green);
-      padding: 4px 10px;
-      border-radius: 4px;
-      font-size: 10px;
-      font-weight: 800;
-      text-transform: uppercase;
-      margin-top: 20px;
-    }
-
-    footer {
-      margin-top: 6rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      color: var(--text-muted);
-    }
+    :root { --bg-main: #0b1220; --bg-card: #0e1626; --accent: #38bdf8; --accent-green: #10b981; --text-main: #e5e7eb; --text-muted: #9aa5b1; --text-title: #f8fafc; --border: #1f2933; }
+    body { margin: 0; font-family: 'Inter', sans-serif; color: var(--text-main); background: var(--bg-main); line-height: 1.6; }
+    .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+    nav { padding: 1.5rem 2rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; }
+    .nav-back { color: var(--accent); text-decoration: none; font-size: 12px; font-weight: 700; text-transform: uppercase; }
+    header { padding: 60px 20px; text-align: center; }
+    h1 { font-family: 'Libre Baskerville', serif; color: var(--text-title); font-size: 2.5rem; }
+    .pub-entry { background: var(--bg-card); padding: 35px; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 25px; }
+    .pub-year { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent-green); font-weight: 700; }
+    .pub-title { font-family: 'Libre Baskerville', serif; font-size: 1.4rem; color: var(--text-title); margin: 10px 0; }
+    .tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; background: #050910; padding: 3px 8px; border: 1px solid var(--border); color: var(--text-muted); text-transform: uppercase; margin-right: 5px; }
+    footer { text-align: center; padding: 40px; font-size: 12px; color: var(--text-muted); border-top: 1px solid var(--border); }
   </style>
 </head>
 <body>
+  <nav><a href="./index.html" class="nav-back"><i class="fa-solid fa-arrow-left"></i> Back to Portal</a></nav>
+  <header><h1>Manuscripts & Reports</h1><p>Formal pipeline for the Unified Rigidity Framework (URF).</p></header>
+  <main class="container">
+    <article class="pub-entry">
+      <span class="pub-year">2026 — Manuscript (Journal-First)</span>
+      <h2 class="pub-title">The Expander Obstruction and Logic-Width Dependency</h2>
+      <p style="color:var(--text-muted);">Analysis of \(FO^k\) local types in bounding global structural invariants.</p>
+      <div style="margin-top:15px;"><span class="tag">Theoretical CS</span><span class="tag">Bounded Analysis</span></div>
+    </article>
 
-  <div class="container">
-    <nav class="nav-header">
-      <a href="https://inaciovasquez2020.github.io/vasquez-index/" class="nav-back">
-        <i class="fa-solid fa-arrow-left"></i> Core Portal
-      </a>
-      <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted);">
-        Authenticated: <span style="color: var(--accent-green);">ID_094_D</span>
-      </div>
-    </nav>
+    <article class="pub-entry">
+      <span class="pub-year">2026 — Draft in Progress</span>
+      <h2 class="pub-title">Finite Capacity and Rigidity in Operator Systems</h2>
+      <p style="color:var(--text-muted);">Exploration of URF rigidity bounds applied to finite operator systems and capacity retention.</p>
+      <div style="margin-top:15px;"><span class="tag">Operator Theory</span><span class="tag">Information Topology</span></div>
+    </article>
 
-    <header>
-      <h1>Formal Manuscripts</h1>
-      <p class="page-subtitle">Deterministic structural results and artifact-backed proofs within the URF program.</p>
-      <div class="scope-disclaimer">
-        All manuscripts listed here represent formally complete results under explicitly stated assumptions. 
-        No implicit generalization beyond the stated scope is asserted. 
-        <br><span style="color: var(--danger); font-weight: bold;">NOTE:</span> Asymptotic claims are valid only within the artifact-verified bound $ n \le 7 $.
-      </div>
-    </header>
-    
-    <div class="pub-card">
-      <a href="https://doi.org/10.5281/zenodo.18450375" 
-         class="pub-title" 
-         target="_blank" 
-         rel="noopener noreferrer">
-        Rank Dichotomy Theorem (CAT(0) cube complexes)
-      </a>
-      
-      <div class="meta-grid">
-        <div class="meta-item">
-          <span class="meta-label">Identifier</span>
-          <span class="meta-value">DOI: 10.5281/zenodo.18450375</span>
-        </div>
-        <div class="meta-item">
-          <span class="meta-label">Classification</span>
-          <span class="meta-value">Theoretical Proof</span>
-        </div>
-        <div class="meta-item">
-          <span class="meta-label">Framework</span>
-          <span class="meta-value">URF_RIGIDITY</span>
-        </div>
-        <div class="meta-item">
-          <span class="meta-label">Verification</span>
-          <span class="meta-value">Artifact-backed</span>
-        </div>
-        <div class="meta-item">
-          <span class="meta-label">Submission Status</span>
-          <span class="meta-value status-published">PUBLISHED / CLOSED</span>
-        </div>
-      </div>
-
-      <p class="abstract">
-        A formal result in <strong>CAT(0) geometry</strong> developed under the Unified Rigidity Framework. 
-        The work classifies combinatorial complexes using rank-dependent stability markers and establishes 
-        structural rigidity criteria under explicitly stated assumptions. All conclusions are formal, 
-        non-heuristic, and internally complete within the stated framework.
-      </p>
-
-      <div class="status-badge">
-        <i class="fa-solid fa-check-double"></i> Structurally Closed
-      </div>
-    </div>
-
-    <footer>
-      VASQUEZ_RESEARCH // FORMAL MANUSCRIPTS // ORCID: 0009-0008-8459-3400 // 2026
-    </footer>
-  </div>
-
+    <article class="pub-entry">
+      <span class="pub-year">2025 — Technical Report</span>
+      <h2 class="pub-title">URF-SG: A Standard for Machine-Verifiable Spectral Rigidity</h2>
+      <p style="color:var(--text-muted);">Definition of the JSON schema for deterministic audit of external witnesses.</p>
+      <div style="margin-top:15px;"><span class="tag">Standardization</span><span class="tag">Verification</span></div>
+    </article>
+  </main>
+  <footer>VASQUEZ_RESEARCH // 2026 // <a href="./CANONICALITY.md" style="color:var(--accent);">Canonicality Doctrine</a></footer>
 </body>
 </html>
