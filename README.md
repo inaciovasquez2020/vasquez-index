@@ -7,6 +7,21 @@ This repository backs the registry pages at:
 ## Purpose
 To provide a single canonical registry of enabled repositories, stable references, and reproducibility links.
 
+## Canonicality & Governance
+
+This repository operates under the **Canonicality Doctrine** of the Vasquez Research Program.
+
+All structural claims, artifact-backed proofs, and publication statuses are governed by a single authoritative document:
+
+**→ [`CANONICALITY.md`](./CANONICALITY.md)**
+
+### What this means for readers
+- All results are **explicitly bounded** and scope-declared.
+- “Structurally Closed” refers to **internal logical closure under bounded verification**, not external consensus.
+- In the event of any discrepancy, **machine-verifiable artifacts take precedence** over narrative text.
+
+Visitors should consult `CANONICALITY.md` before citing or extending any result.
+
 ---
 ## Local–Global Information Barrier
 
