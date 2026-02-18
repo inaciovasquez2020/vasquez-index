@@ -18,6 +18,20 @@
     * { box-sizing: border-box; }
     body { background: var(--bg-main); color: var(--text-main); font-family: 'Inter', sans-serif; margin: 0; line-height: 1.6; }
     
+    /* FIX 1: Mixed Status Banner */
+    .global-status-banner {
+      background: #111b2d;
+      border-bottom: 1px solid var(--border);
+      padding: 8px 20px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      color: var(--accent-orange);
+      letter-spacing: 1px;
+    }
+
     nav {
       background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px);
       padding: 0.8rem 2rem; display: flex; justify-content: space-between; align-items: center;
@@ -50,10 +64,21 @@
     .badge-blue { background: rgba(56, 189, 248, 0.1); color: var(--accent); border-color: var(--accent); }
 
     footer { margin-top: 5rem; padding: 2rem; border-top: 1px solid var(--border); text-align: center; }
-    .canonical-link { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent); text-decoration: none; border: 1px solid var(--border); padding: 5px 12px; border-radius: 4px; }
+    .canonical-link { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent); text-decoration: none; border: 1px solid var(--border); padding: 5px 12px; border-radius: 4px; transition: 0.2s; }
+    .canonical-link:hover { background: rgba(56, 189, 248, 0.1); border-color: var(--accent); }
   </style>
 </head>
 <body>
+
+  <div class="global-status-banner">
+    <span>PROGRAM_STATUS: MIXED</span>
+    <span>//</span>
+    <span>STRUCTURALLY CLOSED ARTIFACTS</span>
+    <span>//</span>
+    <span>ACTIVE TRACKS</span>
+    <span>//</span>
+    <span>FEB_2026</span>
+  </div>
 
   <nav>
     <a href="./index.html" class="nav-brand"><i class="fa-solid fa-gauge-high"></i><span>URF_DASHBOARD</span></a>
@@ -82,7 +107,16 @@
     </div>
 
     <div class="panel">
-      <div class="panel-header"><span class="panel-title">Audit Log (Tier A & B)</span></div>
+      <div class="panel-header">
+        <span class="panel-title">Audit Log (Tier A & B)</span>
+      </div>
+
+      <div style="font-size:11px; color:var(--text-muted); padding: 15px 20px; background: rgba(0,0,0,0.2); border-bottom: 1px solid var(--border);">
+        <i class="fa-solid fa-circle-info"></i> &nbsp;
+        Status precedence: <strong>STRUCTURALLY CLOSED ⟂ VERIFIED ⟂ INDEXED</strong>.  
+        Machine-verifiable artifacts override descriptive text.
+      </div>
+
       <table class="log-table">
         <thead>
           <tr>
@@ -93,31 +127,31 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr data-artifact-id="WIT-09-AX" data-status="closed">
             <td>URF-CORE</td>
             <td>WIT-09-AX</td>
             <td>Structural</td>
             <td><span class="badge badge-success">Closed</span></td>
           </tr>
-          <tr>
+          <tr data-artifact-id="CLR-V7-FINAL" data-status="verified">
             <td>FINAL-WALL</td>
             <td>CLR-V7-FINAL</td>
             <td>Logic Wall</td>
             <td><span class="badge badge-success">Verified</span></td>
           </tr>
-          <tr>
+          <tr data-artifact-id="COS-MODEL-1" data-status="public">
             <td>DFM-MKC</td>
             <td>COS-MODEL-1</td>
             <td>Cosmology</td>
             <td><span class="badge badge-blue">Public</span></td>
           </tr>
-          <tr>
+          <tr data-artifact-id="MIN-NODE-α" data-status="active">
             <td>URC-BLOCKCHAIN</td>
             <td>MIN-NODE-α</td>
             <td>Engineering</td>
             <td><span class="badge badge-warning">Active Spec</span></td>
           </tr>
-          <tr>
+          <tr data-artifact-id="CHR-DRAFT-01" data-status="validating">
             <td>CHRONOS</td>
             <td>CHR-DRAFT-01</td>
             <td>Validation</td>
@@ -128,8 +162,12 @@
     </div>
 
     <footer>
-      <a href="./CANONICALITY.md" class="canonical-link"><i class="fa-solid fa-gavel"></i> View Canonicality Doctrine</a>
-      <p style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-muted); margin-top: 20px;">VASQUEZ_RESEARCH // TERMINAL_ID: 0x9AF4</p>
+      <a href="./CANONICALITY.md" class="canonical-link">
+        <i class="fa-solid fa-gavel"></i> Canonicality Doctrine
+      </a>
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-muted); margin-top: 20px;">
+        VASQUEZ_RESEARCH // TERMINAL_ID: 0x9AF4
+      </p>
     </footer>
   </div>
 
