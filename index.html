@@ -21,6 +21,7 @@
       --border: rgba(255, 255, 255, 0.08);
       --success: #10b981;
       --warning: #f59e0b;
+      --danger: #ef4444; /* Added for disclaimer */
     }
     body {
       margin: 0;
@@ -61,6 +62,16 @@
       margin-top: -40px;
       margin-bottom: 40px;
       color: var(--text-dim);
+    }
+    .hard-disclaimer {
+      font-size: 11px;
+      color: var(--danger);
+      margin-top: 15px;
+      font-weight: bold;
+      border: 1px solid rgba(239, 68, 68, 0.2);
+      padding: 8px;
+      display: inline-block;
+      border-radius: 4px;
     }
     .link-block {
       border: 1px solid var(--border);
@@ -123,8 +134,13 @@
   <div class="sub">Public Network Index · Canonical Endpoints · 2026.Q1</div>
 
   <div class="legend">
-    <span style="color: var(--success)">●</span> STRUCTURALLY CLOSED: Results Finalized under Scoped Assumptions 
-    <span style="margin-left:15px; color: var(--success)">●</span> ARTIFACT VERIFIED: Validated for n ≤ 7
+    <div><span style="color: var(--success)">●</span> STRUCTURALLY CLOSED: Results Finalized under Scoped Assumptions</div>
+    <div style="margin-top:5px;"><span style="color: var(--success)">●</span> ARTIFACT VERIFIED: Validated for $n \le 7$</div>
+    
+    <div class="hard-disclaimer">
+      All results are finite, scoped, and artifact-backed. 
+      No asymptotic, universal, or unbounded claims are asserted.
+    </div>
   </div>
 
   <h2>Core Infrastructure</h2>
@@ -147,7 +163,7 @@
     <span class="status-tag">STRUCTURALLY CLOSED</span>
     <div class="desc">
       Decision resolved in the negative for an explicit constant-width SAT family. 
-      Establishes that fixed-radius local transcripts require Ω(n) total information.
+      Establishes that fixed-radius local transcripts require $\Omega(n)$ total information.
     </div>
     <a href="https://github.com/inaciovasquez2020/overlap-rigidity-counterexamples" 
        class="barrier-link" target="_blank" rel="noopener noreferrer">
@@ -173,14 +189,14 @@
     </a> 
     <span class="status-tag">ARTIFACT VERIFIED</span>
     <div class="desc">
-      Deterministic bounded verification for cycle-local systems; includes checksums and CI validation records for n ≤ 7.
+      Deterministic bounded verification for cycle-local systems; includes checksums and CI validation records for $n \le 7$.
     </div>
   </div>
 
   <h2>Local–Global Information Barrier</h2>
   <div style="padding: 10px 0;">
     <p class="desc" style="color: #e5e7eb;">
-      Formal FO<sup>k</sup> structural result supported by bounded verification. 
+      Formal FO$^k$ structural result supported by bounded verification. 
       Establishes the hard limit of locality-based inference within the declared scope.
     </p>
     <a href="https://github.com/inaciovasquez2020/final-wall-fo-k-locality/blob/main/docs/local-global-barrier.pdf" 
