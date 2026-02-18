@@ -1,154 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Artifact Registry — Vasquez Lab</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Artifact registry for bounded verification and structural rigidity results within the Unified Rigidity Framework (URF)." />
-  <meta name="theme-color" content="#0b1220" />
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-  <style>
-    :root {
-      --bg-main: #0b1220;
-      --bg-sidebar: #0f172a;
-      --bg-card: #0e1626;
-      --text-main: #e5e7eb;
-      --text-muted: #9aa5b1;
-      --text-title: #f8fafc;
-      --accent: #38bdf8;
-      --accent-soft: #7dd3fc;
-      --success: #10b981;
-      --warning: #ef4444;
-      --border: #1f2933;
-      --border-soft: #2a3644;
-    }
-
-    * { box-sizing: border-box; }
-    body { 
-      margin: 0; 
-      font-family: 'Inter', sans-serif; 
-      background: var(--bg-main); 
-      color: var(--text-main); 
-      display: flex; 
-      height: 100vh; 
-      overflow: hidden; 
-    }
-
-    /* Sidebar Navigation */
-    .sidebar { 
-      width: 260px; 
-      background: var(--bg-sidebar); 
-      border-right: 1px solid var(--border);
-      display: flex; 
-      flex-direction: column; 
-      padding: 25px 15px; 
-      flex-shrink: 0; 
-    }
-    .brand { font-size: 18px; font-weight: 700; color: var(--text-title); margin-bottom: 35px; display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .brand i { color: var(--accent); }
-
-    .nav-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 30px; }
-    .nav-header { text-transform: uppercase; font-size: 10px; font-weight: 800; color: #475569; margin-bottom: 10px; padding-left: 12px; letter-spacing: 1px; }
-    .nav-item { display: flex; align-items: center; gap: 12px; padding: 10px 12px; color: var(--text-muted); text-decoration: none; font-size: 13px; font-weight: 500; border-radius: 6px; transition: 0.2s; }
-    .nav-item:hover, .nav-item.active { background: rgba(56, 189, 248, 0.1); color: var(--accent-soft); }
-
-    /* Main Content Area */
-    .main-content { flex-grow: 1; display: flex; flex-direction: column; overflow: hidden; background: linear-gradient(180deg, #060b16, var(--bg-main)); }
-    .top-bar { 
-      height: 65px; 
-      background: rgba(15, 23, 42, 0.8); 
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border); 
-      display: flex; 
-      align-items: center; 
-      justify-content: space-between; 
-      padding: 0 35px; 
-      flex-shrink: 0; 
-    }
-    .dashboard-container { padding: 40px; overflow-y: auto; }
-
-    /* Data Table */
-    .project-table { background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 8px; overflow: hidden; }
-    .table-head { 
-      display: grid; grid-template-columns: 3fr 1fr 1fr 1fr; 
-      padding: 15px 25px; border-bottom: 1px solid var(--border); 
-      background: rgba(0,0,0,0.2); 
-      font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;
-    }
-    .project-row { 
-      display: grid; grid-template-columns: 3fr 1fr 1fr 1fr; 
-      padding: 20px 25px; border-bottom: 1px solid var(--border); 
-      align-items: center; text-decoration: none; color: inherit; transition: 0.2s;
-    }
-    .project-row:hover { background-color: rgba(56, 189, 248, 0.03); }
-    
-    .title-cell { display: flex; flex-direction: column; gap: 5px; }
-    .title-main { font-weight: 600; font-size: 15px; display: flex; align-items: center; gap: 12px; color: var(--text-title); }
-    .title-desc { font-size: 12px; color: var(--text-muted); margin-left: 32px; }
-    
-    /* Tags */
-    .tag { display: inline-block; padding: 2px 10px; border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase; border: 1px solid transparent; white-space: nowrap; }
-    .tag-green { color: var(--success); border-color: var(--success); background: rgba(16, 185, 129, 0.1); }
-    .tag-blue { color: var(--accent); border-color: var(--accent); background: rgba(56, 189, 248, 0.1); }
-    .tag-closed { color: var(--success); border-color: var(--success); background: rgba(16, 185, 129, 0.1); }
-
-    .id-mono { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent-soft); }
-    .action-link { color: var(--accent); text-decoration: none; font-size: 11px; font-weight: 700; display: flex; align-items: center; gap: 5px; text-transform: uppercase; }
-    .action-link:hover { color: var(--text-title); }
-
-    @media (max-width: 900px) {
-      .sidebar { width: 70px; padding: 25px 10px; }
-      .brand span, .nav-item span, .nav-header { display: none; }
-      .table-head { display: none; }
-      .project-row { grid-template-columns: 1fr; gap: 15px; padding: 25px; }
-    }
-  </style>
-</head>
-<body>
-
-  <aside class="sidebar">
-    <a href="https://inaciovasquez2020.github.io/vasquez-index/" class="brand">
-      <i class="fa-solid fa-microchip"></i>
-      <span>VASQUEZ_LAB</span>
-    </a>
-    <div class="nav-group">
-      <div class="nav-header">Verification</div>
-      <a href="#" class="nav-item active"><i class="fa-solid fa-list-check"></i><span>Active Registry</span></a>
-      <a href="https://inaciovasquez2020.github.io/vasquez-index/dashboard.html" class="nav-item"><i class="fa-solid fa-shield-halved"></i><span>Live Dashboard</span></a>
-    </div>
-    <div class="nav-group">
-      <div class="nav-header">External</div>
-      <a href="https://inaciovasquez2020.github.io/vasquez-index/publications.html" class="nav-item"><i class="fa-solid fa-book"></i><span>Manuscripts</span></a>
-      <a href="https://github.com/inaciovasquez2020?tab=repositories" class="nav-item" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i><span>Repositories</span></a>
-      <a href="https://inaciovasquez2020.github.io/vasquez-index/contact.html" class="nav-item"><i class="fa-solid fa-envelope"></i><span>Contact</span></a>
-    </div>
-  </aside>
-
-  <main class="main-content">
-    <header class="top-bar">
-      <div style="font-size: 11px; font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--success);">
-        <i class="fa-solid fa-circle-check"></i> PROGRAM_STRUCTURALLY_CLOSED // BOUNDED_VERIFICATION // FEB_2026
-      </div>
-      <div style="display:flex; align-items:center; gap:12px; font-size:13px; font-weight: 600;">
-        Inacio F. Vasquez <div style="width:32px; height:32px; background:var(--accent); color:var(--bg-main); border-radius:4px; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight: 800;">IV</div>
-      </div>
-    </header>
-
-    <div class="dashboard-container">
-      <div style="margin-bottom: 35px;">
-        <h2 style="margin:0; font-size:24px; color: var(--text-title);">Active Artifact Registry</h2>
-        <div style="margin-top:10px; font-size:12px; color:var(--text-muted); max-width: 680px;">
-          All entries in this registry correspond to bounded, explicitly scoped verification artifacts. No unbounded, asymptotic, or universal claims are asserted on this page.
-        </div>
-      </div>
-
-      <div class="project-table">
+<div class="project-table">
         <div class="table-head">
           <div>Artifact Name / Logic</div>
           <div>Registry ID</div>
@@ -157,6 +7,7 @@
         </div>
 
         <div class="project-row">
+          <data value="META-ART-00" data-scope="index" data-status="active"></data>
           <div class="title-cell">
             <div class="title-main"><i class="fa-solid fa-fingerprint" style="color: var(--accent);"></i> URF Artifact Index</div>
             <div class="title-desc">Canonical registry mapping artifacts to verification parameters and hashes.</div>
@@ -167,6 +18,7 @@
         </div>
 
         <div class="project-row" style="background: rgba(16, 185, 129, 0.04); border-left: 4px solid var(--success);">
+          <data value="WALL-CCL-01" data-scope="bounded" data-verification="ci+hash" data-status="closed"></data>
           <div class="title-cell">
             <div class="title-main"><i class="fa-solid fa-lock" style="color: var(--success);"></i> Clause Contraction Lemma (CCL)</div>
             <div class="title-desc">Reduced to Cycle–Orbit Splitting (CLR) under bounded verification; no asymptotic claims.</div>
@@ -177,6 +29,7 @@
         </div>
 
         <div class="project-row">
+          <data value="CORE-URF-01" data-scope="bounded" data-verification="spectral" data-status="verified"></data>
           <div class="title-cell">
             <div class="title-main"><i class="fa-solid fa-shield-nodes" style="color: var(--success);"></i> URF-Core Spectral Stability</div>
             <div class="title-desc">Artifact-backed verification of spectral rigidity under URF-Core constraints.</div>
@@ -187,6 +40,7 @@
         </div>
 
         <div class="project-row">
+          <data value="ART-BC-01" data-scope="implementation" data-verification="consensus" data-status="verified"></data>
           <div class="title-cell">
             <div class="title-main"><i class="fa-brands fa-bitcoin" style="color: #f7931a;"></i> URC-Minimal-Blockchain</div>
             <div class="title-desc">Capacity Retention implementation via URF consensus.</div>
@@ -197,6 +51,7 @@
         </div>
 
         <div class="project-row">
+          <data value="EXT-COS-01" data-scope="model" data-verification="theoretical" data-status="public"></data>
           <div class="title-cell">
             <div class="title-main"><i class="fa-solid fa-atom" style="color: var(--accent);"></i> DFM–MKC Cosmology</div>
             <div class="title-desc">Dark Fluid Model with Minimal Kinetic Coupling.</div>
@@ -207,9 +62,10 @@
         </div>
 
         <div class="project-row">
+          <data value="EXT-1-GEO" data-scope="instance" data-verification="math" data-status="verified"></data>
           <div class="title-cell">
             <div class="title-main"><i class="fa-solid fa-link" style="color: var(--success);"></i> Heisenberg Nilmanifold</div>
-            <div class="title-desc">Certified spectral gap witness (\( \lambda_1 \ge 4\pi \)) under URF-SG instance.</div>
+            <div class="title-desc">Certified spectral gap witness ($ \lambda_1 \ge 4\pi $) under URF-SG instance.</div>
           </div>
           <div class="id-mono">EXT-1-GEO</div>
           <div><span class="tag tag-green">VERIFIED</span></div>
@@ -217,23 +73,13 @@
         </div>
 
         <div class="project-row">
+          <data value="EXT-2-STAT" data-scope="instance" data-verification="math" data-status="verified"></data>
           <div class="title-cell">
             <div class="title-main"><i class="fa-solid fa-wave-square" style="color: var(--accent);"></i> Ornstein–Uhlenbeck</div>
-            <div class="title-desc">Operator on \( L^2(\mathbb{R},\gamma) \) | Spectral Gap: 1.0</div>
+            <div class="title-desc">Operator on $ L^2(\mathbb{R},\gamma) $ | Spectral Gap: 1.0</div>
           </div>
           <div class="id-mono">EXT-2-STAT</div>
           <div><span class="tag tag-green">VERIFIED</span></div>
           <div><a href="https://github.com/inaciovasquez2020/urf-core/blob/main/instances/EXT-2-Ornstein-Uhlenbeck.json" class="action-link" target="_blank" rel="noopener noreferrer">OPEN_JSON <i class="fa-solid fa-file-code"></i></a></div>
         </div>
-
-      </div> 
-      
-      <div style="margin-top:45px; font-family: 'JetBrains Mono', monospace; font-size:11px; color:var(--text-muted); border-top: 1px solid var(--border); padding-top: 25px;">
-        VASQUEZ_RESEARCH_PROGRAM // STATUS: STRUCTURALLY_CLOSED · ARTIFACT_VERIFIED <br>
-        <span style="opacity: 0.6;">Local rigidity established via CLR reduction under bounded verification. All verification claims are explicitly scoped and artifact-backed. System state remains RIGID.</span>
       </div>
-    </div> 
-  </main>
-
-</body>
-</html>
