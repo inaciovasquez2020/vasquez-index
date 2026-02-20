@@ -66,3 +66,10 @@ If you use this registry or the indexed materials, please cite as follows:
   year   = {2026},
   url    = {[https://inaciovasquez2020.github.io/vasquez-index/](https://inaciovasquez2020.github.io/vasquez-index/)}
 }
+
+Structural wrappers
+- Cyclone (terminal obstruction): https://github.com/inaciovasquez2020/cyclone-terminal-obstruction
+- Whiplash (stability checks): https://github.com/inaciovasquez2020/whiplash-stability
+- Capacity-Locality-Certification: https://github.com/inaciovasquez2020/capacity-locality-certification
+- Reductions map: https://github.com/inaciovasquez2020/urf-reductions-sat-csp
+- Docs source: https://github.com/inaciovasquez2020/vasquez-docs
