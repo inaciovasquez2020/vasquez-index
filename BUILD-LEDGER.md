@@ -69,3 +69,8 @@
   - freeze: freeze-20260223
   - status: audited / reproducible
   - date: 2026-02-23
+- repo: chronos-urf-rr
+  - tag: build-ok-20260223
+  - freeze: freeze-20260223
+  - status: audited / reproducible
+  - date: 2026-02-23
