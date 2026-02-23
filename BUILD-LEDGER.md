@@ -3,3 +3,9 @@
   - freeze: freeze-20260223
   - status: audited / reproducible / CI green
   - date: 2026-02-23
+- Chronos-EntropyDepth
+  - tag: build-ok-20260223
+  - freeze: freeze-20260223
+  - status: audited / reproducible / CI green
+  - artifacts: PDF (paper/)
+  - date: 2026-02-23
