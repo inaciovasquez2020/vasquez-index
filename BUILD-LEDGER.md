@@ -99,3 +99,8 @@
 - freeze: freeze-20260223
 - status: audited / reproducible
 - date: 2026-02-23
+## urf-open-review-ledger
+- tag: build-ok-20260223
+- freeze: freeze-20260223
+- status: audited / reproducible
+- date: 2026-02-23
