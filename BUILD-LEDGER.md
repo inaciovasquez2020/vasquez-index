@@ -29,3 +29,8 @@
   - freeze: freeze-20260223
   - status: audited / reproducible / CI green
   - date: 2026-02-23
+- whiplash-stability
+  - tag: build-ok-20260223
+  - freeze: freeze-20260223
+  - status: audited / reproducible / CI green
+  - date: 2026-02-23
