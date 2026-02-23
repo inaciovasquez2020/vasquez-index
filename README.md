@@ -73,3 +73,12 @@ Structural wrappers
 - Capacity-Locality-Certification: https://github.com/inaciovasquez2020/capacity-locality-certification
 - Reductions map: https://github.com/inaciovasquez2020/urf-reductions-sat-csp
 - Docs source: https://github.com/inaciovasquez2020/vasquez-docs
+
+---
+
+## Registry
+
+This repository is part of the URF registry.
+
+See:
+- `REGISTRY.md` for authoritative role and scope declarations.
