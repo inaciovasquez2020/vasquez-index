@@ -1,7 +1,9 @@
-# URF Synthesis Note
+# URF Synthesis Paper
 
-Goal: a single, readable narrative connecting
-rigidity → admissibility → capacity → certified obstructions,
-with explicit scope boundaries and no overclaims.
+This directory contains an expository synthesis of the Unified Rigidity Framework.
 
-Status: DRAFT (expository only).
+- No new claims
+- No new proofs
+- All inputs are certified elsewhere
+
+Status: DRAFT (expository).
