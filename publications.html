@@ -2,42 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Manuscripts & Standards | Vasquez Index</title>
+    <title>Publications & Standards | Vasquez Index</title>
     <style>
         :root { --bg: #0d1117; --text: #c9d1d9; --accent: #58a6ff; --border: #30363d; }
-        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; padding: 40px; }
-        header { border-bottom: 2px solid var(--border); margin-bottom: 40px; }
-        h1 { font-family: 'JetBrains Mono', monospace; font-size: 1.8rem; }
-        section { margin-bottom: 40px; }
-        h2 { font-family: 'JetBrains Mono', monospace; color: var(--accent); border-bottom: 1px solid var(--border); }
-        .entry { margin-bottom: 1.5rem; }
-        strong { color: #79c0ff; font-family: 'JetBrains Mono', monospace; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; padding: 50px; }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 { font-family: 'JetBrains Mono', monospace; font-size: 1.5rem; color: var(--accent); }
+        h2 { font-family: 'JetBrains Mono', monospace; border-left: 4px solid var(--accent); padding-left: 15px; font-size: 1rem; margin-top: 40px; }
+        .entry { margin-bottom: 20px; padding-left: 20px; }
+        strong { font-family: 'JetBrains Mono', monospace; color: #79c0ff; }
+        a { color: var(--accent); text-decoration: none; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Manuscripts, Certificates, and Standards</h1> [cite: 56]
-        <p>Repository-backed publication and artifact map for the Vasquez research program.</p> [cite: 57]
-    </header>
+    <div class="container">
+        <h1>Manuscripts, Certificates, and Standards Register</h1>
+        <nav style="margin-bottom: 30px;"><a href="index.html">/BACK_TO_INDEX</a></nav>
 
-    <section>
-        <h2>Foundations and Complexity</h2> [cite: 58]
-        <div class="entry">
-            <strong>Final Wall (FO^k Locality)</strong> — terminal obstruction results for FO^k locality and refinement limits. [cite: 59]
-        </div>
-        <div class="entry">
-            <strong>Cycle-Local Rigidity / CorrRank</strong> — cycle-overlap rigidity and the FO^k bridge. [cite: 60]
-        </div>
-    </section>
+        <section>
+            <h2>Foundations and Complexity</h2>
+            <div class="entry">
+                <strong>Final Wall (FO^k Locality)</strong>: Terminal obstruction results. Defined in <a href="https://github.com/inaciovasquez2020/urf-core">urf-core</a>.
+            </div>
+            <div class="entry">
+                <strong>Chronos–EntropyDepth</strong>: Information-theoretic depth witnesses. Implementation: <a href="https://github.com/inaciovasquez2020/chronos-urf-rr">chronos-urf-rr</a>.
+            </div>
+        </section>
 
-    <section>
-        <h2>Formalization and Standards</h2> [cite: 63]
-        <div class="entry">
-            <strong>URF-SG / urf-verifier / capacity-locality-certification</strong> — verifier and certification stack. [cite: 64]
-        </div>
-        <div class="entry">
-            <strong>urf-axioms / urf-spine / flagship-lean</strong> — formal axiomatization and canonical module layer. [cite: 65]
-        </div>
-    </section>
+        <section>
+            <h2>Standards and Audit</h2>
+            <div class="entry">
+                <strong>URF-P Series (0001–0003)</strong>: Public protocols and release surfaces. Repository: <a href="https://github.com/inaciovasquez2020/urf-verifier">urf-verifier</a>.
+            </div>
+        </section>
+    </div>
 </body>
 </html>
