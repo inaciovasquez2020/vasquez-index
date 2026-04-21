@@ -4,48 +4,54 @@
     <meta charset="UTF-8">
     <title>Dashboard | Vasquez Index</title>
     <style>
-        :root { --bg: #0d1117; --text: #c9d1d9; --accent: #58a6ff; --border: #30363d; --success: #3fb950; }
-        body { background: var(--bg); color: var(--text); font-family: 'JetBrains Mono', monospace; margin: 0; display: flex; }
-        #sidebar { width: 240px; border-right: 1px solid var(--border); height: 100vh; padding: 25px; font-size: 0.85rem; flex-shrink: 0; background: #010409; }
-        main { flex-grow: 1; padding: 40px; font-family: 'Inter', sans-serif; overflow-y: auto; }
-        h1 { font-family: 'JetBrains Mono', monospace; font-size: 1.1rem; color: var(--accent); margin-top: 0; }
-        .status { color: var(--success); font-weight: bold; margin-bottom: 20px; display: block; }
-        .promo-block { border: 1px solid var(--accent); background: rgba(88, 166, 255, 0.05); padding: 20px; border-radius: 6px; margin-bottom: 30px; font-size: 0.9rem; }
-        .log-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; }
-        .log-card { border: 1px solid var(--border); padding: 20px; border-radius: 4px; background: #161b22; }
-        h3 { font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; color: var(--accent); margin-top: 0; }
+        :root { --bg: #0d1117; --text: #c9d1d9; --accent: #58a6ff; --border: #30363d; --header: #161b22; --highlight: #d29922; }
+        body { background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; padding: 0; }
+        header { background-color: var(--header); border-bottom: 1px solid var(--border); padding: 2rem; text-align: center; }
+        h1 { font-family: 'JetBrains Mono', monospace; color: var(--accent); font-size: 1rem; margin: 0; }
+        main { max-width: 1100px; margin: 2rem auto; padding: 0 2rem; }
+        .promotion { border: 1px solid var(--highlight); background: rgba(210, 153, 34, 0.05); padding: 1.5rem; border-radius: 6px; margin-bottom: 2.5rem; }
+        .promotion strong { color: var(--highlight); font-family: 'JetBrains Mono', monospace; display: block; margin-bottom: 10px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+        section { border: 1px solid var(--border); padding: 1.5rem; border-radius: 6px; background: #010409; }
+        h2 { font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+        ul { list-style: none; padding: 0; font-size: 0.9rem; }
+        li { margin-bottom: 1rem; border-left: 2px solid var(--border); padding-left: 1rem; }
         a { color: var(--accent); text-decoration: none; }
-        strong { font-family: 'JetBrains Mono', monospace; color: #79c0ff; }
+        a:hover { text-decoration: underline; }
+        nav { margin-top: 1rem; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; }
+        nav a { margin: 0 10px; color: #8b949e; }
     </style>
 </head>
 <body>
-    <nav id="sidebar">
-        <p style="color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 10px;">VASQUEZ_INDEX</p>
-        <a href="index.html" style="display:block; color: var(--text); margin-bottom: 10px;">> INDEX</a>
-        <a href="publications.html" style="display:block; color: var(--text); margin-bottom: 10px;">> PUBLICATIONS</a>
-        <p style="margin-top: 40px; opacity: 0.5;">REPOS_ACTIVE:</p>
-        <p style="font-size: 0.75rem;">urf-core<br>chronos-urf-rr<br>flagship-lean<br>urf-verifier</p>
-    </nav>
+    <header>
+        <h1>PROGRAM_STATUS: ACTIVE NETWORK // EXECUTABLE FOUNDATIONS // OPEN FRONTIERS // APR_2026</h1>
+        <nav><a href="index.html">INDEX</a> | <a href="publications.html">PUBLICATIONS</a></nav>
+    </header>
     <main>
-        <span class="status">> SYSTEM_STATUS: ONLINE // APR_2026_ACTIVE</span>
-        <h1>PROGRAM_STATUS: REPOSITORY-NETWORK MONITORING</h1>
-
-        <div class="promo-block">
-            <strong>Featured URF-Core Update — URF-11 Registry Layer</strong><br>
-            urf-core now includes a canonical URF-11 subproblem registry. Registry checks are currently being integrated into <a href="https://github.com/inaciovasquez2020/urf-core/pull/282">PR #282</a>.
+        <div class="promotion">
+            <strong>Featured URF-Core Update — URF-11 Registry Layer</strong>
+            urf-core now includes a canonical URF-11 subproblem registry with repository-native checks that every bridge source/subproblem pair resolves to a declared record. The next public layer is PR #282, which adds a translation-rule registry and a consistency test requiring every bridge translation_rule to resolve to a declared rule record.
         </div>
 
-        <div class="log-grid">
-            <div class="log-card">
+        <div class="grid">
+            <section>
+                <h2>System Monitoring</h2>
+                <p>Repository network for the Vasquez research program.</p>
                 <h3>Core Infrastructure</h3>
-                <p><strong><a href="https://github.com/inaciovasquez2020/urf-core">urf-core</a></strong>: Canonical bridge and field registries.</p>
-                <p><strong><a href="https://github.com/inaciovasquez2020/chronos-urf-rr">chronos-urf-rr</a></strong>: Reference verification surface.</p>
-            </div>
-            <div class="log-card">
-                <h3>Frontier Tracks</h3>
-                <p><strong><a href="https://github.com/inaciovasquez2020/rh-archimedean-kernel-rigidity">rh-archimedean-kernel-rigidity</a></strong>: Riemann Hypothesis program.</p>
-                <p><strong><a href="https://github.com/inaciovasquez2020/dfm-mkc-cosmology">dfm-mkc-cosmology</a></strong>: Cosmological solver active.</p>
-            </div>
+                <ul>
+                    <li><strong><a href="https://github.com/inaciovasquez2020/urf-core">urf-core</a></strong> — canonical definitions, field registries, and consistency surfaces.</li>
+                    <li><strong><a href="https://github.com/inaciovasquez2020/chronos-urf-rr">chronos-urf-rr</a></strong> — flagship executable reference verification surface.</li>
+                    <li><strong><a href="https://github.com/inaciovasquez2020/flagship-lean">flagship-lean</a></strong> — formal invariant layer and Lean-facing structures.</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Open Frontiers</h2>
+                <ul>
+                    <li><strong><a href="https://github.com/inaciovasquez2020/rh-archimedean-kernel-rigidity">rh-archimedean-kernel-rigidity</a></strong> — active mathematical research track.</li>
+                    <li><strong><a href="https://github.com/inaciovasquez2020/dfm-mkc-cosmology">dfm-mkc-cosmology</a></strong> — cosmological solver program.</li>
+                    <li><strong><a href="https://github.com/inaciovasquez2020/urf-verifier">urf-verifier</a></strong> — deterministic verification and certification layer.</li>
+                </ul>
+            </section>
         </div>
     </main>
 </body>
