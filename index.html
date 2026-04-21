@@ -3,77 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | Vasquez Index</title>
+    <title>Inacio F. Vasquez | Research Index</title>
     <style>
-        :root { --bg: #0d1117; --sidebar-bg: #010409; --card-bg: #161b22; --text: #c9d1d9; --accent: #58a6ff; --border: #30363d; --success: #3fb950; --code: #79c0ff; }
-        body { background: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, sans-serif; margin: 0; display: flex; min-height: 100vh; }
+        :root { --bg: #0d1117; --text: #c9d1d9; --accent: #58a6ff; --border: #30363d; --card: #161b22; --warn: #d29922; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; padding: 40px; }
+        header { max-width: 1000px; margin: 0 auto 40px auto; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+        h1 { font-family: 'JetBrains Mono', monospace; font-size: 2rem; color: var(--accent); margin: 0; }
+        .subtitle { opacity: 0.7; font-size: 1.1rem; margin-top: 10px; }
         
-        #sidebar { width: 260px; background: var(--sidebar-bg); border-right: 1px solid var(--border); padding: 25px; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; flex-shrink: 0; }
-        #sidebar h3 { color: var(--accent); font-size: 1rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
-        .status-dot { height: 8px; width: 8px; background-color: var(--success); border-radius: 50%; display: inline-block; margin-right: 8px; }
-        .nav-group { margin-bottom: 2rem; }
-        .nav-group a { display: block; color: var(--text); text-decoration: none; margin-bottom: 12px; opacity: 0.8; }
-        .nav-group a:hover { opacity: 1; color: var(--accent); }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .promo-card { border: 1px solid var(--warn); background: rgba(210, 153, 34, 0.05); padding: 25px; border-radius: 6px; margin-bottom: 30px; }
+        .promo-card h3 { margin-top: 0; color: var(--warn); font-family: 'JetBrains Mono', monospace; font-size: 1rem; }
 
-        main { flex-grow: 1; padding: 40px; max-width: 1100px; }
-        h1 { font-family: 'JetBrains Mono', monospace; font-size: 1.2rem; color: var(--accent); margin-top: 0; margin-bottom: 2rem; }
+        .ecosystem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; }
+        .category-card { background: var(--card); border: 1px solid var(--border); padding: 25px; border-radius: 6px; }
+        .category-card h2 { font-family: 'JetBrains Mono', monospace; font-size: 1rem; color: var(--accent); margin-top: 0; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
         
-        .promo-banner { border: 1px solid var(--accent); background: rgba(88, 166, 255, 0.05); padding: 20px; border-radius: 6px; margin-bottom: 30px; position: relative; }
-        .promo-banner h2 { font-size: 1rem; margin-top: 0; color: var(--code); font-family: 'JetBrains Mono', monospace; }
-        
-        .monitor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 20px; }
-        .console-box { background: var(--card-bg); border: 1px solid var(--border); padding: 25px; border-radius: 6px; }
-        .console-box h3 { font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-top: 0; }
-        
-        ul { list-style: none; padding: 0; }
-        li { margin-bottom: 15px; font-size: 0.9rem; line-height: 1.5; }
+        ul { padding-left: 18px; }
+        li { margin-bottom: 12px; font-size: 0.9rem; line-height: 1.4; }
         a { color: var(--accent); text-decoration: none; }
         a:hover { text-decoration: underline; }
-        strong { font-family: 'JetBrains Mono', monospace; color: var(--code); font-weight: normal; }
+        strong { font-family: 'JetBrains Mono', monospace; color: #79c0ff; font-weight: normal; }
+        
+        nav { margin-top: 20px; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; }
+        nav a { margin-right: 20px; opacity: 0.6; }
+        nav a:hover { opacity: 1; }
     </style>
 </head>
 <body>
-    <nav id="sidebar">
-        <h3>VASQUEZ_INDEX</h3>
-        <div class="nav-group">
-            <p><span class="status-dot"></span> SYSTEM_ACTIVE</p>
-            <p>> APR_2026_CYCLE</p>
-        </div>
-        <div class="nav-group">
-            <a href="index.html">01_ECOSYSTEM_MAP</a>
-            <a href="publications.html">02_MANUSCRIPTS</a>
-            <a href="https://github.com/inaciovasquez2020">03_GITHUB_ORG</a>
-        </div>
-    </nav>
+    <header>
+        <h1>Inacio F. Vasquez</h1>
+        <p class="subtitle">Unified Rigidity Framework: A repository-native network of executable artifacts.</p>
+        <nav>
+            <a href="dashboard.html">/DASHBOARD</a>
+            <a href="publications.html">/PUBLICATIONS</a>
+            <a href="https://github.com/inaciovasquez2020">/GITHUB</a>
+        </nav>
+    </header>
 
-    <main>
-        <h1>PROGRAM_STATUS: ACTIVE NETWORK // EXECUTABLE FOUNDATIONS // APR_2026</h1>
-
-        <section class="promo-banner">
-            <h2>Featured URF-Core Update — URF-11 Registry Layer</h2>
-            <p><a href="https://github.com/inaciovasquez2020/urf-core">urf-core</a> now includes a canonical URF-11 subproblem registry with repository-native checks. The next public layer is <a href="https://github.com/inaciovasquez2020/urf-core/pull/282">PR #282</a>, which adds a translation-rule registry and consistency tests requiring every bridge translation_rule to resolve to a declared rule record.</p>
+    <div class="container">
+        <section class="promo-card">
+            <h3>Featured URF-Core Update — URF-11 Registry Layer</h3>
+            <p>The <a href="https://github.com/inaciovasquez2020/urf-core">urf-core</a> repository now features a canonical URF-11 subproblem registry. Expansion of translation-rule consistency is active in <a href="https://github.com/inaciovasquez2020/urf-core/pull/282">PR #282</a>.</p>
         </section>
 
-        <div class="monitor-grid">
-            <div class="console-box">
-                <h3>Core Infrastructure</h3>
+        <main class="ecosystem-grid">
+            <div class="category-card">
+                <h2>Foundational Core</h2>
                 <ul>
-                    <li><strong><a href="https://github.com/inaciovasquez2020/urf-core">urf-core</a></strong> — canonical definitions, field registries, bridge registries, and consistency surfaces.</li>
-                    <li><strong><a href="https://github.com/inaciovasquez2020/chronos-urf-rr">chronos-urf-rr</a></strong> — flagship executable Chronos/URF implementation and verification surface.</li>
-                    <li><strong><a href="https://github.com/inaciovasquez2020/flagship-lean">flagship-lean</a></strong> — formal invariant layer and Lean-facing canonical structures.</li>
-                    <li><strong><a href="https://github.com/inaciovasquez2020/urf-verifier">urf-verifier</a></strong> — deterministic verification and certification layer.</li>
+                    <li><strong><a href="https://github.com/inaciovasquez2020/urf-core">urf-core</a></strong> — Canonical repository for definitions, registries, and cross-field coordination.</li>
+                    <li><strong><a href="https://github.com/inaciovasquez2020/chronos-urf-rr">chronos-urf-rr</a></strong> — Information-theoretic depth and executable witness layer.</li>
+                    <li><strong><a href="https://github.com/inaciovasquez2020/flagship-lean">flagship-lean</a></strong> — Formal axiomatization and overlap-rank bridge work.</li>
                 </ul>
             </div>
 
-            <div class="console-box">
-                <h3>Frontier Programs</h3>
+            <div class="category-card">
+                <h2>Verification & Audit</h2>
                 <ul>
-                    <li><strong><a href="https://github.com/inaciovasquez2020/rh-archimedean-kernel-rigidity">rh-archimedean-kernel-rigidity</a></strong> — active mathematical research track.</li>
-                    <li><strong><a href="https://github.com/inaciovasquez2020/dfm-mkc-cosmology">dfm-mkc-cosmology</a></strong> — cosmological background solver.</li>
-                    <li><strong><a href="https://github.com/inaciovasquez2020/pachner-invariant">pachner-invariant</a></strong> — formal simplicial manifold triangulations.</li>
+                    <li><strong><a href="https://github.com/inaciovasquez2020/urf-verifier">urf-verifier</a></strong> — Deterministic verification and certification infrastructure.</li>
+                    <li><strong><a href="https://github.com/inaciovasquez2020/vasquez-index">vasquez-index</a></strong> — Centralized digital portal and repository index.</li>
+                    <li><strong>urf-open-review-ledger</strong> — Public audit and protocol-release layer.</li>
                 </ul>
             </div>
-        </div>
-    </main>
+
+            <div class="category-card">
+                <h2>Mathematical Physics</h2>
+                <ul>
+                    <li><strong><a href="https://github.com/inaciovasquez2020/rh-archimedean-kernel-rigidity">rh-archimedean-kernel-rigidity</a></strong> — Coercivity and defect-control for the Riemann Hypothesis.</li>
+                    <li><strong><a href="https://github.com/inaciovasquez2020/dfm-mkc-cosmology">dfm-mkc-cosmology</a></strong> — Dark Fluid Model addressing cosmological tensions.</li>
+                </ul>
+            </div>
+
+            <div class="category-card">
+                <h2>Frontier Labs</h2>
+                <p>final-wall-fo-k-locality / cycle-local-rigidity / overlap-rigidity-lean-dev / cyclone-terminal-obstruction / clay-problem-lab.</p>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
