@@ -2,83 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inacio F. Vasquez | Research Index</title>
+    <title>Research Index | Vasquez Program</title>
     <style>
-        :root { --bg: #0d1117; --text: #c9d1d9; --accent: #58a6ff; --border: #30363d; --card: #161b22; --warn: #d29922; }
-        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; padding: 40px; }
-        header { max-width: 1000px; margin: 0 auto 40px auto; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
-        h1 { font-family: 'JetBrains Mono', monospace; font-size: 2rem; color: var(--accent); margin: 0; }
-        .subtitle { opacity: 0.7; font-size: 1.1rem; margin-top: 10px; }
-        
-        .container { max-width: 1000px; margin: 0 auto; }
-        .promo-card { border: 1px solid var(--warn); background: rgba(210, 153, 34, 0.05); padding: 25px; border-radius: 6px; margin-bottom: 30px; }
-        .promo-card h3 { margin-top: 0; color: var(--warn); font-family: 'JetBrains Mono', monospace; font-size: 1rem; }
-
-        .ecosystem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; }
-        .category-card { background: var(--card); border: 1px solid var(--border); padding: 25px; border-radius: 6px; }
-        .category-card h2 { font-family: 'JetBrains Mono', monospace; font-size: 1rem; color: var(--accent); margin-top: 0; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
-        
-        ul { padding-left: 18px; }
-        li { margin-bottom: 12px; font-size: 0.9rem; line-height: 1.4; }
+        :root { --bg: #0d1117; --text: #c9d1d9; --accent: #58a6ff; --border: #30363d; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; padding: 40px; margin: 0; }
+        header { border-bottom: 1px solid var(--border); padding-bottom: 30px; margin-bottom: 40px; max-width: 1000px; margin-left: auto; margin-right: auto; }
+        h1 { font-family: 'JetBrains Mono', monospace; font-size: 1.8rem; color: var(--accent); }
+        .promo { border: 1px solid #d29922; background: rgba(210, 153, 34, 0.05); padding: 20px; border-radius: 6px; margin: 30px 0; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
+        section { border: 1px solid var(--border); background: #161b22; padding: 25px; border-radius: 6px; }
+        h2 { font-family: 'JetBrains Mono', monospace; color: var(--accent); font-size: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+        ul { list-style: square; padding-left: 20px; }
+        li { margin-bottom: 10px; font-size: 0.9rem; }
         a { color: var(--accent); text-decoration: none; }
         a:hover { text-decoration: underline; }
         strong { font-family: 'JetBrains Mono', monospace; color: #79c0ff; font-weight: normal; }
-        
-        nav { margin-top: 20px; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; }
-        nav a { margin-right: 20px; opacity: 0.6; }
-        nav a:hover { opacity: 1; }
     </style>
 </head>
 <body>
     <header>
-        <h1>Inacio F. Vasquez</h1>
-        <p class="subtitle">Unified Rigidity Framework: A repository-native network of executable artifacts.</p>
-        <nav>
-            <a href="dashboard.html">/DASHBOARD</a>
-            <a href="publications.html">/PUBLICATIONS</a>
-            <a href="https://github.com/inaciovasquez2020">/GITHUB</a>
+        <h1>Vasquez Research Program: Executable Index</h1>
+        <nav style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; margin-top: 15px;">
+            <a href="dashboard.html">/DASHBOARD</a> | <a href="publications.html">/PUBLICATIONS</a> | <a href="https://github.com/inaciovasquez2020/vasquez-index">/REPO</a>
         </nav>
     </header>
 
-    <div class="container">
-        <section class="promo-card">
-            <h3>Featured URF-Core Update — URF-11 Registry Layer</h3>
-            <p>The <a href="https://github.com/inaciovasquez2020/urf-core">urf-core</a> repository now features a canonical URF-11 subproblem registry. Expansion of translation-rule consistency is active in <a href="https://github.com/inaciovasquez2020/urf-core/pull/282">PR #282</a>.</p>
+    <div class="grid">
+        <div class="promo" style="grid-column: 1 / -1;">
+            <strong>Featured URF-Core Update — URF-11 Registry Layer</strong>
+            <p>The canonical URF-11 subproblem registry is now live in <a href="https://github.com/inaciovasquez2020/urf-core">urf-core</a>. Reference commit: <a href="https://github.com/inaciovasquez2020/urf-core/commit/606f147">606f147</a>. Ongoing work: <a href="https://github.com/inaciovasquez2020/urf-core/pull/282">PR #282</a> (Translation-Rule Registry).</p>
+        </div>
+
+        <section>
+            <h2>Foundational Core</h2>
+            <ul>
+                <li><strong><a href="https://github.com/inaciovasquez2020/urf-core">urf-core</a></strong>: Registry and cross-field coordination.</li>
+                <li><strong><a href="https://github.com/inaciovasquez2020/chronos-urf-rr">chronos-urf-rr</a></strong>: Executable witness layer.</li>
+                <li><strong><a href="https://github.com/inaciovasquez2020/flagship-lean">flagship-lean</a></strong>: Formal invariant layer.</li>
+            </ul>
         </section>
 
-        <main class="ecosystem-grid">
-            <div class="category-card">
-                <h2>Foundational Core</h2>
-                <ul>
-                    <li><strong><a href="https://github.com/inaciovasquez2020/urf-core">urf-core</a></strong> — Canonical repository for definitions, registries, and cross-field coordination.</li>
-                    <li><strong><a href="https://github.com/inaciovasquez2020/chronos-urf-rr">chronos-urf-rr</a></strong> — Information-theoretic depth and executable witness layer.</li>
-                    <li><strong><a href="https://github.com/inaciovasquez2020/flagship-lean">flagship-lean</a></strong> — Formal axiomatization and overlap-rank bridge work.</li>
-                </ul>
-            </div>
-
-            <div class="category-card">
-                <h2>Verification & Audit</h2>
-                <ul>
-                    <li><strong><a href="https://github.com/inaciovasquez2020/urf-verifier">urf-verifier</a></strong> — Deterministic verification and certification infrastructure.</li>
-                    <li><strong><a href="https://github.com/inaciovasquez2020/vasquez-index">vasquez-index</a></strong> — Centralized digital portal and repository index.</li>
-                    <li><strong>urf-open-review-ledger</strong> — Public audit and protocol-release layer.</li>
-                </ul>
-            </div>
-
-            <div class="category-card">
-                <h2>Mathematical Physics</h2>
-                <ul>
-                    <li><strong><a href="https://github.com/inaciovasquez2020/rh-archimedean-kernel-rigidity">rh-archimedean-kernel-rigidity</a></strong> — Coercivity and defect-control for the Riemann Hypothesis.</li>
-                    <li><strong><a href="https://github.com/inaciovasquez2020/dfm-mkc-cosmology">dfm-mkc-cosmology</a></strong> — Dark Fluid Model addressing cosmological tensions.</li>
-                </ul>
-            </div>
-
-            <div class="category-card">
-                <h2>Frontier Labs</h2>
-                <p>final-wall-fo-k-locality / cycle-local-rigidity / overlap-rigidity-lean-dev / cyclone-terminal-obstruction / clay-problem-lab.</p>
-            </div>
-        </main>
+        <section>
+            <h2>Verification & Standards</h2>
+            <ul>
+                <li><strong><a href="https://github.com/inaciovasquez2020/urf-verifier">urf-verifier</a></strong>: Deterministic certification stack.</li>
+                <li><strong>scientific-infrastructure</strong>: Reproducibility protocols.</li>
+                <li><strong>urf-open-review-ledger</strong>: Public audit surface.</li>
+            </ul>
+        </section>
     </div>
 </body>
 </html>
