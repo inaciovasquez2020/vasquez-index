@@ -3,34 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <title>Publications | Vasquez Index</title>
+    <link rel="stylesheet" href="../styles.css">
     <style>
-        :root { --bg: #0d1117; --text: #c9d1d9; --accent: #58a6ff; --border: #30363d; }
-        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; padding: 50px; }
-        .container { max-width: 900px; margin: 0 auto; }
-        h1 { font-family: 'JetBrains Mono', monospace; font-size: 1.5rem; color: var(--accent); }
-        section { margin-top: 40px; }
-        h2 { font-family: 'JetBrains Mono', monospace; border-left: 4px solid var(--accent); padding-left: 15px; font-size: 1rem; }
-        .entry { margin: 20px 0; padding-left: 20px; font-size: 0.95rem; }
-        strong { color: #79c0ff; font-family: 'JetBrains Mono', monospace; }
-        a { color: var(--accent); text-decoration: none; }
+        /* Local overrides for bibliography density */
+        .artifact-category { margin-bottom: 3rem; }
+        .artifact-entry { 
+            margin-bottom: 1.5rem; 
+            padding-bottom: 1rem; 
+            border-bottom: 1px solid var(--border); 
+        }
+        .artifact-entry strong { color: var(--accent); display: block; margin-bottom: 0.25rem; }
+        .artifact-entry p { margin: 0; font-size: 0.9rem; color: var(--text-secondary); }
+        .artifact-meta { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; margin-top: 0.5rem; }
     </style>
 </head>
 <body>
-    <div class="container">
+    <header>
+        <nav>
+            <a href="index.html">/INDEX</a>
+            <a href="dashboard.html">/DASHBOARD</a>
+            <a href="https://github.com/inaciovasquez2020">/GITHUB</a>
+        </nav>
         <h1>Manuscripts, Certificates, and Standards</h1>
         <p>Repository-backed publication and artifact map for the Vasquez research program.</p>
+    </header>
 
-        <section>
+    <main>
+        <div class="promo-block">
+            <strong>Featured Infrastructure Update — URF-11 Registry Layer</strong>
+            <p>
+                The URF-11 registry work is now publication-facing. Subproblem records are canonical in 
+                <a href="https://github.com/inaciovasquez2020/urf-core/commit/606f147">urf-core (Commit 606f147)</a>, 
+                and translation-rule records are the next public consistency layer via 
+                <a href="https://github.com/inaciovasquez2020/urf-core/pull/282">PR #282</a>.
+            </p>
+        </div>
+
+        <section class="artifact-category">
             <h2>Foundations and Complexity</h2>
-            <div class="entry"><strong>Final Wall (FO^k Locality)</strong> — terminal obstruction results for FO^k locality and refinement limits.</div>
-            <div class="entry"><strong>Chronos–EntropyDepth</strong> — entropy-depth and executable lower-bound witnesses. Implementation: <a href="https://github.com/inaciovasquez2020/chronos-urf-rr">chronos-urf-rr</a>.</div>
+            <div class="artifact-entry">
+                <strong><a href="https://github.com/inaciovasquez2020/final-wall-fo-k-locality">Final Wall (FO^k Locality)</a></strong>
+                <p>Terminal obstruction results for FO^k locality and refinement limits.</p>
+            </div>
+            <div class="artifact-entry">
+                <strong><a href="https://github.com/inaciovasquez2020/cycle-local-rigidity">Cycle-Local Rigidity / CorrRank</a></strong>
+                <p>Cycle-overlap rigidity and the FO^k bridge.</p>
+            </div>
+            <div class="artifact-entry">
+                <strong><a href="https://github.com/inaciovasquez2020/chronos-urf-rr">Chronos–EntropyDepth / transcript-capacity-core</a></strong>
+                <p>Entropy-depth, transcript capacity, and executable lower-bound witnesses.</p>
+            </div>
+            <div class="artifact-entry">
+                <strong><a href="https://github.com/inaciovasquez2020/cyclone-terminal-obstruction">Cyclone Terminal Obstruction</a></strong>
+                <p>Admissibility, locality, and terminal-obstruction surfaces.</p>
+            </div>
         </section>
 
-        <section>
+        <section class="artifact-category">
             <h2>Formalization and Standards</h2>
-            <div class="entry"><strong>URF-SG / <a href="https://github.com/inaciovasquez2020/urf-verifier">urf-verifier</a></strong> — verifier and certification stack.</div>
-            <div class="entry"><strong>URF-P Series</strong> — public protocol and audit-track records.</div>
+            <div class="artifact-entry">
+                <strong><a href="https://github.com/inaciovasquez2020/urf-verifier">URF-SG / urf-verifier / capacity-locality-certification</a></strong>
+                <p>Deterministic verifier and certification stack for program-wide reproducibility.</p>
+            </div>
+            <div class="artifact-entry">
+                <strong><a href="https://github.com/inaciovasquez2020/flagship-lean">urf-axioms / urf-spine / flagship-lean</a></strong>
+                <p>Formal axiomatization and canonical module layer for Lean-facing structures.</p>
+            </div>
+            <div class="artifact-entry">
+                <strong><a href="https://github.com/inaciovasquez2020/urf-open-review-ledger">URF-P Series / urf-open-review-ledger</a></strong>
+                <p>Public protocol and audit-track records (URF-P-0001 / 0002 / 0003).</p>
+            </div>
         </section>
-    </div>
+
+        <section class="artifact-category">
+            <h2>Mathematical Physics</h2>
+            <div class="artifact-entry">
+                <strong><a href="https://github.com/inaciovasquez2020/rh-archimedean-kernel-rigidity">rh-archimedean-kernel-rigidity</a></strong>
+                <p>Coercivity and defect-control program for the Riemann Hypothesis.</p>
+            </div>
+            <div class="artifact-entry">
+                <strong><a href="https://github.com/inaciovasquez2020/dfm-mkc-cosmology">dfm-mkc-cosmology</a></strong>
+                <p>Dark Fluid Model with Minimal Kinetic Coupling cosmological background solver.</p>
+            </div>
+            <div class="artifact-entry">
+                <strong><a href="https://github.com/inaciovasquez2020/Exchange-Force-Framework">Exchange Force / Biological Friction Framework</a></strong>
+                <p>Information-theoretic constraints in biological growth and exchange dynamics.</p>
+            </div>
+        </section>
+
+        <section class="artifact-category">
+            <h2>Geometry and Topology</h2>
+            <div class="artifact-entry">
+                <strong><a href="https://github.com/inaciovasquez2020/pachner-invariant">pachner-invariant / poincare-new-derivation</a></strong>
+                <p>Regge action invariance and Pachner moves for 3-manifold triangulations.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Managed via <a href="https://github.com/inaciovasquez2020/vasquez-index">vasquez-index</a> | Canonical ORCID: 0009-0008-8459-3400</p>
+    </footer>
 </body>
 </html>
