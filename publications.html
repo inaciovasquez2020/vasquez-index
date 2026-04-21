@@ -1,52 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Manuscripts & Reports — URF</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    :root { --bg-main: #0b1220; --bg-card: #0e1626; --accent: #38bdf8; --accent-green: #10b981; --text-main: #e5e7eb; --text-muted: #9aa5b1; --text-title: #f8fafc; --border: #1f2933; }
-    body { margin: 0; font-family: 'Inter', sans-serif; color: var(--text-main); background: var(--bg-main); line-height: 1.6; }
-    .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-    nav { padding: 1.5rem 2rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; }
-    .nav-back { color: var(--accent); text-decoration: none; font-size: 12px; font-weight: 700; text-transform: uppercase; }
-    header { padding: 60px 20px; text-align: center; }
-    h1 { font-family: 'Libre Baskerville', serif; color: var(--text-title); font-size: 2.5rem; }
-    .pub-entry { background: var(--bg-card); padding: 35px; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 25px; }
-    .pub-year { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent-green); font-weight: 700; }
-    .pub-title { font-family: 'Libre Baskerville', serif; font-size: 1.4rem; color: var(--text-title); margin: 10px 0; }
-    .tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; background: #050910; padding: 3px 8px; border: 1px solid var(--border); color: var(--text-muted); text-transform: uppercase; margin-right: 5px; }
-    footer { text-align: center; padding: 40px; font-size: 12px; color: var(--text-muted); border-top: 1px solid var(--border); }
-  </style>
+    <meta charset="UTF-8">
+    <title>Manuscripts, Certificates, and Standards</title>
 </head>
 <body>
-  <nav><a href="./index.html" class="nav-back"><i class="fa-solid fa-arrow-left"></i> Back to Portal</a></nav>
-  <header><h1>Manuscripts & Reports</h1><p>Formal pipeline for the Unified Rigidity Framework (URF).</p></header>
-  <main class="container">
-    <article class="pub-entry">
-      <span class="pub-year">2026 — Manuscript (Journal-First)</span>
-      <h2 class="pub-title">The Expander Obstruction and Logic-Width Dependency</h2>
-      <p style="color:var(--text-muted);">Analysis of \(FO^k\) local types in bounding global structural invariants.</p>
-      <div style="margin-top:15px;"><span class="tag">Theoretical CS</span><span class="tag">Bounded Analysis</span></div>
-    </article>
+    <header>
+        <h1>Manuscripts, Certificates, and Standards</h1>
+        <p>Repository-backed publication and artifact map for the Vasquez research program.</p>
+    </header>
 
-    <article class="pub-entry">
-      <span class="pub-year">2026 — Draft in Progress</span>
-      <h2 class="pub-title">Finite Capacity and Rigidity in Operator Systems</h2>
-      <p style="color:var(--text-muted);">Exploration of URF rigidity bounds applied to finite operator systems and capacity retention.</p>
-      <div style="margin-top:15px;"><span class="tag">Operator Theory</span><span class="tag">Information Topology</span></div>
-    </article>
+    <main>
+        <section id="foundations-complexity">
+            <h2>Foundations and Complexity</h2>
+            <ul>
+                <li><strong>Final Wall (FO^k Locality):</strong> terminal obstruction results for FO^k locality and refinement limits.</li>
+                <li><strong>Cycle-Local Rigidity / CorrRank:</strong> cycle-overlap rigidity and the FO^k bridge.</li>
+                <li><strong>Chronos–EntropyDepth / transcript-capacity-core:</strong> entropy-depth, transcript capacity, and executable lower-bound witnesses.</li>
+                <li><strong>URC / overlap-rigidity-counterexamples / cyclone-terminal-obstruction:</strong> admissibility, locality, and terminal-obstruction surfaces.</li>
+            </ul>
+        </section>
 
-    <article class="pub-entry">
-      <span class="pub-year">2025 — Technical Report</span>
-      <h2 class="pub-title">URF-SG: A Standard for Machine-Verifiable Spectral Rigidity</h2>
-      <p style="color:var(--text-muted);">Definition of the JSON schema for deterministic audit of external witnesses.</p>
-      <div style="margin-top:15px;"><span class="tag">Standardization</span><span class="tag">Verification</span></div>
-    </article>
-  </main>
-  <footer>VASQUEZ_RESEARCH // 2026 // <a href="./CANONICALITY.md" style="color:var(--accent);">Canonicality Doctrine</a></footer>
+        <section id="formalization-standards">
+            <h2>Formalization and Standards</h2>
+            <ul>
+                <li><strong>URF-SG / urf-verifier / capacity-locality-certification:</strong> verifier and certification stack.</li>
+                <li><strong>urf-axioms / urf-spine / flagship-lean:</strong> formal axiomatization and canonical module layer.</li>
+                <li><strong>URF-P-0001 / URF-P-0002 / URF-P-0003 / urf-open-review-ledger:</strong> public protocol and audit-track records.</li>
+            </ul>
+        </section>
+
+        <section id="math-physics">
+            <h2>Mathematical Physics</h2>
+            <ul>
+                <li><strong>rh-archimedean-kernel-rigidity:</strong> coercivity and defect-control program for RH.</li>
+                <li><strong>ym-os-quantization / yang-mills-hs-gap-cert:</strong> Yang–Mills quantization and gap certification surfaces.</li>
+                <li><strong>radiative-rigidity / dfm-mkc-cosmology / Operational-Wavefunction-Collapse / Exchange-Force-Framework / biological-friction-framework.</strong></li>
+            </ul>
+        </section>
+
+        <section id="geometry-topology">
+            <h2>Geometry, Topology, and Structural Mathematics</h2>
+            <p>pachner-invariant / poincare-new-derivation / rank-dichotomy-cat0 / bepty.</p>
+        </section>
+
+        <section id="experimental-labs">
+            <h2>Experimental and Boundary Labs</h2>
+            <p>clay-problem-lab / owc-counterexamples / urf-application-stress-test / terminal-rigidity-witness-erb.</p>
+        </section>
+    </main>
 </body>
 </html>
