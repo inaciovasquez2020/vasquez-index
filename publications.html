@@ -2,53 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications - Vasquez Index</title>
+    <title>Manuscripts & Standards | Vasquez Index</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: rgb(51, 51, 51); max-width: 900px; margin: 0 auto; padding: 20px; background-color: rgb(249, 249, 249); }
-        header { border-bottom: 2px solid rgb(200, 200, 200); padding-bottom: 10px; margin-bottom: 20px; }
-        h1 { font-size: 2em; color: rgb(0, 102, 204); }
-        h2 { font-size: 1.3em; border-bottom: 1px solid rgb(221, 221, 221); padding-bottom: 5px; }
-        ul { list-style-type: square; }
-        li { margin-bottom: 10px; }
+        :root { --bg: #0d1117; --text: #c9d1d9; --accent: #58a6ff; --border: #30363d; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; padding: 40px; }
+        header { border-bottom: 2px solid var(--border); margin-bottom: 40px; }
+        h1 { font-family: 'JetBrains Mono', monospace; font-size: 1.8rem; }
+        section { margin-bottom: 40px; }
+        h2 { font-family: 'JetBrains Mono', monospace; color: var(--accent); border-bottom: 1px solid var(--border); }
+        .entry { margin-bottom: 1.5rem; }
+        strong { color: #79c0ff; font-family: 'JetBrains Mono', monospace; }
     </style>
 </head>
 <body>
     <header>
-        <h1>Manuscripts, Certificates, and Standards [cite: 56]</h1>
-        <p>Repository-backed publication and artifact map for the Vasquez research program. [cite: 57]</p>
+        <h1>Manuscripts, Certificates, and Standards</h1> [cite: 56]
+        <p>Repository-backed publication and artifact map for the Vasquez research program.</p> [cite: 57]
     </header>
 
-    <main>
-        <section>
-            <h2>Foundations and Complexity [cite: 58]</h2>
-            <ul>
-                <li><strong>Final Wall (FO^k Locality)</strong> — terminal obstruction results for FO^k locality and refinement limits. [cite: 59]</li>
-                <li><strong>Cycle-Local Rigidity / CorrRank</strong> — cycle-overlap rigidity and the FO^k bridge. [cite: 60]</li>
-                <li><strong>Chronos–EntropyDepth / transcript-capacity-core</strong> — entropy-depth, transcript capacity, and executable lower-bound witnesses. [cite: 61]</li>
-                <li><strong>URC / overlap-rigidity-counterexamples / cyclone-terminal-obstruction</strong> — admissibility, locality, and terminal-obstruction surfaces. [cite: 62]</li>
-            </ul>
+    <section>
+        <h2>Foundations and Complexity</h2> [cite: 58]
+        <div class="entry">
+            <strong>Final Wall (FO^k Locality)</strong> — terminal obstruction results for FO^k locality and refinement limits. [cite: 59]
+        </div>
+        <div class="entry">
+            <strong>Cycle-Local Rigidity / CorrRank</strong> — cycle-overlap rigidity and the FO^k bridge. [cite: 60]
+        </div>
+    </section>
 
-            <h2>Formalization and Standards [cite: 63]</h2>
-            <ul>
-                <li><strong>URF-SG / urf-verifier / capacity-locality-certification</strong> — verifier and certification stack. [cite: 64]</li>
-                <li><strong>urf-axioms / urf-spine / flagship-lean</strong> — formal axiomatization and canonical module layer. [cite: 65]</li>
-                <li><strong>URF-P-0001 / URF-P-0002 / URF-P-0003 / urf-open-review-ledger</strong> — public protocol and audit-track records. [cite: 66]</li>
-            </ul>
-
-            <h2>Mathematical Physics [cite: 67]</h2>
-            <ul>
-                <li><strong>rh-archimedean-kernel-rigidity</strong> — coercivity and defect-control program for RH. [cite: 68]</li>
-                <li><strong>ym-os-quantization / yang-mills-hs-gap-cert</strong> — Yang–Mills quantization and gap certification surfaces. [cite: 69]</li>
-                <li><strong>radiative-rigidity / dfm-mkc-cosmology / Operational-Wavefunction-Collapse / Exchange-Force-Framework / biological-friction-framework.</strong> [cite: 70]</li>
-            </ul>
-
-            <h2>Geometry, Topology, and Structural Mathematics [cite: 71]</h2>
-            <p>pachner-invariant / poincare-new-derivation / rank-dichotomy-cat0 / bepty. [cite: 72]</p>
-
-            <h2>Experimental and Boundary Labs [cite: 73]</h2>
-            <p>clay-problem-lab / owc-counterexamples / urf-application-stress-test / terminal-rigidity-witness-erb. [cite: 74]</p>
-        </section>
-    </main>
+    <section>
+        <h2>Formalization and Standards</h2> [cite: 63]
+        <div class="entry">
+            <strong>URF-SG / urf-verifier / capacity-locality-certification</strong> — verifier and certification stack. [cite: 64]
+        </div>
+        <div class="entry">
+            <strong>urf-axioms / urf-spine / flagship-lean</strong> — formal axiomatization and canonical module layer. [cite: 65]
+        </div>
+    </section>
 </body>
 </html>
