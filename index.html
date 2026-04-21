@@ -2,54 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Research Index | Vasquez Program</title>
+    <title>Inacio F. Vasquez | Research Index</title>
     <style>
-        :root { --bg: #0d1117; --text: #c9d1d9; --accent: #58a6ff; --border: #30363d; }
+        :root { --bg: #0d1117; --text: #c9d1d9; --accent: #58a6ff; --border: #30363d; --promo: #d29922; }
         body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; padding: 40px; margin: 0; }
-        header { border-bottom: 1px solid var(--border); padding-bottom: 30px; margin-bottom: 40px; max-width: 1000px; margin-left: auto; margin-right: auto; }
+        header { max-width: 1000px; margin: 0 auto 40px auto; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
         h1 { font-family: 'JetBrains Mono', monospace; font-size: 1.8rem; color: var(--accent); }
-        .promo { border: 1px solid #d29922; background: rgba(210, 153, 34, 0.05); padding: 20px; border-radius: 6px; margin: 30px 0; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
-        section { border: 1px solid var(--border); background: #161b22; padding: 25px; border-radius: 6px; }
-        h2 { font-family: 'JetBrains Mono', monospace; color: var(--accent); font-size: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
-        ul { list-style: square; padding-left: 20px; }
-        li { margin-bottom: 10px; font-size: 0.9rem; }
+        .highlight { border: 1px solid var(--promo); background: rgba(210, 153, 34, 0.05); padding: 25px; border-radius: 6px; margin: 30px auto; max-width: 1000px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
+        section { background: #161b22; border: 1px solid var(--border); padding: 25px; border-radius: 6px; }
+        h2 { font-family: 'JetBrains Mono', monospace; font-size: 1rem; color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+        ul { list-style: square; padding-left: 20px; font-size: 0.9rem; }
         a { color: var(--accent); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        strong { font-family: 'JetBrains Mono', monospace; color: #79c0ff; font-weight: normal; }
     </style>
 </head>
 <body>
     <header>
-        <h1>Vasquez Research Program: Executable Index</h1>
-        <nav style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; margin-top: 15px;">
-            <a href="dashboard.html">/DASHBOARD</a> | <a href="publications.html">/PUBLICATIONS</a> | <a href="https://github.com/inaciovasquez2020/vasquez-index">/REPO</a>
-        </nav>
+        <h1>Inacio F. Vasquez</h1>
+        <p>Independent researcher building a network of executable research artifacts across structural rigidity, formal verification, and public certification.</p>
     </header>
 
-    <div class="grid">
-        <div class="promo" style="grid-column: 1 / -1;">
-            <strong>Featured URF-Core Update — URF-11 Registry Layer</strong>
-            <p>The canonical URF-11 subproblem registry is now live in <a href="https://github.com/inaciovasquez2020/urf-core">urf-core</a>. Reference commit: <a href="https://github.com/inaciovasquez2020/urf-core/commit/606f147">606f147</a>. Ongoing work: <a href="https://github.com/inaciovasquez2020/urf-core/pull/282">PR #282</a> (Translation-Rule Registry).</p>
-        </div>
+    <div class="highlight">
+        <strong style="color:var(--promo); font-family: 'JetBrains Mono', monospace;">Featured URF-Core Update — URF-11 Registry Layer</strong>
+        <p>urf-core now includes a canonical URF-11 subproblem registry. Reference commit: <a href="https://github.com/inaciovasquez2020/urf-core/commit/606f147">606f147</a>. Next: PR #282.</p>
+    </div>
 
+    <main class="grid">
         <section>
             <h2>Foundational Core</h2>
             <ul>
-                <li><strong><a href="https://github.com/inaciovasquez2020/urf-core">urf-core</a></strong>: Registry and cross-field coordination.</li>
-                <li><strong><a href="https://github.com/inaciovasquez2020/chronos-urf-rr">chronos-urf-rr</a></strong>: Executable witness layer.</li>
-                <li><strong><a href="https://github.com/inaciovasquez2020/flagship-lean">flagship-lean</a></strong>: Formal invariant layer.</li>
+                <li><strong><a href="https://github.com/inaciovasquez2020/urf-core">urf-core</a></strong> — definitions, field registries, and coordination.</li>
+                <li><strong><a href="https://github.com/inaciovasquez2020/chronos-urf-rr">chronos-urf-rr</a></strong> — information-theoretic depth and witness layer.</li>
             </ul>
         </section>
-
         <section>
-            <h2>Verification & Standards</h2>
+            <h2>Verification & Audit</h2>
             <ul>
-                <li><strong><a href="https://github.com/inaciovasquez2020/urf-verifier">urf-verifier</a></strong>: Deterministic certification stack.</li>
-                <li><strong>scientific-infrastructure</strong>: Reproducibility protocols.</li>
-                <li><strong>urf-open-review-ledger</strong>: Public audit surface.</li>
+                <li><strong><a href="https://github.com/inaciovasquez2020/urf-verifier">urf-verifier</a></strong> — deterministic verification infrastructure.</li>
+                <li><strong><a href="https://github.com/inaciovasquez2020/urf-open-review-ledger">urf-open-review-ledger</a></strong> — public audit and protocol layer.</li>
             </ul>
         </section>
-    </div>
+    </main>
 </body>
 </html>
