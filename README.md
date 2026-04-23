@@ -1,3 +1,7 @@
+## Public Classification
+
+- `docs/REPO_CLASSIFICATION_2026_04_23.md`
+
 # Vasquez Index — Canonical Registry Dashboard
 
 This repository backs the registry pages at:
