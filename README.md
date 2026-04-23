@@ -4,6 +4,10 @@ This repository backs the registry pages at:
 * [Main Registry](https://inaciovasquez2020.github.io/vasquez-index/)
 * [Dashboard](https://inaciovasquez2020.github.io/vasquez-index/dashboard.html)
 
+## Current Execution Priority
+
+* `docs/status/ACTIVE_EXECUTION_PRIORITY_2026_04_23.md`
+
 ## Purpose
 To provide a single canonical registry of enabled repositories, stable references, and reproducibility links.
 
