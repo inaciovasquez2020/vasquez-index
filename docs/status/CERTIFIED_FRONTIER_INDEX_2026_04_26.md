@@ -1,17 +1,18 @@
 # Certified Frontier Index — 2026-04-26
 
 Status: Portfolio frontier index  
-Scope: RA1n + Pachner certified frontier map
+Scope: RA1n + Pachner + Yang--Mills OS certified frontier map
 
 ## 1. Purpose
 
-This index records the two certified frontier surfaces currently mirrored in `vasquez-index`:
+This index records the certified frontier surfaces currently mirrored in `vasquez-index`:
 
 ```text
 RA1n certified frontier
 Pachner certified frontier
-Both are rigorous frontier artifacts.
-Neither is a final theorem closure.
+Yang--Mills OS certified frontier
+All three are rigorous frontier artifacts.
+None is a final theorem closure.
 2. RA1n frontier
 Repository:
 inaciovasquez2020/clay-problem-lab
@@ -42,13 +43,28 @@ status index locked
 Pachner remains certificate-gated.
 No global Pachner descent theorem is asserted.
 No new topological invariant theorem is asserted.
-4. Shared interpretation
+4. Yang--Mills OS frontier
+Repository:
+inaciovasquez2020/ym-os-quantization
+Checkpoint:
+ym-os-certified-frontier-2026-04-26
+Portfolio snapshot:
+docs/status/YM_OS_FRONTIER_SNAPSHOT_2026_04_26.md
+Current Yang--Mills OS status:
+OS certificate registry locked
+certificate value gate locked
+status index locked
+mass-gap / Clay-level claims blocked pending OS-measure certificates
+Yang--Mills OS remains certificate-gated.
+No Yang--Mills mass-gap theorem is asserted.
+No Clay problem is asserted solved.
+No unconditional four-dimensional nonabelian Yang--Mills construction is asserted.
+5. Shared interpretation
 The shared status is:
 certified frontier surfaces locked;
 certificate evaluation pending;
 no final theorem closure asserted.
-5. Stop rule
-No theorem-strengthening step is admissible for either frontier without new certificate input.
+6. Missing inputs
 For RA1n, the missing inputs are:
 M(phi)
 m_phi
@@ -61,9 +77,18 @@ For Pachner, the missing inputs are:
 theta/descent closure
 penalty-control or equivalent local descent condition
 global descent gate
-6. Non-overclaim boundary
+For Yang--Mills OS, the missing inputs are:
+nonperturbative OS-positive Euclidean Yang--Mills measure
+OS reconstruction
+strictly positive mass gap
+single-observable clustering certificate
+7. Stop rule
+No theorem-strengthening step is admissible for any listed frontier without new certificate input.
+8. Non-overclaim boundary
 No Clay problem is claimed solved here.
 No unconditional RA1n theorem is claimed.
 No global Pachner descent theorem is claimed.
 No new topological invariant theorem is claimed.
+No Yang--Mills mass-gap theorem is claimed.
+No unconditional four-dimensional nonabelian Yang--Mills construction is claimed.
 This file is a portfolio index of certified frontiers only.
