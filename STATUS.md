@@ -9,3 +9,19 @@ Scope:
 Verification:
 - make verify
 - .github/workflows/verify.yml
+
+## Repository-Scope Closure: VI-IBC-1
+
+Index boundary certificate: CLOSED under finite manifest verification and explicit index non-claim boundary.
+
+Closure artifact: `docs/status/INDEX_BOUNDARY_CERTIFICATE.md`.
+
+Executable checker: `scripts/verify_index_boundary_certificate.py`.
+
+No repository-level claim that index placement implies external validation.
+
+No repository-level claim that listed artifacts are peer-reviewed unless explicitly marked.
+
+No repository-level claim that index completeness equals theorem-level completion.
+
+Remaining frontier: actual external review, independent validation, peer-reviewed publication, or theorem-level strengthening in the indexed repositories.
