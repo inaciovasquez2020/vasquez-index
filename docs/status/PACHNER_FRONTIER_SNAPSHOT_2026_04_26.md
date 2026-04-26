@@ -10,14 +10,14 @@ inaciovasquez2020/pachner-invariant
 2. Final checkpoint
 pachner-certified-frontier-2026-04-26
 3. Latest pushed Pachner commits
+7c41460 docs(pachner): lock certificate value gate and status index
 0c2de97 docs(pachner): add certificate evaluation registry
 c0e98f4 docs(pachner): lock count bridge theorem snapshot
 ff390fc docs(pachner): sync count bridge theorem status
 80ddcac fix(g2): support python versions without int bit_count
-dbf527a docs(ai): add agent entrypoint and claim boundary
 4. Verified state
 Lean build: PASS
-pytest: 300/300 passed
+pytest: 304/304 passed
 working tree clean
 main synced with origin/main
 tag pushed: pachner-certified-frontier-2026-04-26
@@ -29,6 +29,12 @@ count bridge theorem surface locked;
 ​	
  
 certificate registry pending descent/topological invariant certificates;
+​	
+ 
+certificate value gate locked;
+​	
+ 
+status index locked;
 ​	
  
 6. Current theorem boundary
@@ -53,15 +59,14 @@ global descent gate
 ​	
  
 8. Portfolio interpretation
-This update strengthens the portfolio by converting the Pachner count-bridge layer from stale axiom-target documentation into a theorem-level synchronized frontier with a pending certificate registry.
+This update strengthens the portfolio by converting the Pachner count-bridge layer from stale axiom-target documentation into a theorem-level synchronized frontier with a pending certificate registry, certificate value gate, and status index.
 The valid status is:
 count bridge closed at theorem level;
 edge-degree chain theorem-level present;
+certificate value gate locked;
+status index locked;
 global descent/topological invariant closure pending certificates.
 9. Stop rule
 No further Pachner theorem-strengthening step is admissible without descent/topological-invariant certificate input.
-
-## 10. Literal theorem-chain lock
-
-```text
+10. Literal theorem-chain lock
 2--3 edge-degree chain theorem-level present
