@@ -1,0 +1,28 @@
+{
+  "audit_id": "PCA-2026-04-26",
+  "status": "CLOSED",
+  "repository_count": 15,
+  "boundary": {
+    "external_validation_claimed": false,
+    "peer_reviewed_acceptance_claimed": false,
+    "theorem_level_completion_claimed_beyond_finite_certificate_surface": false,
+    "conditional_frontier_claims_upgraded": false
+  },
+  "repositories": [
+    {"repo": "whiplash-stability", "certificate": "WS-EFIS-1"},
+    {"repo": "poincare-new-derivation", "certificate": "PND-CDT-1"},
+    {"repo": "URF-P-0002", "certificate": "URFP0002-RBC-1"},
+    {"repo": "URF-P-0003", "certificate": "URFP0003-RBC-1"},
+    {"repo": "URF-P-0001", "certificate": "URFP0001-RBC-1"},
+    {"repo": "urf-open-review-ledger", "certificate": "UORL-LBC-1"},
+    {"repo": "vasquez-index", "certificate": "VI-IBC-1"},
+    {"repo": "capacity-locality-certification", "certificate": "CLC-CBC-1"},
+    {"repo": "scientific-infrastructure", "certificate": "SI-IBC-1"},
+    {"repo": "urf-verifier", "certificate": "UV-VBC-1"},
+    {"repo": "urf-spine", "certificate": "URFS-SBC-1"},
+    {"repo": "cslib-fmt", "certificate": "CSLIB-LBC-1"},
+    {"repo": "final-wall-fo-k-locality", "certificate": "FWFK-LBC-1"},
+    {"repo": "cycle-local-rigidity", "certificate": "CLR-CBC-1"},
+    {"repo": "transcript-capacity-core", "certificate": "TCC-TBC-1"}
+  ]
+}
