@@ -98,3 +98,18 @@ This repository is governed by [`docs/status/EXTERNAL_STATUS_LOCK.md`](docs/stat
 ## Lean proof portfolio classification
 
 This repository is governed by [`docs/status/LEAN_PROOF_PORTFOLIO_CLASSIFICATION.md`](docs/status/LEAN_PROOF_PORTFOLIO_CLASSIFICATION.md). Its role in the portfolio is explicitly classified as proof-facing, conditional frontier, infrastructure/documentation, or legacy/scaffold.
+
+## Formal Status
+
+Status: Documentation / Index Surface
+
+This repository is an index surface. It does not independently prove mathematical claims.
+
+Theorem-status rule:
+- Every theorem-level claim must inherit from a buildable formal source repository.
+- The inherited source must identify repository, commit or release, file path, theorem/artifact name, and status label.
+- Build success, dashboards, badges, ledgers, or index pages do not constitute theorem-level proof.
+
+Source-of-truth document:
+- `docs/status/SOURCE_OF_TRUTH_2026_04_27.md`
+
