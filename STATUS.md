@@ -1,10 +1,10 @@
-Status: Canonical public index / registry surface
+Status: Current reference public index / registry surface
 Last updated: 2026-04-17
 
 Scope:
 - Public-facing index and dashboard surface
-- Registry and canonicality layer
-- Reference links to canonical repositories and artifacts
+- Registry and current referenceity layer
+- Reference links to current reference repositories and artifacts
 
 Verification:
 - make verify

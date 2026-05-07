@@ -2,7 +2,7 @@
 
 - `docs/REPO_CLASSIFICATION_2026_04_23.md`
 
-# Vasquez Index — Canonical Registry Dashboard
+# Vasquez Index — Current reference Registry Dashboard
 
 This repository backs the registry pages at:
 * [Main Registry](https://inaciovasquez2020.github.io/vasquez-index/)
@@ -13,13 +13,13 @@ This repository backs the registry pages at:
 * `docs/status/ACTIVE_EXECUTION_PRIORITY_2026_04_23.md`
 
 ## Purpose
-To provide a single canonical registry of enabled repositories, stable references, and reproducibility links.
+To provide a single current reference registry of enabled repositories, stable references, and reproducibility links.
 
-## Canonicality & Governance
+## Current referenceity & Governance
 
-This repository operates under the **Canonicality Doctrine** of the Vasquez Research Program.
+This repository operates under the **Current referenceity Doctrine** of the Vasquez Research Program.
 
-All structural claims, artifact-backed proofs, and publication statuses are governed by a single authoritative document:
+All structural claims, artifact-backed proofs, and publication statuses are governed by a single status-locked document:
 
 **→ [`CANONICALITY.md`](./CANONICALITY.md)**
 
@@ -36,7 +36,7 @@ Visitors should consult `CANONICALITY.md` before citing or extending any result.
 Formal FO^k structural theorem establishing limits of locality-based inference.
 
 Source:
-https://github.com/inaciovasquez2020/final-wall-fo-k-locality/blob/main/docs/local-global-barrier.tex
+https://github.com/inaciovasquez2020/current terminal-wall-fo-k-locality/blob/main/docs/local-global-barrier.tex
 
 ## Enabled Repositories and DOIs
 
@@ -70,7 +70,7 @@ If you use this registry or the indexed materials, please cite as follows:
 ```bibtex
 @manual{Vasquez_Index_2026,
   author = {Vasquez, Inacio F.},
-  title  = {Vasquez Index: Canonical Repository Registry and Dashboard},
+  title  = {Vasquez Index: Current reference Repository Registry and Dashboard},
   year   = {2026},
   url    = {[https://inaciovasquez2020.github.io/vasquez-index/](https://inaciovasquez2020.github.io/vasquez-index/)}
 }
@@ -89,7 +89,7 @@ Structural wrappers
 This repository is part of the URF registry.
 
 See:
-- `REGISTRY.md` for authoritative role and scope declarations.
+- `REGISTRY.md` for status-locked role and scope declarations.
 
 ## External status
 
