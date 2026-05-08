@@ -1,114 +1,59 @@
-## Public Classification
+# Vasquez Index
 
-- `docs/REPO_CLASSIFICATION_2026_04_23.md`
+Public front door and registry index for the Unified Rigidity Framework (URF).
 
-# Vasquez Index — Canonical Registry Dashboard
+This repository is the public registry surface for the small set of active public URF repositories.
 
-This repository backs the registry pages at:
-* [Main Registry](https://inaciovasquez2020.github.io/vasquez-index/)
-* [Dashboard](https://inaciovasquez2020.github.io/vasquez-index/dashboard.html)
+## Start here
 
-## Current Execution Priority
+URF is a verification-first research program for organizing rigidity principles, locality constraints, entropy/capacity bounds, formal proof surfaces, executable certificates, and claim-status discipline.
 
-* `docs/status/ACTIVE_EXECUTION_PRIORITY_2026_04_23.md`
+## What URF is not
 
-## Purpose
-To provide a single canonical registry of enabled repositories, stable references, and reproducibility links.
+URF does not claim theorem-level closure of any major open problem unless the relevant repository explicitly states and verifies that closure.
 
-## Canonicality & Governance
+## Public repository set
 
-This repository operates under the **Canonicality Doctrine** of the Vasquez Research Program.
+| Repo | Role |
+|---|---|
+| `inaciovasquez2020` | GitHub profile README and public orientation |
+| `vasquez-index` | Public front door and repository map |
+| `urf-core` | Core reference layer |
+| `chronos-urf-rr` | Reference executable/verification implementation |
+| `urf-textbook` | Expository layer |
+| `frontier-status-dashboard` | Public status dashboard |
 
-All structural claims, artifact-backed proofs, and publication statuses are governed by a single authoritative document:
+## Private / archived work
 
-**→ [`CANONICALITY.md`](./CANONICALITY.md)**
+Additional experimental, frontier, application, and Clay-adjacent repositories are private or archived pending review, preprint release, or external validation.
 
-### What this means for readers
-- All results are **explicitly bounded** and scope-declared.
-- “Structurally Closed” refers to **internal logical closure under bounded verification**, not external consensus.
-- In the event of any discrepancy, **machine-verifiable artifacts take precedence** over narrative text.
+## Status classes
 
-Visitors should consult `CANONICALITY.md` before citing or extending any result.
+| Class | Meaning |
+|---|---|
+| Verified | Repository checks, CI, formal files, and stated certificates pass. |
+| Conditional | A result depends on explicitly named assumptions or external theorem inputs. |
+| Open | A named obstruction/frontier remains unresolved. |
+| Not claimed | Build success, dashboard status, or executable evidence does not imply theorem-level closure. |
 
----
-## Local–Global Information Barrier
+## Dependency diagram
 
-Formal FO^k structural theorem establishing limits of locality-based inference.
+    vasquez-index
+       |
+       +-- urf-core
+       |      |
+       |      +-- chronos-urf-rr
+       |
+       +-- urf-textbook
+       |
+       +-- frontier-status-dashboard
 
-Source:
-https://github.com/inaciovasquez2020/final-wall-fo-k-locality/blob/main/docs/local-global-barrier.tex
+## Verification principle
 
-## Enabled Repositories and DOIs
+Build PASS means repository verification passed. It does not mean theorem-level closure unless the relevant repository explicitly states and verifies theorem-level closure.
 
-The following repositories are currently indexed. DOI links resolve to stable versions on Zenodo.
+## Links
 
-| Repository Handle | DOI Reference |
-| :--- | :--- |
-| inaciovasquez2020/chronos-urf-rr | [10.5281/zenodo.18403707](https://doi.org/10.5281/zenodo.18403707) |
-| inaciovasquez2020/rank-dichotomy-cat0 | [10.5281/zenodo.18450375](https://doi.org/10.5281/zenodo.18450375) |
-| inaciovasquez2020/scientific-infrastructure | [10.5281/zenodo.18442204](https://doi.org/10.5281/zenodo.18442204) |
-| inaciovasquez2020/support-drift | [10.5281/zenodo.18434555](https://doi.org/10.5281/zenodo.18434555) |
-| inaciovasquez2020/urf-axioms | [10.5281/zenodo.18442235](https://doi.org/10.5281/zenodo.18442235) |
-| inaciovasquez2020/urf-core | [10.5281/zenodo.18437927](https://doi.org/10.5281/zenodo.18437927) |
-
----
-Suggested order:
-1. scientific-infrastructure
-2. urf-core
-3. urf-spine
-4. chronos-urf-rr
-5. Application repositories
-
-## Technical Notes
-* **Zenodo Integration:** If repositories do not appear in the registry, verify that third-party access is enabled for the Zenodo integration. 
-* **Repository Visibility:** Private repositories are not supported; indexed repositories must be public to ensure reproducibility.
-* **Status:** This is an index and registry repository. It contains no executable research code.
-
-## Citation
-If you use this registry or the indexed materials, please cite as follows:
-
-```bibtex
-@manual{Vasquez_Index_2026,
-  author = {Vasquez, Inacio F.},
-  title  = {Vasquez Index: Canonical Repository Registry and Dashboard},
-  year   = {2026},
-  url    = {[https://inaciovasquez2020.github.io/vasquez-index/](https://inaciovasquez2020.github.io/vasquez-index/)}
-}
-
-Structural wrappers
-- Cyclone (terminal obstruction): https://github.com/inaciovasquez2020/cyclone-terminal-obstruction
-- Whiplash (stability checks): https://github.com/inaciovasquez2020/whiplash-stability
-- Capacity-Locality-Certification: https://github.com/inaciovasquez2020/capacity-locality-certification
-- Reductions map: https://github.com/inaciovasquez2020/urf-reductions-sat-csp
-- Docs source: https://github.com/inaciovasquez2020/vasquez-docs
-
----
-
-## Registry
-
-This repository is part of the URF registry.
-
-See:
-- `REGISTRY.md` for authoritative role and scope declarations.
-
-## External status
-
-This repository is governed by [`docs/status/EXTERNAL_STATUS_LOCK.md`](docs/status/EXTERNAL_STATUS_LOCK.md). Build success, CI success, dashboards, ledgers, axioms, admits, `sorry`, or placeholder witnesses do not constitute theorem-level closure.
-
-## Lean proof portfolio classification
-
-This repository is governed by [`docs/status/LEAN_PROOF_PORTFOLIO_CLASSIFICATION.md`](docs/status/LEAN_PROOF_PORTFOLIO_CLASSIFICATION.md). Its role in the portfolio is explicitly classified as proof-facing, conditional frontier, infrastructure/documentation, or legacy/scaffold.
-
-## Formal Status
-
-Status: Documentation / Index Surface
-
-This repository is an index surface. It does not independently prove mathematical claims.
-
-Theorem-status rule:
-- Every theorem-level claim must inherit from a buildable formal source repository.
-- The inherited source must identify repository, commit or release, file path, theorem/artifact name, and status label.
-- Build success, dashboards, badges, ledgers, or index pages do not constitute theorem-level proof.
-
-Source-of-truth document:
-- `docs/status/SOURCE_OF_TRUTH_2026_04_27.md`
+- GitHub profile: https://github.com/inaciovasquez2020
+- ORCID: https://orcid.org/0009-0008-8459-3400
+- Research site: https://vasquezresearch.com
