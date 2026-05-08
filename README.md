@@ -1,6 +1,8 @@
 # Vasquez Index
 
-Public front door for the Unified Rigidity Framework (URF).
+Public front door and registry index for the Unified Rigidity Framework (URF).
+
+This repository is the public registry surface for the small set of active public URF repositories.
 
 ## Start here
 
