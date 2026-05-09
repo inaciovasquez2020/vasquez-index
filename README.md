@@ -22,8 +22,8 @@ Boundary: this index is a navigation and status surface. It does not claim theor
 ## Purpose
 To provide a single current reference registry of enabled repositories, stable references, and reproducibility links.
 
-## Current referenceity & Governance
-This repository operates under the **Current referenceity Doctrine** of the Vasquez Research Program.
+## Current Reference & Governance
+This repository operates under the **Current Reference Doctrine** of the Vasquez Research Program.
 All structural claims, artifact-backed proofs, and publication statuses are governed by a single status-locked document:
 Public front door and registry index for the Unified Rigidity Framework (URF).
 This repository is the public registry surface for the small set of active public URF repositories.
@@ -48,7 +48,7 @@ URF does not claim theorem-level closure of any major open problem unless the re
 ## Private / archived work
 
 Source:
-https://github.com/inaciovasquez2020/current terminal-wall-fo-k-locality/blob/main/docs/local-global-barrier.tex
+private/internal reference omitted
 Additional experimental, frontier, application, and Clay-adjacent repositories are private or archived pending review, preprint release, or external validation.
 
 ## Status classes
