@@ -48,7 +48,7 @@ URF does not claim theorem-level closure of any major open problem unless the re
 ## Private / archived work
 
 Source:
-https://github.com/inaciovasquez2020/current terminal-wall-fo-k-locality/blob/main/docs/local-global-barrier.tex
+private/internal reference omitted
 Additional experimental, frontier, application, and Clay-adjacent repositories are private or archived pending review, preprint release, or external validation.
 
 ## Status classes
