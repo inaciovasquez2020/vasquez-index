@@ -103,3 +103,13 @@ It does not promote any conditional result.
 It does not convert any open frontier into theorem-level closure.
 
 It identifies the public entry path for inspecting the system.
+
+## Formal Status
+
+Status: Documentation / Index Surface
+
+It does not independently prove mathematical claims.
+
+Every theorem-level claim must inherit from a buildable formal source repository.
+
+`docs/status/SOURCE_OF_TRUTH_2026_04_27.md`

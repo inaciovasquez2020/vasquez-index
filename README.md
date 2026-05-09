@@ -75,3 +75,13 @@ Build PASS means repository verification passed. It does not mean theorem-level 
 - GitHub profile: https://github.com/inaciovasquez2020
 - ORCID: https://orcid.org/0009-0008-8459-3400
 - Research site: https://vasquezresearch.com
+
+## Formal Status
+
+Status: Documentation / Index Surface
+
+It does not independently prove mathematical claims.
+
+Every theorem-level claim must inherit from a buildable formal source repository.
+
+`docs/status/SOURCE_OF_TRUTH_2026_04_27.md`
