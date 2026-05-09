@@ -25,3 +25,5 @@ No repository-level claim that listed artifacts are peer-reviewed unless explici
 No repository-level claim that index completeness equals theorem-level completion.
 
 Remaining frontier: actual external review, independent validation, peer-reviewed publication, or theorem-level strengthening in the indexed repositories.
+
+Canonical status: vasquez-index is the canonical public index and registry surface; this status file is frozen except for explicit status-normalization updates.

@@ -6,11 +6,11 @@ This report inventories local Git repositories under `$HOME` and classifies whic
 
 ## Boundary
 
-This report does not assert theorem verification. It only identifies remaining repositories requiring status normalization.
+This canonical status report does not assert theorem verification. It only identifies remaining repositories requiring status normalization.
 
-Total local repositories scanned: 70
+Total local repositories scanned: 78
 
-Remaining repositories needing sweep: 54
+Remaining repositories needing sweep: 62
 
 ## Repositories needing sweep
 
@@ -31,14 +31,18 @@ Remaining repositories needing sweep: 54
 - `final-wall-fo-k-locality`
 - `final-wall-fok-synthesis`
 - `flagship-lean-witness`
+- `frontier-status-dashboard`
 - `mathlib4`
 - `ncr-new-computational-regime`
+- `non-clay-problem-closure-workspace`
 - `Operational-Wavefunction-Collapse`
 - `overlap-rigidity-counterexamples`
 - `owc-counterexamples`
 - `pachner-invariant`
 - `pachner-invariant-confirm`
 - `phase-transition-pnp`
+- `phase-transition-pnp-empirical`
+- `phase-transition-pnp-main`
 - `radiative-rigidity`
 - `rank-dichotomy-cat0`
 - `recovery-urf-reductions-sat-csp`
@@ -46,6 +50,7 @@ Remaining repositories needing sweep: 54
 - `scientific-infrastructure`
 - `support-drift`
 - `terminal-rigidity-witness-erb`
+- `transcript-capacity-core`
 - `URC`
 - `urc-minimal-blockchain`
 - `urf-application-stress-test`
@@ -55,6 +60,7 @@ Remaining repositories needing sweep: 54
 - `urf-minimal-obstruction`
 - `urf-open-review-ledger`
 - `URF-P-0001`
+- `URF-P-0002`
 - `URF-P-0003`
 - `urf-portfolio`
 - `urf-prefab-system`
@@ -64,6 +70,8 @@ Remaining repositories needing sweep: 54
 - `urf-spine`
 - `urf-verifier`
 - `urf-wl2-obstruction`
+- `vasquez-docs`
+- `whiplash-stability`
 - `yang-mills-hs-gap-cert`
 - `ym-gap-test`
 - `ym-os-quantization`
@@ -97,10 +105,12 @@ Remaining repositories needing sweep: 54
 | `final-wall-fok-synthesis` | needs-sweep | none |
 | `flagship-lean` | completed-primary | FORMAL_STATUS_2026_04_27.md, TRIVIALITY_BOUNDARY_2026_04_27.md |
 | `flagship-lean-witness` | needs-sweep | none |
+| `frontier-status-dashboard` | needs-sweep | none |
 | `inaciovasquez2020` | completed-primary | SOURCE_OF_TRUTH_2026_04_27.md |
 | `inaciovasquez2020.github.io` | completed-primary | SOURCE_OF_TRUTH_2026_04_27.md |
 | `mathlib4` | needs-sweep | none |
 | `ncr-new-computational-regime` | needs-sweep | none |
+| `non-clay-problem-closure-workspace` | needs-sweep | none |
 | `Operational-Wavefunction-Collapse` | needs-sweep | none |
 | `overlap-rigidity-counterexamples` | needs-sweep | none |
 | `overlap-rigidity-lean` | completed-primary | FORMAL_STATUS_2026_04_27.md, SCAFFOLD_STATUS_2026_04_27.md |
@@ -109,6 +119,8 @@ Remaining repositories needing sweep: 54
 | `pachner-invariant` | needs-sweep | none |
 | `pachner-invariant-confirm` | needs-sweep | none |
 | `phase-transition-pnp` | needs-sweep | none |
+| `phase-transition-pnp-empirical` | needs-sweep | none |
+| `phase-transition-pnp-main` | needs-sweep | none |
 | `poincare-new-derivation` | completed-primary | DEPRECATED_CONDITIONAL_STATUS_2026_04_27.md, FORMAL_STATUS_2026_04_27.md |
 | `radiative-rigidity` | needs-sweep | none |
 | `rank-dichotomy-cat0` | needs-sweep | none |
@@ -117,6 +129,7 @@ Remaining repositories needing sweep: 54
 | `scientific-infrastructure` | needs-sweep | none |
 | `support-drift` | needs-sweep | none |
 | `terminal-rigidity-witness-erb` | needs-sweep | none |
+| `transcript-capacity-core` | needs-sweep | none |
 | `URC` | needs-sweep | none |
 | `urc-minimal-blockchain` | needs-sweep | none |
 | `urf-application-stress-test` | needs-sweep | none |
@@ -128,6 +141,7 @@ Remaining repositories needing sweep: 54
 | `urf-minimal-obstruction` | needs-sweep | none |
 | `urf-open-review-ledger` | needs-sweep | none |
 | `URF-P-0001` | needs-sweep | none |
+| `URF-P-0002` | needs-sweep | none |
 | `URF-P-0003` | needs-sweep | none |
 | `urf-portfolio` | needs-sweep | none |
 | `urf-prefab-system` | needs-sweep | none |
@@ -138,7 +152,9 @@ Remaining repositories needing sweep: 54
 | `urf-textbook` | completed-primary | SOURCE_OF_TRUTH_2026_04_27.md |
 | `urf-verifier` | needs-sweep | none |
 | `urf-wl2-obstruction` | needs-sweep | none |
+| `vasquez-docs` | needs-sweep | none |
 | `vasquez-index` | completed-primary | SOURCE_OF_TRUTH_2026_04_27.md |
+| `whiplash-stability` | needs-sweep | none |
 | `yang-mills-hs-gap-cert` | needs-sweep | none |
 | `ym-gap-test` | needs-sweep | none |
 | `ym-os-quantization` | needs-sweep | none |
