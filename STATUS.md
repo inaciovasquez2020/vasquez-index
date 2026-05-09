@@ -1,10 +1,10 @@
-Status: Canonical public index / registry surface
+Status: Current reference public index / registry surface
 Last updated: 2026-04-17
 
 Scope:
 - Public-facing index and dashboard surface
-- Registry and canonicality layer
-- Reference links to canonical repositories and artifacts
+- Registry and current referenceity layer
+- Reference links to current reference repositories and artifacts
 
 Verification:
 - make verify
@@ -25,3 +25,5 @@ No repository-level claim that listed artifacts are peer-reviewed unless explici
 No repository-level claim that index completeness equals theorem-level completion.
 
 Remaining frontier: actual external review, independent validation, peer-reviewed publication, or theorem-level strengthening in the indexed repositories.
+
+Canonical status: vasquez-index is the canonical public index and registry surface; this status file is frozen except for explicit status-normalization updates.
