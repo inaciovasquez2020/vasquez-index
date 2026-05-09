@@ -1,5 +1,23 @@
 # Vasquez Index
 
+<!-- VERIFIED_FRONTIER_TRACKING_DOOR:BEGIN -->
+## Verified Frontier Tracking
+
+Vasquez Index is the public front door for **Verified Frontier Tracking**: an AI-readable, publicly checkable system for hard research claims.
+
+Its role is to route readers to the correct layer:
+
+| Layer | Repository | Role |
+|---|---|---|
+| Public index | `vasquez-index` | Start-here map and canonical navigation |
+| Transparency proof | `frontier-status-dashboard` | CI health, integrity, theorem-boundary status, and review readiness |
+| Explanation | `urf-textbook` | Human-readable exposition and release-facing documentation |
+| Definitions | `urf-core` | Trusted definitions, schemas, and verification artifacts |
+| Technical demonstration | `chronos-urf-rr` | Executable URF/Chronos frontier implementation |
+
+Boundary: this index is a navigation and status surface. It does not claim theorem-level closure unless a linked artifact explicitly names and proves that closure.
+<!-- VERIFIED_FRONTIER_TRACKING_DOOR:END -->
+
 Public front door and registry index for the Unified Rigidity Framework (URF).
 
 This repository is the public registry surface for the small set of active public URF repositories.
