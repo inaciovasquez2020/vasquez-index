@@ -1,0 +1,17 @@
+{
+  "id": "urf-11-translation-subproblem-registry",
+  "status": "URF11_REGISTRY_ONLY",
+  "repository": "https://github.com/inaciovasquez2020/urf-11-translation-subproblem-registry",
+  "initial_commit": "22a8e88",
+  "source_of_truth_guard_merge": "ed3e5b9",
+  "role": "public navigation and registry/status reference only",
+  "boundary": [
+    "No unrestricted Chronos-RR closure.",
+    "No H4.1/FGL closure.",
+    "No UniversalFiberEntropyGap theorem.",
+    "No P vs NP.",
+    "No Clay-problem closure.",
+    "No unrestricted graph-rigidity theorem.",
+    "No unrestricted Cayley-graph rigidity theorem."
+  ]
+}
