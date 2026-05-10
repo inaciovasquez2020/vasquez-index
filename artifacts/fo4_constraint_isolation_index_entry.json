@@ -1,0 +1,18 @@
+{
+  "repository": "inaciovasquez2020/fo4-constraint-isolation",
+  "url": "https://github.com/inaciovasquez2020/fo4-constraint-isolation",
+  "status": "FO4_CONSTRAINT_ISOLATION_ONLY",
+  "role": "canonical public FO4 constraint-isolation package",
+  "canonical_artifact": "artifacts/fo4_constraint_isolation.json",
+  "canonical_verifier": "python3 tools/verify_fo4_constraint_isolation.py",
+  "theorem_closure": false,
+  "non_claims": [
+    "no unrestricted graph-rigidity theorem",
+    "no unrestricted Cayley-graph rigidity theorem",
+    "no Chronos-RR closure",
+    "no H4.1/FGL closure",
+    "no UniversalFiberEntropyGap theorem",
+    "no P vs NP result",
+    "no Clay-problem closure"
+  ]
+}
