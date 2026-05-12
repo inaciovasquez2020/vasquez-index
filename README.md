@@ -113,3 +113,21 @@ It does not independently prove mathematical claims.
 Every theorem-level claim must inherit from a buildable formal source repository.
 
 `docs/status/SOURCE_OF_TRUTH_2026_04_27.md`
+
+## Chronos PR233 dashboard sync — 2026-05-12
+
+The public status surface has been synchronized with the merged Chronos and dashboard updates:
+
+- `chronos-urf-rr` PR #231: RepositoryNativeZeroArityInterface closure.
+- `chronos-urf-rr` PR #232: zero-arity exhaustiveness to Reg-SNF bridge.
+- `chronos-urf-rr` PR #233: current unrestricted Reg-SNF status lock.
+- `frontier-status-dashboard` PR #50: dashboard row updated.
+
+Dashboard state:
+
+- Repository integrity: 100%.
+- Theorem closure: 82%.
+- Current real Chronos-admissible unrestricted Reg-SNF: status-locked closed.
+- Selected DepthBridge reachability: locked.
+
+Boundary preserved: no UniversalFiberEntropyGap closure, no DepthBridge beyond selected final carrier domain, no Chronos-RR theorem-level closure, no H4.1/FGL theorem-level closure, no P vs NP closure, and no Clay-problem closure.
