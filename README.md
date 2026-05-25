@@ -1,6 +1,13 @@
 # Vasquez Index
 
 <!-- VERIFIED_FRONTIER_TRACKING_DOOR:BEGIN -->
+
+## Public Spine Overview
+
+- [`urf-spine-public`](https://github.com/inaciovasquez2020/urf-spine-public): sanitized public audit surface for the URF spine layer.
+- Scope: public status surface, citation metadata, scope limitations, external status lock, minimal verifier, and minimal finite certificate example.
+- Boundary: public audit surface only; not theorem-prover-complete, not a primary mathematics-closure repository, and not a proof of unrestricted Chronos-RR, unrestricted H4.1/FGL, P vs NP, or any Clay problem.
+
 ## Verified Frontier Tracking
 
 # Vasquez Index — Current reference Registry Dashboard
