@@ -1,0 +1,23 @@
+{
+  "status": "VASQUEZ_INDEX_URF_CORE_TEXTBOOK_CSLIB_FMT_SIGNAL_UPDATE_2026_06_21",
+  "date": "2026-06-21",
+  "index_effect": "cross_repository_status_index_only",
+  "source_updates": [
+    {
+      "repo": "urf-core",
+      "commit": "857e954",
+      "pr": 474,
+      "status": "CSLIB_FMT_FULL_FORMULA_RADIUS_EXTERNAL_STATUS_SIGNAL_OK",
+      "also_recorded": "URF_CORE_FULL_PYTEST_BASELINE_BLOCKERS_OK",
+      "boundary": "status signal and baseline-blocker inventory only"
+    },
+    {
+      "repo": "urf-textbook",
+      "commit": "d026cfe",
+      "status": "URF_CORE_CSLIB_FMT_SIGNAL_TEXTBOOK_SYNC_OK",
+      "boundary": "textbook status sync only"
+    }
+  ],
+  "summary": "Indexes the cross-repository propagation of the CSLIB-FMT full formula-radius external status signal from urf-core PR #474 into urf-textbook.",
+  "boundary": "index update only; no new theorem, no proof import, no URF-core repair, no CSLIB-FMT repair, and no claim that unrelated URF-core full pytest baseline failures were fixed"
+}
