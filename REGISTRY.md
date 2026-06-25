@@ -68,3 +68,13 @@ Dashboard state:
 - Selected DepthBridge reachability: locked.
 
 Boundary preserved: no UniversalFiberEntropyGap closure, no DepthBridge beyond selected final carrier domain, no Chronos-RR theorem-level closure, no H4.1/FGL theorem-level closure, no P vs NP closure, and no Clay-problem closure.
+
+## URC public demo container pointer — 2026-06-25
+
+- Repository: `inaciovasquez2020/URC`
+- Merge commit: `1254de0466cbed8f5ed80dd4e116d7505e11aa15`
+- PR: `inaciovasquez2020/URC#6`
+- Scope: implementation remains in `URC`; this index entry is a pointer only.
+- Public demo package: pending publication as `ghcr.io/inaciovasquez2020/urc-public-demo`.
+- Private-by-default package boundary: do not recreate or publish `ghcr.io/inaciovasquez2020/urc`.
+- `urf-templates`: unchanged.
