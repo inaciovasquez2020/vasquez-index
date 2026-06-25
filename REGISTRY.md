@@ -75,6 +75,6 @@ Boundary preserved: no UniversalFiberEntropyGap closure, no DepthBridge beyond s
 - Merge commit: `1254de0466cbed8f5ed80dd4e116d7505e11aa15`
 - PR: `inaciovasquez2020/URC#6`
 - Scope: implementation remains in `URC`; this index entry is a pointer only.
-- Public demo package: pending publication as `ghcr.io/inaciovasquez2020/urc-public-demo`.
+- Public demo package: `ghcr.io/inaciovasquez2020/urc-public-demo` (published; visibility confirmed public on 2026-06-25).
 - Private-by-default package boundary: do not recreate or publish `ghcr.io/inaciovasquez2020/urc`.
 - `urf-templates`: unchanged.
