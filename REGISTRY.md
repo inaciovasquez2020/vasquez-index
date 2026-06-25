@@ -78,3 +78,12 @@ Boundary preserved: no UniversalFiberEntropyGap closure, no DepthBridge beyond s
 - Public demo package: `ghcr.io/inaciovasquez2020/urc-public-demo` (published; visibility confirmed public on 2026-06-25).
 - Private-by-default package boundary: do not recreate or publish `ghcr.io/inaciovasquez2020/urc`.
 - `urf-templates`: unchanged.
+
+## URF SG verifier container pointer — 2026-06-25
+
+- Repository: `inaciovasquez2020/urf-core`
+- Package: `ghcr.io/inaciovasquez2020/urf-sg-verifier`
+- Visibility: public; confirmed by GitHub Packages on 2026-06-25.
+- Install: `docker pull ghcr.io/inaciovasquez2020/urf-sg-verifier:latest`
+- Scope: public verifier/demo container pointer only; implementation remains in `urf-core`.
+- Boundary: this index entry does not claim theorem-level closure or external validation beyond explicit repository/package artifacts.
