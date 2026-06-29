@@ -1,0 +1,230 @@
+{
+  "boundary": "BOUNDARY := \u00ac public_repository_inventory_implies_theorem_level_closure",
+  "generated_at_utc": "2026-06-29T13:29:33+00:00",
+  "owner": "inaciovasquez2020",
+  "public_repository_count": 20,
+  "repositories": [
+    {
+      "archived": false,
+      "boundary": "BOUNDARY := \u00ac chronos_public_ci_success_implies_frontier_or_headline_theorem_closure",
+      "fork": false,
+      "language": "Python",
+      "name": "chronos-urf-rr",
+      "role": "Flagship executable URF/Chronos implementation and bounded frontier-reduction surface.",
+      "status": "public; active verifier-backed frontier surface; no universal theorem closure asserted",
+      "updated_at": "2026-06-29T12:37:07Z",
+      "url": "https://github.com/inaciovasquez2020/chronos-urf-rr"
+    },
+    {
+      "archived": false,
+      "boundary": "BOUNDARY := \u00ac cslib_fmt_library_interfaces_imply_finite_model_theory_problem_closure",
+      "fork": false,
+      "language": "Python",
+      "name": "cslib-fmt",
+      "role": "Lean finite-model-theory support library for locality, EF games, and invariant interfaces.",
+      "status": "public; finite-model-theory support layer; open issue classified separately",
+      "updated_at": "2026-06-29T12:24:16Z",
+      "url": "https://github.com/inaciovasquez2020/cslib-fmt"
+    },
+    {
+      "archived": false,
+      "boundary": "BOUNDARY := \u00ac null_test_surface_implies_positive_dynamics_claim",
+      "fork": false,
+      "language": "Python",
+      "name": "darkness-region-dynamics-null-test",
+      "role": "Null-test surface for darkness-region dynamics and falsification controls.",
+      "status": "public; null-test surface",
+      "updated_at": "2026-06-23T10:50:30Z",
+      "url": "https://github.com/inaciovasquez2020/darkness-region-dynamics-null-test"
+    },
+    {
+      "archived": false,
+      "boundary": "BOUNDARY := \u00ac dfm_mkc_executable_consistency_checks_imply_cosmology_or_gravity_closure",
+      "fork": false,
+      "language": "Python",
+      "name": "dfm-mkc-cosmology",
+      "role": "DFM-MKC cosmology consistency-check surface for bounded deformation-field and metric-kinematic artifacts.",
+      "status": "public; executable cosmology consistency surface; non-closure boundary explicit",
+      "updated_at": "2026-06-29T13:06:54Z",
+      "url": "https://github.com/inaciovasquez2020/dfm-mkc-cosmology"
+    },
+    {
+      "archived": false,
+      "boundary": "BOUNDARY := \u00ac forked_dependency_presence_implies_new_dynamical_systems_result",
+      "fork": true,
+      "language": "Lean",
+      "name": "DynamicalSystems",
+      "role": "Forked Lean dynamical-systems formalization dependency surface.",
+      "status": "public fork; dependency surface",
+      "updated_at": "2026-06-23T10:04:33Z",
+      "url": "https://github.com/inaciovasquez2020/DynamicalSystems"
+    },
+    {
+      "archived": false,
+      "boundary": "BOUNDARY := \u00ac constraint_isolation_boundary_implies_terminal_math_ai_problem_closure",
+      "fork": false,
+      "language": "Python",
+      "name": "fo4-constraint-isolation",
+      "role": "FO4 constraint-isolation boundary module for Cayley/local-rigidity arguments.",
+      "status": "public; open-problem boundary surface",
+      "updated_at": "2026-06-23T10:29:36Z",
+      "url": "https://github.com/inaciovasquez2020/fo4-constraint-isolation"
+    },
+    {
+      "archived": false,
+      "boundary": "BOUNDARY := \u00ac conjecture_formalization_dependency_implies_conjecture_proof",
+      "fork": true,
+      "language": null,
+      "name": "formal-conjectures",
+      "role": "Forked Lean conjecture-formalization dependency surface.",
+      "status": "public fork; conjecture dependency surface",
+      "updated_at": "2026-06-23T09:56:28Z",
+      "url": "https://github.com/inaciovasquez2020/formal-conjectures"
+    },
+    {
+      "archived": false,
+      "boundary": "BOUNDARY := \u00ac dashboard_visibility_implies_frontier_closure",
+      "fork": false,
+      "language": "TypeScript",
+      "name": "frontier-status-dashboard",
+      "role": "Public dashboard for repository integrity, CI health, and theorem-boundary status.",
+      "status": "public; dashboard/indexing layer",
+      "updated_at": "2026-06-26T12:47:16Z",
+      "url": "https://github.com/inaciovasquez2020/frontier-status-dashboard"
+    },
+    {
+      "archived": false,
+      "boundary": "BOUNDARY := \u00ac theorem_prover_fork_presence_implies_formal_result_closure",
+      "fork": true,
+      "language": null,
+      "name": "HOL",
+      "role": "Forked HOL4 theorem-prover dependency surface.",
+      "status": "public fork; HOL4 dependency surface",
+      "updated_at": "2026-06-23T09:53:32Z",
+      "url": "https://github.com/inaciovasquez2020/HOL"
+    },
+    {
+      "archived": false,
+      "boundary": "BOUNDARY := \u00ac profile_readme_map_implies_repository_theorem_closure",
+      "fork": false,
+      "language": "Python",
+      "name": "inaciovasquez2020",
+      "role": "GitHub profile README and start-here repository map.",
+      "status": "public; profile README map",
+      "updated_at": "2026-06-19T11:37:46Z",
+      "url": "https://github.com/inaciovasquez2020/inaciovasquez2020"
+    },
+    {
+      "archived": false,
+      "boundary": "BOUNDARY := \u00ac public_website_status_implies_theorem_closure",
+      "fork": false,
+      "language": "HTML",
+      "name": "inaciovasquez2020.github.io",
+      "role": "Public research website and documentation hub.",
+      "status": "public; website/docs hub",
+      "updated_at": "2026-06-22T02:19:37Z",
+      "url": "https://github.com/inaciovasquez2020/inaciovasquez2020.github.io"
+    },
+    {
+      "archived": false,
+      "boundary": "BOUNDARY := \u00ac fork_presence_implies_upstream_issue_or_theorem_closure",
+      "fork": true,
+      "language": null,
+      "name": "iris-lean",
+      "role": "Forked Lean/Iris formal-methods dependency and experimentation surface.",
+      "status": "public fork; dependency/experiment surface",
+      "updated_at": "2026-06-23T10:06:35Z",
+      "url": "https://github.com/inaciovasquez2020/iris-lean"
+    },
+    {
+      "archived": false,
+      "boundary": "BOUNDARY := \u00ac classifier_label_implies_theorem_proof",
+      "fork": false,
+      "language": "Python",
+      "name": "theorem-closure-classifier",
+      "role": "Verification-governed theorem-closure classifier with benchmark controls.",
+      "status": "public; classifier/control layer",
+      "updated_at": "2026-06-23T14:36:37Z",
+      "url": "https://github.com/inaciovasquez2020/theorem-closure-classifier"
+    },
+    {
+      "archived": false,
+      "boundary": "BOUNDARY := \u00ac registry_tracking_implies_subproblem_closure",
+      "fork": false,
+      "language": "Python",
+      "name": "urf-11-translation-subproblem-registry",
+      "role": "URF-11 translation and subproblem registry for boundary-preserving reductions.",
+      "status": "public; translation/subproblem registry",
+      "updated_at": "2026-05-12T18:28:37Z",
+      "url": "https://github.com/inaciovasquez2020/urf-11-translation-subproblem-registry"
+    },
+    {
+      "archived": false,
+      "boundary": "BOUNDARY := \u00ac zero_active_obligations_implies_universal_urf_theorem_closure",
+      "fork": false,
+      "language": "Python",
+      "name": "urf-core",
+      "role": "Trusted URF base layer for definitions, schemas, certificates, and active-obligation accounting.",
+      "status": "public; trusted-base status; active-obligation ledger tracked",
+      "updated_at": "2026-06-28T23:07:10Z",
+      "url": "https://github.com/inaciovasquez2020/urf-core"
+    },
+    {
+      "archived": false,
+      "boundary": "BOUNDARY := \u00ac sanitized_audit_surface_implies_private_spine_closure",
+      "fork": false,
+      "language": "Python",
+      "name": "urf-spine-public",
+      "role": "Sanitized public audit surface for the URF spine layer.",
+      "status": "public; sanitized audit surface",
+      "updated_at": "2026-06-23T09:59:31Z",
+      "url": "https://github.com/inaciovasquez2020/urf-spine-public"
+    },
+    {
+      "archived": false,
+      "boundary": "BOUNDARY := \u00ac template_success_implies_general_scientific_claim_validation",
+      "fork": false,
+      "language": null,
+      "name": "urf-templates",
+      "role": "Bounded outsider-demo templates for reproducible claim verification.",
+      "status": "public; outsider-demo template layer",
+      "updated_at": "2026-06-24T10:00:34Z",
+      "url": "https://github.com/inaciovasquez2020/urf-templates"
+    },
+    {
+      "archived": false,
+      "boundary": "BOUNDARY := \u00ac exposition_or_archive_status_implies_theorem_closure",
+      "fork": false,
+      "language": "Python",
+      "name": "urf-textbook",
+      "role": "Canonical exposition and archive-facing URF documentation layer.",
+      "status": "public; exposition and archive layer",
+      "updated_at": "2026-06-27T13:07:01Z",
+      "url": "https://github.com/inaciovasquez2020/urf-textbook"
+    },
+    {
+      "archived": false,
+      "boundary": "BOUNDARY := \u00ac certificate_validation_implies_unstated_mathematical_claims",
+      "fork": false,
+      "language": "Python",
+      "name": "urf-verifier",
+      "role": "Deterministic verifier for URF certificates, provenance checks, and reproducible validation.",
+      "status": "public; verifier infrastructure",
+      "updated_at": "2026-06-25T21:41:32Z",
+      "url": "https://github.com/inaciovasquez2020/urf-verifier"
+    },
+    {
+      "archived": false,
+      "boundary": "BOUNDARY := \u00ac index_navigation_implies_repository_theorem_closure",
+      "fork": false,
+      "language": "Python",
+      "name": "vasquez-index",
+      "role": "Canonical navigation index for repositories, artifacts, publications, and boundary status.",
+      "status": "public; canonical index layer",
+      "updated_at": "2026-06-25T11:16:14Z",
+      "url": "https://github.com/inaciovasquez2020/vasquez-index"
+    }
+  ],
+  "schema": "vasquez_public_repository_inventory.v1",
+  "source": "https://api.github.com/users/inaciovasquez2020/repos?type=public&per_page=100"
+}
