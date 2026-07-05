@@ -2,7 +2,7 @@
   "boundary": "BOUNDARY := \u00ac public_repository_inventory_implies_theorem_level_closure",
   "generated_at_utc": "2026-06-29T13:29:33+00:00",
   "owner": "inaciovasquez2020",
-  "public_repository_count": 20,
+  "public_repository_count": 16,
   "repositories": [
     {
       "archived": false,
@@ -50,17 +50,6 @@
     },
     {
       "archived": false,
-      "boundary": "BOUNDARY := \u00ac forked_dependency_presence_implies_new_dynamical_systems_result",
-      "fork": true,
-      "language": "Lean",
-      "name": "DynamicalSystems",
-      "role": "Forked Lean dynamical-systems formalization dependency surface.",
-      "status": "public fork; dependency surface",
-      "updated_at": "2026-06-23T10:04:33Z",
-      "url": "https://github.com/inaciovasquez2020/DynamicalSystems"
-    },
-    {
-      "archived": false,
       "boundary": "BOUNDARY := \u00ac constraint_isolation_boundary_implies_terminal_math_ai_problem_closure",
       "fork": false,
       "language": "Python",
@@ -72,17 +61,6 @@
     },
     {
       "archived": false,
-      "boundary": "BOUNDARY := \u00ac conjecture_formalization_dependency_implies_conjecture_proof",
-      "fork": true,
-      "language": null,
-      "name": "formal-conjectures",
-      "role": "Forked Lean conjecture-formalization dependency surface.",
-      "status": "public fork; conjecture dependency surface",
-      "updated_at": "2026-06-23T09:56:28Z",
-      "url": "https://github.com/inaciovasquez2020/formal-conjectures"
-    },
-    {
-      "archived": false,
       "boundary": "BOUNDARY := \u00ac dashboard_visibility_implies_frontier_closure",
       "fork": false,
       "language": "TypeScript",
@@ -91,17 +69,6 @@
       "status": "public; dashboard/indexing layer",
       "updated_at": "2026-06-26T12:47:16Z",
       "url": "https://github.com/inaciovasquez2020/frontier-status-dashboard"
-    },
-    {
-      "archived": false,
-      "boundary": "BOUNDARY := \u00ac theorem_prover_fork_presence_implies_formal_result_closure",
-      "fork": true,
-      "language": null,
-      "name": "HOL",
-      "role": "Forked HOL4 theorem-prover dependency surface.",
-      "status": "public fork; HOL4 dependency surface",
-      "updated_at": "2026-06-23T09:53:32Z",
-      "url": "https://github.com/inaciovasquez2020/HOL"
     },
     {
       "archived": false,
@@ -124,17 +91,6 @@
       "status": "public; website/docs hub",
       "updated_at": "2026-06-22T02:19:37Z",
       "url": "https://github.com/inaciovasquez2020/inaciovasquez2020.github.io"
-    },
-    {
-      "archived": false,
-      "boundary": "BOUNDARY := \u00ac fork_presence_implies_upstream_issue_or_theorem_closure",
-      "fork": true,
-      "language": null,
-      "name": "iris-lean",
-      "role": "Forked Lean/Iris formal-methods dependency and experimentation surface.",
-      "status": "public fork; dependency/experiment surface",
-      "updated_at": "2026-06-23T10:06:35Z",
-      "url": "https://github.com/inaciovasquez2020/iris-lean"
     },
     {
       "archived": false,
