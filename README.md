@@ -142,7 +142,7 @@ Boundary preserved: no UniversalFiberEntropyGap closure, no DepthBridge beyond s
 <!-- PUBLIC_REPOSITORY_INVENTORY_BEGIN -->
 # Public repository inventory
 
-GitHub-visible public repository count: **16**.
+GitHub-visible public repository count: **17**.
 
 | Repository | Role | Status | Boundary |
 |---|---|---|---|
@@ -162,6 +162,7 @@ GitHub-visible public repository count: **16**.
 | [`urf-textbook`](https://github.com/inaciovasquez2020/urf-textbook) | Canonical exposition and archive-facing URF documentation layer. | public; exposition and archive layer | `BOUNDARY := ¬ exposition_or_archive_status_implies_theorem_closure` |
 | [`urf-verifier`](https://github.com/inaciovasquez2020/urf-verifier) | Deterministic verifier for URF certificates, provenance checks, and reproducible validation. | public; verifier infrastructure | `BOUNDARY := ¬ certificate_validation_implies_unstated_mathematical_claims` |
 | [`vasquez-index`](https://github.com/inaciovasquez2020/vasquez-index) | Canonical navigation index for repositories, artifacts, publications, and boundary status. | public; canonical index layer | `BOUNDARY := ¬ index_navigation_implies_repository_theorem_closure` |
+| [`zero_day_restricted_closures`](https://github.com/inaciovasquez2020/zero_day_restricted_closures) | Conditional Zero Day restricted-closure boundary surfaces. | public; restricted-closure boundary surface; unrestricted closure not claimed | `BOUNDARY := ¬ restricted_zero_day_closure_surface_implies_unrestricted_zero_day_closure` |
 
 `BOUNDARY := ¬ public_repository_inventory_implies_theorem_level_closure`
 <!-- PUBLIC_REPOSITORY_INVENTORY_END -->
