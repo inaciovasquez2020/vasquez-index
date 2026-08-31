@@ -142,10 +142,11 @@ Boundary preserved: no UniversalFiberEntropyGap closure, no DepthBridge beyond s
 <!-- PUBLIC_REPOSITORY_INVENTORY_BEGIN -->
 # Public repository inventory
 
-GitHub-visible public repository count: **17**.
+GitHub-visible public repository count: **19**.
 
 | Repository | Role | Status | Boundary |
 |---|---|---|---|
+| [`biological-friction-framework`](https://github.com/inaciovasquez2020/biological-friction-framework) | Literature-bounded preclinical biology framework for resistance-state and residual-route mapping. | public; preclinical evidence-map surface; no treatment or cure claim | `BOUNDARY := ¬ literature_bounded_residual_map_implies_clinical_efficacy_or_cure` |
 | [`chronos-urf-rr`](https://github.com/inaciovasquez2020/chronos-urf-rr) | Flagship executable URF/Chronos implementation and bounded frontier-reduction surface. | public; active verifier-backed frontier surface; no universal theorem closure asserted | `BOUNDARY := ¬ chronos_public_ci_success_implies_frontier_or_headline_theorem_closure` |
 | [`cslib-fmt`](https://github.com/inaciovasquez2020/cslib-fmt) | Lean finite-model-theory support library for locality, EF games, and invariant interfaces. | public; finite-model-theory support layer; open issue classified separately | `BOUNDARY := ¬ cslib_fmt_library_interfaces_imply_finite_model_theory_problem_closure` |
 | [`darkness-region-dynamics-null-test`](https://github.com/inaciovasquez2020/darkness-region-dynamics-null-test) | Null-test surface for darkness-region dynamics and falsification controls. | public; null-test surface | `BOUNDARY := ¬ null_test_surface_implies_positive_dynamics_claim` |
@@ -154,6 +155,7 @@ GitHub-visible public repository count: **17**.
 | [`frontier-status-dashboard`](https://github.com/inaciovasquez2020/frontier-status-dashboard) | Public dashboard for repository integrity, CI health, and theorem-boundary status. | public; dashboard/indexing layer | `BOUNDARY := ¬ dashboard_visibility_implies_frontier_closure` |
 | [`inaciovasquez2020`](https://github.com/inaciovasquez2020/inaciovasquez2020) | GitHub profile README and start-here repository map. | public; profile README map | `BOUNDARY := ¬ profile_readme_map_implies_repository_theorem_closure` |
 | [`inaciovasquez2020.github.io`](https://github.com/inaciovasquez2020/inaciovasquez2020.github.io) | Public research website and documentation hub. | public; website/docs hub | `BOUNDARY := ¬ public_website_status_implies_theorem_closure` |
+| [`poincare-new-derivation`](https://github.com/inaciovasquez2020/poincare-new-derivation) | Public Poincare proof-program repository with verifier-backed intermediate checkpoints. | public; active proof frontier; `Poincare.JIID` remains unproved | `BOUNDARY := ¬ intermediate_poincare_checkpoint_implies_poincare_theorem_closure` |
 | [`theorem-closure-classifier`](https://github.com/inaciovasquez2020/theorem-closure-classifier) | Verification-governed theorem-closure classifier with benchmark controls. | public; classifier/control layer | `BOUNDARY := ¬ classifier_label_implies_theorem_proof` |
 | [`urf-11-translation-subproblem-registry`](https://github.com/inaciovasquez2020/urf-11-translation-subproblem-registry) | URF-11 translation and subproblem registry for boundary-preserving reductions. | public; translation/subproblem registry | `BOUNDARY := ¬ registry_tracking_implies_subproblem_closure` |
 | [`urf-core`](https://github.com/inaciovasquez2020/urf-core) | Trusted URF base layer for definitions, schemas, certificates, and active-obligation accounting. | public; trusted-base status; active-obligation ledger tracked | `BOUNDARY := ¬ zero_active_obligations_implies_universal_urf_theorem_closure` |
