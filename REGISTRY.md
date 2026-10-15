@@ -146,3 +146,17 @@ The GitHub Releases endpoint was queried for each of the 19 public repositories.
 | [`zero_day_restricted_closures`](https://github.com/inaciovasquez2020/zero_day_restricted_closures) | No GitHub release entries returned | No release pointer verified in this pass; absence of a release is not itself a defect |
 
 **Audit result:** release metadata is present for 12 repositories and no release entries were returned for 7. This is a release-pointer inventory, not a quality ranking. A missing release does not mean a repository is invalid; a release entry does not prove that its artifacts reproduce or that its scientific claims are correct. The JSON receipt marks artifact hashes and reproducibility as not audited.
+
+
+## Root metadata coverage snapshot — 2026-10-15
+
+A root-directory listing was checked for README, citation metadata, license file, GitHub workflow directory, and a root-level tests directory. These are structural indicators only; absence is not automatically a defect, and a present directory does not establish that tests are comprehensive or pass.
+
+| Root indicator | Repositories with no root-level entry observed |
+|---|---|
+| `CITATION.cff` | `cslib-fmt`, `fo4-constraint-isolation`, `inaciovasquez2020`, `urf-11-translation-subproblem-registry`, `zero_day_restricted_closures` |
+| License file | `cslib-fmt`, `fo4-constraint-isolation`, `frontier-status-dashboard`, `inaciovasquez2020`, `poincare-new-derivation`, `urf-11-translation-subproblem-registry`, `urf-templates`, `zero_day_restricted_closures` |
+| `.github/` workflow directory | `darkness-region-dynamics-null-test`, `urf-spine-public` |
+| `tests/` directory | `urf-spine-public`, `urf-templates`, `zero_day_restricted_closures` |
+
+The complete per-repository observations are recorded in `artifacts/public-repository-inventory.json`. This snapshot does not inspect nested test directories, license text, citation correctness, workflow contents, artifact hashes, or scientific claims. Treat these rows as audit leads, not automatic failure classifications.
