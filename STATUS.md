@@ -1,5 +1,5 @@
 Status: Current reference public index / registry surface
-Last updated: 2026-04-17
+Last updated: 2026-10-15
 
 Scope:
 - Public-facing index and dashboard surface
@@ -37,11 +37,10 @@ The public status surface has been synchronized with the merged Chronos and dash
 - `chronos-urf-rr` PR #233: current unrestricted Reg-SNF status lock.
 - `frontier-status-dashboard` PR #50: dashboard row updated.
 
-Dashboard state:
+Historical dashboard snapshot (2026-05-12; metric semantics not audited in this index pass):
 
-- Repository integrity: 100%.
-- Theorem closure: 82%.
-- Current real Chronos-admissible unrestricted Reg-SNF: status-locked closed.
-- Selected DepthBridge reachability: locked.
+- Repository integrity was reported as 100% by the dashboard at that time.
+- The dashboard reported “Theorem closure: 82%”; denominator, aggregation rule, and validation protocol were not established by this audit. Do not interpret it as 82% of any theorem proved or 82% of the research program completed.
+- The status labels for Chronos-admissible unrestricted Reg-SNF and selected DepthBridge reachability remain scoped to the named artifacts and status locks; this index does not independently re-prove them.
 
 Boundary preserved: no UniversalFiberEntropyGap closure, no DepthBridge beyond selected final carrier domain, no Chronos-RR theorem-level closure, no H4.1/FGL theorem-level closure, no P vs NP closure, and no Clay-problem closure.

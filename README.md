@@ -41,22 +41,11 @@ URF is a verification-first research program for organizing rigidity principles,
 
 URF does not claim theorem-level closure of any major open problem unless the relevant repository explicitly states and verifies that closure.
 
-## Public repository set
+## Public repository inventory source of truth
 
-| Repo | Role |
-|---|---|
-| `inaciovasquez2020` | GitHub profile README and public orientation |
-| `vasquez-index` | Public front door and repository map |
-| `urf-core` | Core reference layer |
-| `chronos-urf-rr` | Reference executable/verification implementation |
-| `urf-textbook` | Expository layer |
-| `frontier-status-dashboard` | Public status dashboard |
+The machine-readable snapshot is `artifacts/public-repository-inventory.json`; the human-readable list is the table between `PUBLIC_REPOSITORY_INVENTORY_BEGIN` and `PUBLIC_REPOSITORY_INVENTORY_END` below. The navigation list in `docs/index.md` must match that public inventory exactly.
 
-## Private / archived work
-
-Source:
-private/internal reference omitted
-Additional experimental, frontier, application, and Clay-adjacent repositories are private or archived pending review, preprint release, or external validation.
+The account-level snapshot found 70 repositories accessible to the linked GitHub account, of which 19 were public and 51 private. This is a point-in-time visibility count, not a completeness claim about the research program. The inventory does not assess theorem validity or imply that every repository has reproducible artifacts.
 
 ## Status classes
 
@@ -130,12 +119,11 @@ The public status surface has been synchronized with the merged Chronos and dash
 - `chronos-urf-rr` PR #233: current unrestricted Reg-SNF status lock.
 - `frontier-status-dashboard` PR #50: dashboard row updated.
 
-Dashboard state:
+Historical dashboard snapshot (2026-05-12; metric semantics not audited in this index pass):
 
-- Repository integrity: 100%.
-- Theorem closure: 82%.
-- Current real Chronos-admissible unrestricted Reg-SNF: status-locked closed.
-- Selected DepthBridge reachability: locked.
+- Repository integrity was reported as 100% by the dashboard at that time.
+- The dashboard reported “Theorem closure: 82%”; denominator, aggregation rule, and validation protocol were not established by this audit. Do not interpret it as 82% of any theorem proved or 82% of the research program completed.
+- The status labels for Chronos-admissible unrestricted Reg-SNF and selected DepthBridge reachability remain scoped to the named artifacts and status locks; this index does not independently re-prove them.
 
 Boundary preserved: no UniversalFiberEntropyGap closure, no DepthBridge beyond selected final carrier domain, no Chronos-RR theorem-level closure, no H4.1/FGL theorem-level closure, no P vs NP closure, and no Clay-problem closure.
 

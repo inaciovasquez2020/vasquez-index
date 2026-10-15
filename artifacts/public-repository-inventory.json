@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at_utc": "2026-10-15T09:49:41Z",
+  "owner": "inaciovasquez2020",
+  "source": "GitHub repository listing returned to the linked GitHub account",
+  "scope": "point-in-time repository visibility snapshot; not a research-completeness or theorem-validation certificate",
+  "account_repository_count_observed": 70,
+  "public_repository_count_observed": 19,
+  "private_repository_count_observed": 51,
+  "invariant": "public_repository_inventory_implies_theorem_level_closure is false",
+  "repositories": [
+    {
+      "name": "biological-friction-framework",
+      "url": "https://github.com/inaciovasquez2020/biological-friction-framework",
+      "visibility": "public",
+      "default_branch": "main",
+      "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
+      "theorem_claim_validation": "not_assessed_by_this_inventory"
+    },
+    {
+      "name": "chronos-urf-rr",
+      "url": "https://github.com/inaciovasquez2020/chronos-urf-rr",
+      "visibility": "public",
+      "default_branch": "main",
+      "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
+      "theorem_claim_validation": "not_assessed_by_this_inventory"
+    },
+    {
+      "name": "cslib-fmt",
+      "url": "https://github.com/inaciovasquez2020/cslib-fmt",
+      "visibility": "public",
+      "default_branch": "main",
+      "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
+      "theorem_claim_validation": "not_assessed_by_this_inventory"
+    },
+    {
+      "name": "darkness-region-dynamics-null-test",
+      "url": "https://github.com/inaciovasquez2020/darkness-region-dynamics-null-test",
+      "visibility": "public",
+      "default_branch": "main",
+      "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
+      "theorem_claim_validation": "not_assessed_by_this_inventory"
+    },
+    {
+      "name": "dfm-mkc-cosmology",
+      "url": "https://github.com/inaciovasquez2020/dfm-mkc-cosmology",
+      "visibility": "public",
+      "default_branch": "main",
+      "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
+      "theorem_claim_validation": "not_assessed_by_this_inventory"
+    },
+    {
+      "name": "fo4-constraint-isolation",
+      "url": "https://github.com/inaciovasquez2020/fo4-constraint-isolation",
+      "visibility": "public",
+      "default_branch": "main",
+      "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
+      "theorem_claim_validation": "not_assessed_by_this_inventory"
+    },
+    {
+      "name": "frontier-status-dashboard",
+      "url": "https://github.com/inaciovasquez2020/frontier-status-dashboard",
+      "visibility": "public",
+      "default_branch": "main",
+      "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
+      "theorem_claim_validation": "not_assessed_by_this_inventory"
+    },
+    {
+      "name": "inaciovasquez2020",
+      "url": "https://github.com/inaciovasquez2020/inaciovasquez2020",
+      "visibility": "public",
+      "default_branch": "main",
+      "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
+      "theorem_claim_validation": "not_assessed_by_this_inventory"
+    },
+    {
+      "name": "inaciovasquez2020.github.io",
+      "url": "https://github.com/inaciovasquez2020/inaciovasquez2020.github.io",
+      "visibility": "public",
+      "default_branch": "main",
+      "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
+      "theorem_claim_validation": "not_assessed_by_this_inventory"
+    },
+    {
+      "name": "poincare-new-derivation",
+      "url": "https://github.com/inaciovasquez2020/poincare-new-derivation",
+      "visibility": "public",
+      "default_branch": "main",
+      "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
+      "theorem_claim_validation": "not_assessed_by_this_inventory"
+    },
+    {
+      "name": "theorem-closure-classifier",
+      "url": "https://github.com/inaciovasquez2020/theorem-closure-classifier",
+      "visibility": "public",
+      "default_branch": "main",
+      "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
+      "theorem_claim_validation": "not_assessed_by_this_inventory"
+    },
+    {
+      "name": "urf-11-translation-subproblem-registry",
+      "url": "https://github.com/inaciovasquez2020/urf-11-translation-subproblem-registry",
+      "visibility": "public",
+      "default_branch": "main",
+      "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
+      "theorem_claim_validation": "not_assessed_by_this_inventory"
+    },
+    {
+      "name": "urf-core",
+      "url": "https://github.com/inaciovasquez2020/urf-core",
+      "visibility": "public",
+      "default_branch": "main",
+      "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
+      "theorem_claim_validation": "not_assessed_by_this_inventory"
+    },
+    {
+      "name": "urf-spine-public",
+      "url": "https://github.com/inaciovasquez2020/urf-spine-public",
+      "visibility": "public",
+      "default_branch": "main",
+      "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
+      "theorem_claim_validation": "not_assessed_by_this_inventory"
+    },
+    {
+      "name": "urf-templates",
+      "url": "https://github.com/inaciovasquez2020/urf-templates",
+      "visibility": "public",
+      "default_branch": "main",
+      "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
+      "theorem_claim_validation": "not_assessed_by_this_inventory"
+    },
+    {
+      "name": "urf-textbook",
+      "url": "https://github.com/inaciovasquez2020/urf-textbook",
+      "visibility": "public",
+      "default_branch": "main",
+      "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
+      "theorem_claim_validation": "not_assessed_by_this_inventory"
+    },
+    {
+      "name": "urf-verifier",
+      "url": "https://github.com/inaciovasquez2020/urf-verifier",
+      "visibility": "public",
+      "default_branch": "main",
+      "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
+      "theorem_claim_validation": "not_assessed_by_this_inventory"
+    },
+    {
+      "name": "vasquez-index",
+      "url": "https://github.com/inaciovasquez2020/vasquez-index",
+      "visibility": "public",
+      "default_branch": "main",
+      "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
+      "theorem_claim_validation": "not_assessed_by_this_inventory"
+    },
+    {
+      "name": "zero_day_restricted_closures",
+      "url": "https://github.com/inaciovasquez2020/zero_day_restricted_closures",
+      "visibility": "public",
+      "default_branch": "main",
+      "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
+      "theorem_claim_validation": "not_assessed_by_this_inventory"
+    }
+  ]
+}
