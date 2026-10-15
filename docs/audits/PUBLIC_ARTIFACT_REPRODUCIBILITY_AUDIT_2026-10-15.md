@@ -48,6 +48,15 @@ A static review of `urf-core/scripts/verify_checksums.sh` found a fail-open risk
 
 This is a source-level finding, not an executed exploit or a measured failed run. A robust verifier should parse the manifest, require every in-scope path to exist, verify every digest, fail on malformed/duplicate entries, and return nonzero on any missing or mismatched file. Test cases should include a missing file, a wrong digest, a malformed line, and a valid manifest. Do not promote the current script to a trusted pass until these cases are tested.
 
+## Pinned-source snapshot replay: urf-templates
+
+The documented demo at commit `40741c620ed31e27418890685a3b8e238cea461e` was replayed from the exact fetched verifier, test, and JSON artifact source contents in a temporary local directory. Results:
+
+- Verifier exit code: `0`; output: `NON_URF_OHMS_LAW_FIXED_OBSERVATION_BOUND_OK`.
+- Pytest exit code: `0`; result: `1 passed in 0.05s`.
+- The host Python environment emitted a spreadsheet-runtime warmup exception to stderr, but both commands exited successfully.
+- A full Git clone could not be completed in this environment because resolving `github.com` failed. This was a pinned-source snapshot replay, **not** a clean-clone reproduction.
+
 ## Existing documented reproduction evidence
 
 The `urf-templates` file `examples/non_urf_scientific_claim_demo/docs/CLEAN_CLONE_ADOPTION_CONFIRMATION_2026_06_23.md` records a clean-clone confirmation at commit `40741c620ed31e27418890685a3b8e238cea461e`, including the verifier command and a reported passing test. This audit did not independently replay that record, so it is documentation evidence, not a reproduction performed during this audit. The audit total below therefore remains zero newly executed clean-clone reproductions.
@@ -59,7 +68,12 @@ The `urf-templates` file `examples/non_urf_scientific_claim_demo/docs/CLEAN_CLON
 - 1 manifest/verifier mechanism executed; the `urf-core` manifest check failed on 69 stale entries (34 missing files, 35 digest mismatches).
 - 1 committed release PDF SHA-256 independently recomputed and matched its recorded digest.
 - 0 separately downloaded GitHub release-asset hashes independently recomputed.
+- 1 pinned-source snapshot replay completed successfully (not a clean clone).
 - 0 clean-clone reproductions completed.
+
+## Outstanding manifest repair
+
+The fail-closed checksum verifier was merged in [urf-core PR #580](https://github.com/inaciovasquez2020/urf-core/pull/580) after the regression-test CI passed. The legacy `CHECKSUMS.txt` manifest itself remains stale: its current checkout failed verification with 69 entries needing reconciliation (34 missing paths and 35 mismatched digests). The verifier now reports this accurately; the manifest has **not** yet been repaired, so the repository-wide checksum gate is not a pass.
 
 ## Reproducibility gate for future status promotion
 
