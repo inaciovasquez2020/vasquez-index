@@ -15,7 +15,7 @@ Only repositories listed here are considered registry-visible.
 - **Authority:** Normative
 - **Scope:** Entropy-Depth definitions, bounds, structural obstructions
 - **Executable:** No (documentation-first)
-- **Status:** Frozen (spec-complete)
+- **Status:** Private repository (current GitHub metadata); specification completeness and reproducibility are not externally auditable from the public index.
 
 ---
 
@@ -33,13 +33,11 @@ Only repositories listed here are considered registry-visible.
 
 ## Composition & Infrastructure
 
-### urf-prefab-system
-- **Repo:** https://github.com/inaciovasquez2020/urf-prefab-system
-- **Role:** Canonical prefab definitions
-- **Authority:** Structural
-- **Scope:** Invariant-preserving prefab bundles
-- **Executable:** No (structure-only)
-- **Status:** Registry-aligned
+### Legacy entry: urf-prefab-system (unresolved)
+- **Previously recorded repo:** https://github.com/inaciovasquez2020/urf-prefab-system
+- **Role recorded historically:** Canonical prefab definitions
+- **Audit result (2026-10-15):** GitHub API returned 404 and the name was absent from the current account repository listing.
+- **Status:** Unverified legacy entry; do not treat as a current canonical dependency until its identity and location are restored or explicitly retired.
 
 ---
 
@@ -87,3 +85,20 @@ Boundary preserved: no UniversalFiberEntropyGap closure, no DepthBridge beyond s
 - Install: `docker pull ghcr.io/inaciovasquez2020/urf-sg-verifier:latest`
 - Scope: public verifier/demo container pointer only; implementation remains in `urf-core`.
 - Boundary: this index entry does not claim theorem-level closure or external validation beyond explicit repository/package artifacts.
+
+
+## Registry audit — 2026-10-15
+
+This audit records repository visibility and link resolution, not mathematical validity.
+
+| Entry | Observed condition | Disposition |
+|---|---|---|
+| `Chronos-EntropyDepth` | Repository currently private | Retained as a private normative specification pointer; external readers cannot independently inspect it through the public index. |
+| `chronos-urf-rr` | Public repository; release endpoint returns a release entry | Implementation pointer resolves. Release presence does not establish theorem closure. |
+| `urf-prefab-system` | Repository endpoint returned 404 and name absent from current account listing | Marked unresolved legacy entry above; canonical status withdrawn pending identity resolution. |
+| `urf-core` | Public repository; release endpoint returns an entry labeled `untagged-...` | Repository pointer resolves; stable version-tag and artifact reproducibility requirements need separate audit. |
+| `URC` | Repository currently private | Implementation remains a private pointer; public demo package is a separate distribution surface. |
+
+The current account listing contains 70 repositories, of which 19 are public. The public inventory in `README.md` enumerates those 19. The public navigation page must not present private repositories as publicly accessible.
+
+**Audit boundary:** this is a targeted registry/link/visibility audit, not a repository-by-repository verification of every release, artifact hash, proof, or scientific claim. No theorem-level status is upgraded by this audit.
