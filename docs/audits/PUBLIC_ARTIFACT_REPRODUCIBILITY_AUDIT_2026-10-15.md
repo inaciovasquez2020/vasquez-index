@@ -8,7 +8,7 @@
 
 | Repository | Source evidence | Status |
 |---|---|---|
-| `urf-core` | `CHECKSUMS.txt`, `transparency/files.sha256`, `scripts/verify_checksums.sh` | Executed the fail-closed verifier in GitHub Actions at PR head `741f8e69d47cbe33ddee714ce4dd1dab4316a238`. It correctly failed on 69 stale entries out of 439: 24 referenced files missing and 45 present files with digest mismatches. This is evidence that the legacy `CHECKSUMS.txt` snapshot is not current; it is not evidence of a cryptographic break. The verifier fix is proposed separately in [urf-core PR #580](https://github.com/inaciovasquez2020/urf-core/pull/580).
+| `urf-core` | `CHECKSUMS.txt`, `transparency/files.sha256`, `scripts/verify_checksums.sh` | Executed the fail-closed verifier in GitHub Actions at PR head `741f8e69d47cbe33ddee714ce4dd1dab4316a238`. It correctly failed on 69 stale entries out of 439: 34 referenced files missing and 35 present files with digest mismatches. This is evidence that the legacy `CHECKSUMS.txt` snapshot is not current; it is not evidence of a cryptographic break. The verifier fix is proposed separately in [urf-core PR #580](https://github.com/inaciovasquez2020/urf-core/pull/580).
 | `urf-verifier` | `transparency/files.sha256`, `transparency/merkle.root`, `.github/workflows/lean_and_certs.yml` | CI hash-comparison mechanism located; this audit did not execute the workflow or independently recompute the manifest. README notes a sample certificate/hash payload is not shipped at the described surface. |
 | `dfm-mkc-cosmology` | `tools/verify_dfm_mkc_downloaded_public_payload_manifest.py` checks file existence, byte size, SHA-256, and explicit no-evidence boundaries. | Verifier source inspected, not run. Hash validity does not imply schema validation, external payload verification, protocol execution, or scientific evidence. |
 | `urf-textbook` | `releases/v0.1.2/README.md` records a PDF SHA-256 and release tag/commit. | Independently recomputed SHA-256 for the committed file `releases/v0.1.2/urf-textbook-v0.1.2.pdf` (192,228 bytes): `b4704ca9a791346585826a02dc1baf184c0d6f7f6e7fd9a3aedda0bfc2ef059e`; it matches the capsule. This checks the committed PDF copy, not a separately downloaded GitHub release asset. Capsule labels itself release metadata, not theorem closure. |
@@ -56,7 +56,7 @@ The `urf-templates` file `examples/non_urf_scientific_claim_demo/docs/CLEAN_CLON
 
 - 5 repositories with static hash/checksum evidence located.
 - 14 additional repositories with README-level build, verifier, or explicit documentation-boundary evidence inspected.
-- 1 manifest/verifier mechanism executed; the `urf-core` manifest check failed on 69 stale entries (24 missing files, 45 digest mismatches).
+- 1 manifest/verifier mechanism executed; the `urf-core` manifest check failed on 69 stale entries (34 missing files, 35 digest mismatches).
 - 1 committed release PDF SHA-256 independently recomputed and matched its recorded digest.
 - 0 separately downloaded GitHub release-asset hashes independently recomputed.
 - 0 clean-clone reproductions completed.
