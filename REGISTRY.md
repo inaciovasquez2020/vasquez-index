@@ -117,3 +117,32 @@ The current account listing contains 70 repositories, of which 19 are public. Th
 | `vasquez-index` | Release `vi-ibc-1-2026-04-26` resolves; PRs #46 and #47 are merged. | Release and PR records verify repository history and index changes, not the completeness of the research portfolio. |
 
 **Remaining unverified:** a complete per-repository audit of artifact hashes, pinned commit/tag references, reproduction instructions, formal proof dependencies, and current theorem claims across all 19 public repositories and the private research repositories. The public index is now a visibility-correct navigation map; it is not a certificate that the underlying portfolio is complete.
+
+
+## Public release coverage snapshot — 2026-10-15
+
+The GitHub Releases endpoint was queried for each of the 19 public repositories. Up to three recent release entries are recorded in `artifacts/public-repository-inventory.json`. The table below summarizes the observed endpoint results.
+
+| Repository | Observed release metadata | Interpretation |
+|---|---|---|
+| [`biological-friction-framework`](https://github.com/inaciovasquez2020/biological-friction-framework) | Release entries returned: `frozen-2026-02-13`, `canonical-examples-v1`, `v1.0` | Release metadata observed; assets and reproducibility not audited |
+| [`chronos-urf-rr`](https://github.com/inaciovasquez2020/chronos-urf-rr) | Release entries returned: `zenodo-2026-05-26`, `v_ack_vardi`, `urf-classification-freeze-2026-04-01` | Release metadata observed; assets and reproducibility not audited |
+| [`cslib-fmt`](https://github.com/inaciovasquez2020/cslib-fmt) | Release entries returned: `public-cslib-fmt-finite-graph-diameter-2026-06-02`, `cslib-lbc-1-2026-04-26`, `cslib-fmt-distance-layer-closed-grep-clean-2026-04-23` | Release metadata observed; assets and reproducibility not audited |
+| [`darkness-region-dynamics-null-test`](https://github.com/inaciovasquez2020/darkness-region-dynamics-null-test) | No GitHub release entries returned | No release pointer verified in this pass; absence of a release is not itself a defect |
+| [`dfm-mkc-cosmology`](https://github.com/inaciovasquez2020/dfm-mkc-cosmology) | Release entries returned: `v1.0.0`, `dfm-mkc-cosmology-post-closure-validation-2026-06-02`, `zenodo-2026-05-26-r2` | Release metadata observed; assets and reproducibility not audited |
+| [`fo4-constraint-isolation`](https://github.com/inaciovasquez2020/fo4-constraint-isolation) | No GitHub release entries returned | No release pointer verified in this pass; absence of a release is not itself a defect |
+| [`frontier-status-dashboard`](https://github.com/inaciovasquez2020/frontier-status-dashboard) | Release entries returned: `zenodo-2026-05-26-r2`, `zenodo-2026-05-26` | Release metadata observed; assets and reproducibility not audited |
+| [`inaciovasquez2020`](https://github.com/inaciovasquez2020/inaciovasquez2020) | No GitHub release entries returned | No release pointer verified in this pass; absence of a release is not itself a defect |
+| [`inaciovasquez2020.github.io`](https://github.com/inaciovasquez2020/inaciovasquez2020.github.io) | No GitHub release entries returned | No release pointer verified in this pass; absence of a release is not itself a defect |
+| [`poincare-new-derivation`](https://github.com/inaciovasquez2020/poincare-new-derivation) | Release entries returned: `pnd-cdt-1-2026-04-26` | Release metadata observed; assets and reproducibility not audited |
+| [`theorem-closure-classifier`](https://github.com/inaciovasquez2020/theorem-closure-classifier) | Release entries returned: `v0.1.3`, `v0.1.2`, `v0.1.1` | Release metadata observed; assets and reproducibility not audited |
+| [`urf-11-translation-subproblem-registry`](https://github.com/inaciovasquez2020/urf-11-translation-subproblem-registry) | No GitHub release entries returned | No release pointer verified in this pass; absence of a release is not itself a defect |
+| [`urf-core`](https://github.com/inaciovasquez2020/urf-core) | Release entries returned: `urf-core-freeze-2026-02`, `zenodo-2026-05-26`, `v_ack_vardi` | Release metadata observed; assets and reproducibility not audited |
+| [`urf-spine-public`](https://github.com/inaciovasquez2020/urf-spine-public) | No GitHub release entries returned | No release pointer verified in this pass; absence of a release is not itself a defect |
+| [`urf-templates`](https://github.com/inaciovasquez2020/urf-templates) | Release entries returned: `v0.1.0` | Release metadata observed; assets and reproducibility not audited |
+| [`urf-textbook`](https://github.com/inaciovasquez2020/urf-textbook) | Release entries returned: `v0.3.1`, `v0.3.0`, `v0.2.0` | Release metadata observed; assets and reproducibility not audited |
+| [`urf-verifier`](https://github.com/inaciovasquez2020/urf-verifier) | Release entries returned: `uv-vbc-1-2026-04-26`, `v1.1.0`, `v1.0.0` | Release metadata observed; assets and reproducibility not audited |
+| [`vasquez-index`](https://github.com/inaciovasquez2020/vasquez-index) | Release entries returned: `vi-ibc-1-2026-04-26`, `pca-2026-04-26` | Release metadata observed; assets and reproducibility not audited |
+| [`zero_day_restricted_closures`](https://github.com/inaciovasquez2020/zero_day_restricted_closures) | No GitHub release entries returned | No release pointer verified in this pass; absence of a release is not itself a defect |
+
+**Audit result:** release metadata is present for 12 repositories and no release entries were returned for 7. This is a release-pointer inventory, not a quality ranking. A missing release does not mean a repository is invalid; a release entry does not prove that its artifacts reproduce or that its scientific claims are correct. The JSON receipt marks artifact hashes and reproducibility as not audited.

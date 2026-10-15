@@ -15,7 +15,14 @@
       "visibility": "public",
       "default_branch": "main",
       "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
-      "theorem_claim_validation": "not_assessed_by_this_inventory"
+      "theorem_claim_validation": "not_assessed_by_this_inventory",
+      "github_releases_observed": true,
+      "recent_release_tags_observed": [
+        "frozen-2026-02-13",
+        "canonical-examples-v1",
+        "v1.0"
+      ],
+      "release_assets_hashes_reproducibility": "not_audited"
     },
     {
       "name": "chronos-urf-rr",
@@ -23,7 +30,14 @@
       "visibility": "public",
       "default_branch": "main",
       "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
-      "theorem_claim_validation": "not_assessed_by_this_inventory"
+      "theorem_claim_validation": "not_assessed_by_this_inventory",
+      "github_releases_observed": true,
+      "recent_release_tags_observed": [
+        "zenodo-2026-05-26",
+        "v_ack_vardi",
+        "urf-classification-freeze-2026-04-01"
+      ],
+      "release_assets_hashes_reproducibility": "not_audited"
     },
     {
       "name": "cslib-fmt",
@@ -31,7 +45,14 @@
       "visibility": "public",
       "default_branch": "main",
       "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
-      "theorem_claim_validation": "not_assessed_by_this_inventory"
+      "theorem_claim_validation": "not_assessed_by_this_inventory",
+      "github_releases_observed": true,
+      "recent_release_tags_observed": [
+        "public-cslib-fmt-finite-graph-diameter-2026-06-02",
+        "cslib-lbc-1-2026-04-26",
+        "cslib-fmt-distance-layer-closed-grep-clean-2026-04-23"
+      ],
+      "release_assets_hashes_reproducibility": "not_audited"
     },
     {
       "name": "darkness-region-dynamics-null-test",
@@ -39,7 +60,10 @@
       "visibility": "public",
       "default_branch": "main",
       "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
-      "theorem_claim_validation": "not_assessed_by_this_inventory"
+      "theorem_claim_validation": "not_assessed_by_this_inventory",
+      "github_releases_observed": false,
+      "recent_release_tags_observed": [],
+      "release_assets_hashes_reproducibility": "not_audited"
     },
     {
       "name": "dfm-mkc-cosmology",
@@ -47,7 +71,14 @@
       "visibility": "public",
       "default_branch": "main",
       "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
-      "theorem_claim_validation": "not_assessed_by_this_inventory"
+      "theorem_claim_validation": "not_assessed_by_this_inventory",
+      "github_releases_observed": true,
+      "recent_release_tags_observed": [
+        "v1.0.0",
+        "dfm-mkc-cosmology-post-closure-validation-2026-06-02",
+        "zenodo-2026-05-26-r2"
+      ],
+      "release_assets_hashes_reproducibility": "not_audited"
     },
     {
       "name": "fo4-constraint-isolation",
@@ -55,7 +86,10 @@
       "visibility": "public",
       "default_branch": "main",
       "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
-      "theorem_claim_validation": "not_assessed_by_this_inventory"
+      "theorem_claim_validation": "not_assessed_by_this_inventory",
+      "github_releases_observed": false,
+      "recent_release_tags_observed": [],
+      "release_assets_hashes_reproducibility": "not_audited"
     },
     {
       "name": "frontier-status-dashboard",
@@ -63,7 +97,13 @@
       "visibility": "public",
       "default_branch": "main",
       "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
-      "theorem_claim_validation": "not_assessed_by_this_inventory"
+      "theorem_claim_validation": "not_assessed_by_this_inventory",
+      "github_releases_observed": true,
+      "recent_release_tags_observed": [
+        "zenodo-2026-05-26-r2",
+        "zenodo-2026-05-26"
+      ],
+      "release_assets_hashes_reproducibility": "not_audited"
     },
     {
       "name": "inaciovasquez2020",
@@ -71,7 +111,10 @@
       "visibility": "public",
       "default_branch": "main",
       "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
-      "theorem_claim_validation": "not_assessed_by_this_inventory"
+      "theorem_claim_validation": "not_assessed_by_this_inventory",
+      "github_releases_observed": false,
+      "recent_release_tags_observed": [],
+      "release_assets_hashes_reproducibility": "not_audited"
     },
     {
       "name": "inaciovasquez2020.github.io",
@@ -79,7 +122,10 @@
       "visibility": "public",
       "default_branch": "main",
       "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
-      "theorem_claim_validation": "not_assessed_by_this_inventory"
+      "theorem_claim_validation": "not_assessed_by_this_inventory",
+      "github_releases_observed": false,
+      "recent_release_tags_observed": [],
+      "release_assets_hashes_reproducibility": "not_audited"
     },
     {
       "name": "poincare-new-derivation",
@@ -87,7 +133,12 @@
       "visibility": "public",
       "default_branch": "main",
       "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
-      "theorem_claim_validation": "not_assessed_by_this_inventory"
+      "theorem_claim_validation": "not_assessed_by_this_inventory",
+      "github_releases_observed": true,
+      "recent_release_tags_observed": [
+        "pnd-cdt-1-2026-04-26"
+      ],
+      "release_assets_hashes_reproducibility": "not_audited"
     },
     {
       "name": "theorem-closure-classifier",
@@ -95,7 +146,14 @@
       "visibility": "public",
       "default_branch": "main",
       "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
-      "theorem_claim_validation": "not_assessed_by_this_inventory"
+      "theorem_claim_validation": "not_assessed_by_this_inventory",
+      "github_releases_observed": true,
+      "recent_release_tags_observed": [
+        "v0.1.3",
+        "v0.1.2",
+        "v0.1.1"
+      ],
+      "release_assets_hashes_reproducibility": "not_audited"
     },
     {
       "name": "urf-11-translation-subproblem-registry",
@@ -103,7 +161,10 @@
       "visibility": "public",
       "default_branch": "main",
       "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
-      "theorem_claim_validation": "not_assessed_by_this_inventory"
+      "theorem_claim_validation": "not_assessed_by_this_inventory",
+      "github_releases_observed": false,
+      "recent_release_tags_observed": [],
+      "release_assets_hashes_reproducibility": "not_audited"
     },
     {
       "name": "urf-core",
@@ -111,7 +172,14 @@
       "visibility": "public",
       "default_branch": "main",
       "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
-      "theorem_claim_validation": "not_assessed_by_this_inventory"
+      "theorem_claim_validation": "not_assessed_by_this_inventory",
+      "github_releases_observed": true,
+      "recent_release_tags_observed": [
+        "urf-core-freeze-2026-02",
+        "zenodo-2026-05-26",
+        "v_ack_vardi"
+      ],
+      "release_assets_hashes_reproducibility": "not_audited"
     },
     {
       "name": "urf-spine-public",
@@ -119,7 +187,10 @@
       "visibility": "public",
       "default_branch": "main",
       "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
-      "theorem_claim_validation": "not_assessed_by_this_inventory"
+      "theorem_claim_validation": "not_assessed_by_this_inventory",
+      "github_releases_observed": false,
+      "recent_release_tags_observed": [],
+      "release_assets_hashes_reproducibility": "not_audited"
     },
     {
       "name": "urf-templates",
@@ -127,7 +198,12 @@
       "visibility": "public",
       "default_branch": "main",
       "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
-      "theorem_claim_validation": "not_assessed_by_this_inventory"
+      "theorem_claim_validation": "not_assessed_by_this_inventory",
+      "github_releases_observed": true,
+      "recent_release_tags_observed": [
+        "v0.1.0"
+      ],
+      "release_assets_hashes_reproducibility": "not_audited"
     },
     {
       "name": "urf-textbook",
@@ -135,7 +211,14 @@
       "visibility": "public",
       "default_branch": "main",
       "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
-      "theorem_claim_validation": "not_assessed_by_this_inventory"
+      "theorem_claim_validation": "not_assessed_by_this_inventory",
+      "github_releases_observed": true,
+      "recent_release_tags_observed": [
+        "v0.3.1",
+        "v0.3.0",
+        "v0.2.0"
+      ],
+      "release_assets_hashes_reproducibility": "not_audited"
     },
     {
       "name": "urf-verifier",
@@ -143,7 +226,14 @@
       "visibility": "public",
       "default_branch": "main",
       "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
-      "theorem_claim_validation": "not_assessed_by_this_inventory"
+      "theorem_claim_validation": "not_assessed_by_this_inventory",
+      "github_releases_observed": true,
+      "recent_release_tags_observed": [
+        "uv-vbc-1-2026-04-26",
+        "v1.1.0",
+        "v1.0.0"
+      ],
+      "release_assets_hashes_reproducibility": "not_audited"
     },
     {
       "name": "vasquez-index",
@@ -151,7 +241,13 @@
       "visibility": "public",
       "default_branch": "main",
       "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
-      "theorem_claim_validation": "not_assessed_by_this_inventory"
+      "theorem_claim_validation": "not_assessed_by_this_inventory",
+      "github_releases_observed": true,
+      "recent_release_tags_observed": [
+        "vi-ibc-1-2026-04-26",
+        "pca-2026-04-26"
+      ],
+      "release_assets_hashes_reproducibility": "not_audited"
     },
     {
       "name": "zero_day_restricted_closures",
@@ -159,7 +255,12 @@
       "visibility": "public",
       "default_branch": "main",
       "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
-      "theorem_claim_validation": "not_assessed_by_this_inventory"
+      "theorem_claim_validation": "not_assessed_by_this_inventory",
+      "github_releases_observed": false,
+      "recent_release_tags_observed": [],
+      "release_assets_hashes_reproducibility": "not_audited"
     }
-  ]
+  ],
+  "release_snapshot_observed_at_utc": "2026-10-15",
+  "release_snapshot_scope": "GitHub Releases endpoint, up to the three most recent entries returned per public repository; this does not check assets, hashes, tag protection, or reproducibility"
 }
