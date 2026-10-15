@@ -61,7 +61,7 @@ The public status surface has been synchronized with the merged Chronos and dash
 Dashboard state:
 
 - Repository integrity: 100%.
-- Theorem closure: 82%.
+- Scoped closure-scale indicator: 82 (historical scalar; not a theorem-completion percentage).
 - Current real Chronos-admissible unrestricted Reg-SNF: status-locked closed.
 - Selected DepthBridge reachability: locked.
 
@@ -160,3 +160,30 @@ A root-directory listing was checked for README, citation metadata, license file
 | `tests/` directory | `urf-spine-public`, `urf-templates`, `zero_day_restricted_closures` |
 
 The complete per-repository observations are recorded in `artifacts/public-repository-inventory.json`. This snapshot does not inspect nested test directories, license text, citation correctness, workflow contents, artifact hashes, or scientific claims. Treat these rows as audit leads, not automatic failure classifications.
+
+
+## Public artifact/reproducibility evidence audit — 2026-10-15
+
+This is a **static source inspection**, not a clean-clone or full runtime reproducibility audit. It distinguishes visible mechanisms from successfully executed verification.
+
+| Repository | Evidence located in tracked source | Audit status and boundary |
+|---|---|---|
+| `urf-core` | Root `CHECKSUMS.txt`, `transparency/files.sha256`, and `scripts/verify_checksums.sh` exist. | Mechanism located; checksum verifier was inspected but not executed against a clean checkout. No portfolio-wide reproducibility claim. |
+| `urf-verifier` | `transparency/files.sha256`, `transparency/merkle.root`, and `.github/workflows/lean_and_certs.yml` checks comparing manifest and attestation hashes. | CI verification mechanism located; this audit did not execute the workflow or independently recompute the manifest. README also explicitly says no sample certificate/hash payload is shipped at the stated surface. |
+| `dfm-mkc-cosmology` | `tools/verify_dfm_mkc_downloaded_public_payload_manifest.py` checks payload existence, byte size, and SHA-256 against a JSON manifest. | Source-level verifier inspected. It explicitly preserves a no-evidence boundary: checksum verification does not mean schema validation, external payload verification, protocol execution, or scientific evidence. The verifier was not run here. |
+| `urf-textbook` | `releases/v0.1.2/README.md` records a PDF SHA-256 and release tag/commit. | Recorded checksum located; this audit did not retrieve the asset and independently verify the digest. The capsule labels itself documentation/release metadata, not theorem closure. |
+| `biological-friction-framework` | Search located code using SHA-256 for selected input/evidence checks. | Per-artifact hashing code exists in at least one checked path; no global release manifest or clean-clone replay was established by this inspection. |
+
+### Remaining repositories
+
+The other public repositories were not confirmed to lack checksums or reproducibility instructions. A code-search query returning no results is **not** evidence of absence. Their artifact manifests, release assets, environment pins, and clean-clone commands remain unaudited.
+
+### Audit result
+
+- Static evidence located in 5 repositories.
+- Manifest/verification mechanisms were not executed in this audit.
+- Release asset hashes were not independently recomputed.
+- Clean-clone reproducibility was not tested.
+- This audit does not validate mathematical claims, theorem dependencies, or scientific conclusions.
+
+Next required verification for each claimed release is to pin the exact tag/commit, obtain its declared assets, run the repository's documented verifier in a clean environment, record exact commands and outputs, and preserve failures as failures rather than promoting status.
