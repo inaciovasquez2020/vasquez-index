@@ -11,7 +11,6 @@ This page is the public navigation layer for the Vasquez research portfolio. It 
 - [URF Templates](https://github.com/inaciovasquez2020/urf-templates) — bounded outsider-demo templates.
 
 ## Mathematical and computational research
-- [Cycle-local rigidity is not listed as public; use the public proof-frontier repository below where applicable.] 
 - [Poincaré New Derivation](https://github.com/inaciovasquez2020/poincare-new-derivation) — intermediate checkpoints; Poincaré closure is not claimed.
 - [CSLib-FMT](https://github.com/inaciovasquez2020/cslib-fmt) — finite-model-theory support library.
 - [FO4 Constraint Isolation](https://github.com/inaciovasquez2020/fo4-constraint-isolation) — constraint-isolation boundary module.
