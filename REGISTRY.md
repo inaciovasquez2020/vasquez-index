@@ -102,3 +102,18 @@ This audit records repository visibility and link resolution, not mathematical v
 The current account listing contains 70 repositories, of which 19 are public. The public inventory in `README.md` enumerates those 19. The public navigation page must not present private repositories as publicly accessible.
 
 **Audit boundary:** this is a targeted registry/link/visibility audit, not a repository-by-repository verification of every release, artifact hash, proof, or scientific claim. No theorem-level status is upgraded by this audit.
+
+
+## Release and historical-pointer cross-check — 2026-10-15
+
+| Pointer | Observed evidence | Boundary |
+|---|---|---|
+| Chronos PRs #231, #232, #233 | All three GitHub pull requests are closed and merged on 2026-05-12. | Confirms merge history only; the theorem scope remains the scope stated in the source repository. |
+| Frontier dashboard PR #50 | Closed and merged on 2026-05-12. | Confirms the dashboard update was merged, not that dashboard metrics establish mathematical closure. |
+| `frontier-status-dashboard` | Public release entries `zenodo-2026-05-26` and `zenodo-2026-05-26-r2` resolve. | A historical registry snapshot reports “Theorem closure: 82%”. This audit did not establish the metric's denominator, semantics, or validation protocol. Do not interpret it as a percentage of a theorem proved or of science completed. |
+| `urf-templates` | Public release `v0.1.0` resolves. | Release presence establishes a published version pointer, not general scientific-claim validation. |
+| `urf-verifier` | Public releases `v1.0.0`, `v1.1.0`, and `uv-vbc-1-2026-04-26` resolve. | Verifier success is limited to the certificate and provenance checks actually implemented. |
+| `urf-spine-public` | Public repository resolves; no GitHub releases were returned by the releases endpoint. | No release artifact was verified in this pass; absence of a release is not itself a proof defect. |
+| `vasquez-index` | Release `vi-ibc-1-2026-04-26` resolves; PRs #46 and #47 are merged. | Release and PR records verify repository history and index changes, not the completeness of the research portfolio. |
+
+**Remaining unverified:** a complete per-repository audit of artifact hashes, pinned commit/tag references, reproduction instructions, formal proof dependencies, and current theorem claims across all 19 public repositories and the private research repositories. The public index is now a visibility-correct navigation map; it is not a certificate that the underlying portfolio is complete.
