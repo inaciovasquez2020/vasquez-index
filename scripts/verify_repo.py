@@ -17,7 +17,7 @@ readme = Path("README.md").read_text(encoding="utf-8")
 index = Path("docs/index.md").read_text(encoding="utf-8")
 receipt = json.loads(Path("artifacts/public-repository-inventory.json").read_text(encoding="utf-8"))
 begin = "<!-- PUBLIC_REPOSITORY_INVENTORY_BEGIN -->"
- end_marker = "<!-- PUBLIC_REPOSITORY_INVENTORY_END -->"
+end_marker = "<!-- PUBLIC_REPOSITORY_INVENTORY_END -->"
 if readme.count(begin) != 1 or readme.count(end_marker) != 1:
     print(json.dumps({"valid": False, "error": "inventory_markers_missing_or_duplicated"}))
     sys.exit(1)
