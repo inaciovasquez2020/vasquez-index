@@ -38,6 +38,20 @@ Searches for `reproducibility SHA256 checksum` returned no indexed matches for s
 
 The full 19-repository inventory includes the five hash-evidence repositories above and the 14 repositories in the reproducibility table. This is not an exhaustive tree walk of every repository, branch, release asset, or nested submodule.
 
+## Verifier review: concrete issue found
+
+A static review of `urf-core/scripts/verify_checksums.sh` found a fail-open risk that must be resolved before treating the script as a successful integrity gate:
+
+- It invokes `sha256sum --ignore-missing -c -`, which can skip manifest entries whose files are absent.
+- It captures `PIPESTATUS[1]` into `rc` but never tests `rc`.
+- The final result is based on searching the tee'd output for the word `FAILED`, rather than requiring every non-exempt manifest entry to exist and verify.
+
+This is a source-level finding, not an executed exploit or a measured failed run. A robust verifier should parse the manifest, require every in-scope path to exist, verify every digest, fail on malformed/duplicate entries, and return nonzero on any missing or mismatched file. Test cases should include a missing file, a wrong digest, a malformed line, and a valid manifest. Do not promote the current script to a trusted pass until these cases are tested.
+
+## Existing documented reproduction evidence
+
+The `urf-templates` file `examples/non_urf_scientific_claim_demo/docs/CLEAN_CLONE_ADOPTION_CONFIRMATION_2026_06_23.md` records a clean-clone confirmation at commit `40741c620ed31e27418890685a3b8e238cea461e`, including the verifier command and a reported passing test. This audit did not independently replay that record, so it is documentation evidence, not a reproduction performed during this audit. The audit total below therefore remains zero newly executed clean-clone reproductions.
+
 ## Audit totals
 
 - 5 repositories with static hash/checksum evidence located.
