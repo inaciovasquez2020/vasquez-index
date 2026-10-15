@@ -22,7 +22,15 @@
         "canonical-examples-v1",
         "v1.0"
       ],
-      "release_assets_hashes_reproducibility": "not_audited"
+      "release_assets_hashes_reproducibility": "not_audited",
+      "root_metadata_observed": {
+        "readme_md": true,
+        "citation_cff": true,
+        "license_file": true,
+        "github_workflows_directory": true,
+        "tests_directory": true
+      },
+      "root_metadata_interpretation": "presence/absence at repository root only; not a quality or correctness judgment"
     },
     {
       "name": "chronos-urf-rr",
@@ -37,7 +45,15 @@
         "v_ack_vardi",
         "urf-classification-freeze-2026-04-01"
       ],
-      "release_assets_hashes_reproducibility": "not_audited"
+      "release_assets_hashes_reproducibility": "not_audited",
+      "root_metadata_observed": {
+        "readme_md": true,
+        "citation_cff": true,
+        "license_file": true,
+        "github_workflows_directory": true,
+        "tests_directory": true
+      },
+      "root_metadata_interpretation": "presence/absence at repository root only; not a quality or correctness judgment"
     },
     {
       "name": "cslib-fmt",
@@ -52,7 +68,15 @@
         "cslib-lbc-1-2026-04-26",
         "cslib-fmt-distance-layer-closed-grep-clean-2026-04-23"
       ],
-      "release_assets_hashes_reproducibility": "not_audited"
+      "release_assets_hashes_reproducibility": "not_audited",
+      "root_metadata_observed": {
+        "readme_md": true,
+        "citation_cff": false,
+        "license_file": false,
+        "github_workflows_directory": true,
+        "tests_directory": true
+      },
+      "root_metadata_interpretation": "presence/absence at repository root only; not a quality or correctness judgment"
     },
     {
       "name": "darkness-region-dynamics-null-test",
@@ -63,7 +87,15 @@
       "theorem_claim_validation": "not_assessed_by_this_inventory",
       "github_releases_observed": false,
       "recent_release_tags_observed": [],
-      "release_assets_hashes_reproducibility": "not_audited"
+      "release_assets_hashes_reproducibility": "not_audited",
+      "root_metadata_observed": {
+        "readme_md": true,
+        "citation_cff": true,
+        "license_file": true,
+        "github_workflows_directory": false,
+        "tests_directory": true
+      },
+      "root_metadata_interpretation": "presence/absence at repository root only; not a quality or correctness judgment"
     },
     {
       "name": "dfm-mkc-cosmology",
@@ -78,7 +110,15 @@
         "dfm-mkc-cosmology-post-closure-validation-2026-06-02",
         "zenodo-2026-05-26-r2"
       ],
-      "release_assets_hashes_reproducibility": "not_audited"
+      "release_assets_hashes_reproducibility": "not_audited",
+      "root_metadata_observed": {
+        "readme_md": true,
+        "citation_cff": true,
+        "license_file": true,
+        "github_workflows_directory": true,
+        "tests_directory": true
+      },
+      "root_metadata_interpretation": "presence/absence at repository root only; not a quality or correctness judgment"
     },
     {
       "name": "fo4-constraint-isolation",
@@ -89,7 +129,15 @@
       "theorem_claim_validation": "not_assessed_by_this_inventory",
       "github_releases_observed": false,
       "recent_release_tags_observed": [],
-      "release_assets_hashes_reproducibility": "not_audited"
+      "release_assets_hashes_reproducibility": "not_audited",
+      "root_metadata_observed": {
+        "readme_md": true,
+        "citation_cff": false,
+        "license_file": false,
+        "github_workflows_directory": true,
+        "tests_directory": true
+      },
+      "root_metadata_interpretation": "presence/absence at repository root only; not a quality or correctness judgment"
     },
     {
       "name": "frontier-status-dashboard",
@@ -103,7 +151,15 @@
         "zenodo-2026-05-26-r2",
         "zenodo-2026-05-26"
       ],
-      "release_assets_hashes_reproducibility": "not_audited"
+      "release_assets_hashes_reproducibility": "not_audited",
+      "root_metadata_observed": {
+        "readme_md": true,
+        "citation_cff": true,
+        "license_file": false,
+        "github_workflows_directory": true,
+        "tests_directory": true
+      },
+      "root_metadata_interpretation": "presence/absence at repository root only; not a quality or correctness judgment"
     },
     {
       "name": "inaciovasquez2020",
@@ -114,7 +170,15 @@
       "theorem_claim_validation": "not_assessed_by_this_inventory",
       "github_releases_observed": false,
       "recent_release_tags_observed": [],
-      "release_assets_hashes_reproducibility": "not_audited"
+      "release_assets_hashes_reproducibility": "not_audited",
+      "root_metadata_observed": {
+        "readme_md": true,
+        "citation_cff": false,
+        "license_file": false,
+        "github_workflows_directory": true,
+        "tests_directory": true
+      },
+      "root_metadata_interpretation": "presence/absence at repository root only; not a quality or correctness judgment"
     },
     {
       "name": "inaciovasquez2020.github.io",
@@ -125,7 +189,15 @@
       "theorem_claim_validation": "not_assessed_by_this_inventory",
       "github_releases_observed": false,
       "recent_release_tags_observed": [],
-      "release_assets_hashes_reproducibility": "not_audited"
+      "release_assets_hashes_reproducibility": "not_audited",
+      "root_metadata_observed": {
+        "readme_md": true,
+        "citation_cff": true,
+        "license_file": true,
+        "github_workflows_directory": true,
+        "tests_directory": true
+      },
+      "root_metadata_interpretation": "presence/absence at repository root only; not a quality or correctness judgment"
     },
     {
       "name": "poincare-new-derivation",
@@ -138,7 +210,15 @@
       "recent_release_tags_observed": [
         "pnd-cdt-1-2026-04-26"
       ],
-      "release_assets_hashes_reproducibility": "not_audited"
+      "release_assets_hashes_reproducibility": "not_audited",
+      "root_metadata_observed": {
+        "readme_md": true,
+        "citation_cff": true,
+        "license_file": false,
+        "github_workflows_directory": true,
+        "tests_directory": true
+      },
+      "root_metadata_interpretation": "presence/absence at repository root only; not a quality or correctness judgment"
     },
     {
       "name": "theorem-closure-classifier",
@@ -153,7 +233,15 @@
         "v0.1.2",
         "v0.1.1"
       ],
-      "release_assets_hashes_reproducibility": "not_audited"
+      "release_assets_hashes_reproducibility": "not_audited",
+      "root_metadata_observed": {
+        "readme_md": true,
+        "citation_cff": true,
+        "license_file": true,
+        "github_workflows_directory": true,
+        "tests_directory": true
+      },
+      "root_metadata_interpretation": "presence/absence at repository root only; not a quality or correctness judgment"
     },
     {
       "name": "urf-11-translation-subproblem-registry",
@@ -164,7 +252,15 @@
       "theorem_claim_validation": "not_assessed_by_this_inventory",
       "github_releases_observed": false,
       "recent_release_tags_observed": [],
-      "release_assets_hashes_reproducibility": "not_audited"
+      "release_assets_hashes_reproducibility": "not_audited",
+      "root_metadata_observed": {
+        "readme_md": true,
+        "citation_cff": false,
+        "license_file": false,
+        "github_workflows_directory": true,
+        "tests_directory": true
+      },
+      "root_metadata_interpretation": "presence/absence at repository root only; not a quality or correctness judgment"
     },
     {
       "name": "urf-core",
@@ -179,7 +275,15 @@
         "zenodo-2026-05-26",
         "v_ack_vardi"
       ],
-      "release_assets_hashes_reproducibility": "not_audited"
+      "release_assets_hashes_reproducibility": "not_audited",
+      "root_metadata_observed": {
+        "readme_md": true,
+        "citation_cff": true,
+        "license_file": true,
+        "github_workflows_directory": true,
+        "tests_directory": true
+      },
+      "root_metadata_interpretation": "presence/absence at repository root only; not a quality or correctness judgment"
     },
     {
       "name": "urf-spine-public",
@@ -190,7 +294,15 @@
       "theorem_claim_validation": "not_assessed_by_this_inventory",
       "github_releases_observed": false,
       "recent_release_tags_observed": [],
-      "release_assets_hashes_reproducibility": "not_audited"
+      "release_assets_hashes_reproducibility": "not_audited",
+      "root_metadata_observed": {
+        "readme_md": true,
+        "citation_cff": true,
+        "license_file": true,
+        "github_workflows_directory": false,
+        "tests_directory": false
+      },
+      "root_metadata_interpretation": "presence/absence at repository root only; not a quality or correctness judgment"
     },
     {
       "name": "urf-templates",
@@ -203,7 +315,15 @@
       "recent_release_tags_observed": [
         "v0.1.0"
       ],
-      "release_assets_hashes_reproducibility": "not_audited"
+      "release_assets_hashes_reproducibility": "not_audited",
+      "root_metadata_observed": {
+        "readme_md": true,
+        "citation_cff": true,
+        "license_file": false,
+        "github_workflows_directory": true,
+        "tests_directory": false
+      },
+      "root_metadata_interpretation": "presence/absence at repository root only; not a quality or correctness judgment"
     },
     {
       "name": "urf-textbook",
@@ -218,7 +338,15 @@
         "v0.3.0",
         "v0.2.0"
       ],
-      "release_assets_hashes_reproducibility": "not_audited"
+      "release_assets_hashes_reproducibility": "not_audited",
+      "root_metadata_observed": {
+        "readme_md": true,
+        "citation_cff": true,
+        "license_file": true,
+        "github_workflows_directory": true,
+        "tests_directory": true
+      },
+      "root_metadata_interpretation": "presence/absence at repository root only; not a quality or correctness judgment"
     },
     {
       "name": "urf-verifier",
@@ -233,7 +361,15 @@
         "v1.1.0",
         "v1.0.0"
       ],
-      "release_assets_hashes_reproducibility": "not_audited"
+      "release_assets_hashes_reproducibility": "not_audited",
+      "root_metadata_observed": {
+        "readme_md": true,
+        "citation_cff": true,
+        "license_file": true,
+        "github_workflows_directory": true,
+        "tests_directory": true
+      },
+      "root_metadata_interpretation": "presence/absence at repository root only; not a quality or correctness judgment"
     },
     {
       "name": "vasquez-index",
@@ -247,7 +383,15 @@
         "vi-ibc-1-2026-04-26",
         "pca-2026-04-26"
       ],
-      "release_assets_hashes_reproducibility": "not_audited"
+      "release_assets_hashes_reproducibility": "not_audited",
+      "root_metadata_observed": {
+        "readme_md": true,
+        "citation_cff": true,
+        "license_file": true,
+        "github_workflows_directory": true,
+        "tests_directory": true
+      },
+      "root_metadata_interpretation": "presence/absence at repository root only; not a quality or correctness judgment"
     },
     {
       "name": "zero_day_restricted_closures",
@@ -258,9 +402,19 @@
       "theorem_claim_validation": "not_assessed_by_this_inventory",
       "github_releases_observed": false,
       "recent_release_tags_observed": [],
-      "release_assets_hashes_reproducibility": "not_audited"
+      "release_assets_hashes_reproducibility": "not_audited",
+      "root_metadata_observed": {
+        "readme_md": true,
+        "citation_cff": false,
+        "license_file": false,
+        "github_workflows_directory": true,
+        "tests_directory": false
+      },
+      "root_metadata_interpretation": "presence/absence at repository root only; not a quality or correctness judgment"
     }
   ],
   "release_snapshot_observed_at_utc": "2026-10-15",
-  "release_snapshot_scope": "GitHub Releases endpoint, up to the three most recent entries returned per public repository; this does not check assets, hashes, tag protection, or reproducibility"
+  "release_snapshot_scope": "GitHub Releases endpoint, up to the three most recent entries returned per public repository; this does not check assets, hashes, tag protection, or reproducibility",
+  "root_metadata_snapshot_observed_at_utc": "2026-10-15",
+  "root_metadata_snapshot_scope": "root directory entry checks only; does not inspect nested structure or certify policy compliance"
 }
