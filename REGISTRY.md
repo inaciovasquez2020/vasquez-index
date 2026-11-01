@@ -11,11 +11,11 @@ Only repositories listed here are considered registry-visible.
 
 ### Chronos–EntropyDepth
 - **Repo:** https://github.com/inaciovasquez2020/Chronos-EntropyDepth
-- **Role:** Canonical invariant specification
-- **Authority:** Normative
-- **Scope:** Entropy-Depth definitions, bounds, structural obstructions
-- **Executable:** No (documentation-first)
-- **Status:** Private repository (current GitHub metadata); specification completeness and reproducibility are not externally auditable from the public index.
+- **Role:** Chronos certificate artifacts and conditional research surfaces
+- **Authority:** Conditional-frontier evidence; not a normative, theorem-complete specification
+- **Scope:** Frozen certificate subset, entropy-depth research, scoped information-theoretic bounds, and open physical bridges
+- **Executable:** Mixed repository with tests and Lean surfaces; results require artifact-level verification
+- **Status:** Private repository; current GitHub CI and history-pattern scans are not a proof of mathematical or security completeness. Refer to the repository's `docs/status/EXTERNAL_STATUS_LOCK.md` for claims scope.
 
 ---
 
