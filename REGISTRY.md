@@ -19,6 +19,30 @@ Only repositories listed here are considered registry-visible.
 
 ---
 
+## Public curated research snapshots — 2026-11-01
+
+These are two **separate, public, version-tagged GitHub release assets**, not publications of their private working repositories. The SHA-256 values below identify the exact reviewed ZIP bytes; a release tag or URL alone is not an immutable content guarantee. Revalidate hashes when retrieving the assets. Registry inclusion records provenance and stated scope, **not** peer review, mathematical completeness, or new theorem-level closure.
+
+### Chronos — conditional research snapshot
+- **Public release:** https://github.com/inaciovasquez2020/chronos-curated-release/releases/tag/snapshot-2026-11-01
+- **ZIP asset:** https://github.com/inaciovasquez2020/chronos-curated-release/releases/download/snapshot-2026-11-01/chronos_authorized_candidate.zip
+- **SHA-256 (ZIP):** `5469fa9f404dc5470035b96f209e98839829671035130f24ac347906b8800387`
+- **Release date:** 2026-11-01
+- **Authority:** Conditional research manuscript and frozen certificate/signature artifacts, with explicitly limited mathematical scope; signature verification certifies file authenticity relative to the designated key, not validity of numerical or physical claims.
+- **Boundary:** No unconditional universal entropy-depth theorem, complexity separation, P vs NP proof, or physical bridge is established by this release.
+- **Source isolation:** `Chronos-EntropyDepth` remains private; its complete working history is not distributed in this ZIP.
+
+### Overlap-rigidity — hidden-assignment oracle snapshot
+- **Public release:** https://github.com/inaciovasquez2020/overlap-rigidity-oracle-release/releases/tag/snapshot-2026-11-01
+- **ZIP asset:** https://github.com/inaciovasquez2020/overlap-rigidity-oracle-release/releases/download/snapshot-2026-11-01/overlap_scope_corrected.zip
+- **SHA-256 (ZIP):** `401382dbd0b290648cabc585c267f8ba7289653da71be5522414f76f8db58c97`
+- **Release date:** 2026-11-01
+- **Authority:** Conditional information-acquisition bound for an idealized hidden-satisfying-assignment oracle under the stated hypotheses.
+- **Boundary:** No general SAT algorithm lower bound or P vs NP separation is established; the specified explicit high-girth family with uniform rank deficit remains unconstructed in the manuscript.
+- **Source isolation:** `overlap-rigidity-counterexamples` remains private; its complete working history is not distributed in this ZIP.
+
+---
+
 ## Reference Implementations
 
 ### chronos-urf-rr
