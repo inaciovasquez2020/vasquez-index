@@ -41,7 +41,9 @@ These descriptions reveal only theorem scope and evidence class. They do not pub
 
 ## Gate for a future sanitized public certificate
 
-**First candidate:** the finite Pachner-theta counterexample, because its statement has explicit before/after numerical witnesses and a narrowly specified formal validity predicate. **Release status: NOT READY / NOT PUBLISHED.** Before publication:
+**First candidate:** the finite Pachner-theta counterexample, because its statement has explicit before/after numerical witnesses and a narrowly specified formal validity predicate. **Release status: NOT READY / NOT PUBLISHED.**
+
+**Independent review request:** [GitHub issue #57](https://github.com/inaciovasquez2020/vasquez-index/issues/57). The standalone candidate has been locally replayed with SHA-256 `e53b942535e6d08b02770a6382f82116289afeaffd3f9a699e3272661f82ffda`, but **no unaffiliated reproduction has been received**. The candidate archive is not publicly published. Before publication:
 
 1. Reproduce the exact finite witness and `Valid23Exact` definition in a new, standalone public-safe artifact without copying protected private data or repository history.
 2. Check that every required definition, license, provenance statement, and dependency is safe to disclose.
