@@ -37,6 +37,10 @@ This repository is the public registry surface for the small set of active publi
 ## Start here
 URF is a verification-first research program for organizing rigidity principles, locality constraints, entropy/capacity bounds, formal proof surfaces, executable certificates, and claim-status discipline.
 
+## Scoped theorem results
+
+See [Scoped Results and Proof Availability](UNCONDITIONAL_RESULTS.md) for exact theorem statements, public versus private proof evidence, and unresolved global extensions. The index does not independently prove these results.
+
 ## What URF is not
 
 URF does not claim theorem-level closure of any major open problem unless the relevant repository explicitly states and verifies that closure.
