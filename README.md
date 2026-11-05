@@ -39,6 +39,8 @@ URF is a verification-first research program for organizing rigidity principles,
 
 ## Scoped theorem results
 
+**Latest claim-status corrections (November 5, 2026):** [Portfolio Claim-Status Corrections](docs/status/PORTFOLIO_STATUS_CORRECTIONS_2026_11_05.md). The corrections supersede conflicting old classifications without rewriting historical dated snapshots.
+
 See [Scoped Results and Proof Availability](UNCONDITIONAL_RESULTS.md) for exact theorem statements, public versus private proof evidence, and unresolved global extensions. The index does not independently prove these results.
 
 ## What URF is not
