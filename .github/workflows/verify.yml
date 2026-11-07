@@ -13,3 +13,5 @@ jobs:
         with:
           python-version: "3.11"
       - run: make verify
+      - name: Check public navigation and link accessibility
+        run: python3 tests/test_public_portal_links.py
