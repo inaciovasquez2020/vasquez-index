@@ -15,9 +15,11 @@
         ul { list-style: square; padding-left: 20px; font-size: 0.9rem; }
         a { color: var(--accent); text-decoration: none; }
     </style>
+<link rel="stylesheet" href="portal.css">
 </head>
 <body>
-    <header>
+<nav class="portal-nav" aria-label="Research network navigation"><a class="portal-brand" href="https://inaciovasquez2020.github.io/"><strong>V</strong>ASQUEZ RESEARCH</a><div class="portal-links"><a href="https://inaciovasquez2020.github.io/">Research home</a><a href="index.html" aria-current="page">Index</a><a href="dashboard.html">Dashboard</a><a href="publications.html">Publications</a><a href="https://github.com/inaciovasquez2020">GitHub</a></div></nav>
+    <header class="portal-main-header">
         <h1>Inacio F. Vasquez</h1>
         <p>Independent researcher building a network of executable research artifacts across structural rigidity, formal verification, and public certification.</p>
     </header>
@@ -39,7 +41,7 @@
             <h2>Verification & Audit</h2>
             <ul>
                 <li><strong><a href="https://github.com/inaciovasquez2020/urf-verifier">urf-verifier</a></strong> — deterministic verification infrastructure.</li>
-                <li><strong><a href="https://github.com/inaciovasquez2020/urf-open-review-ledger">urf-open-review-ledger</a></strong> — private audit/protocol staging layer; public ledger pending sanitized release.</li>
+                <li><strong><span class="restricted-reference" title="Repository is not publicly accessible">urf-open-review-ledger</span></strong> — private audit/protocol staging layer; public ledger pending sanitized release.</li>
             </ul>
         </section>
 
@@ -51,5 +53,5 @@
         </section>
 
     </main>
-</body>
+<p class="portal-note">Navigation and status documentation only. This index does not independently prove theorem-level claims. <a href="https://inaciovasquez2020.github.io/docs/FORMAL_VERIFICATION_BOUNDARY.html">Verification boundary</a>.</p></body>
 </html>
