@@ -54,3 +54,10 @@ def test_status_boundary_is_not_promotion():
     for name in PAGES:
         text = (ROOT / name).read_text(encoding="utf-8")
         assert "not" in text.lower() or "OPEN" in text
+
+
+if __name__ == "__main__":
+    test_shared_navigation_and_stylesheet()
+    test_links_are_public_and_local_assets_exist()
+    test_status_boundary_is_not_promotion()
+    print("PUBLIC_PORTAL_LINKS := PASS")
