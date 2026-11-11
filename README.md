@@ -51,7 +51,7 @@ URF does not claim theorem-level closure of any major open problem unless the re
 
 The machine-readable snapshot is `artifacts/public-repository-inventory.json`; the human-readable list is the table between `PUBLIC_REPOSITORY_INVENTORY_BEGIN` and `PUBLIC_REPOSITORY_INVENTORY_END` below. The navigation list in `docs/index.md` must match that public inventory exactly.
 
-The account-level snapshot found 70 repositories accessible to the linked GitHub account, of which 19 were public and 51 private. This is a point-in-time visibility count, not a completeness claim about the research program. The inventory does not assess theorem validity or imply that every repository has reproducible artifacts.
+The account-level snapshot found 74 repositories accessible to the linked GitHub account, of which 22 were public and 52 private. This is a point-in-time visibility count, not a completeness claim about the research program. The inventory does not assess theorem validity or imply that every repository has reproducible artifacts.
 
 ## Status classes
 
@@ -136,7 +136,7 @@ Boundary preserved: no UniversalFiberEntropyGap closure, no DepthBridge beyond s
 <!-- PUBLIC_REPOSITORY_INVENTORY_BEGIN -->
 # Public repository inventory
 
-GitHub-visible public repository count: **19**.
+GitHub-visible public repository count: **22**.
 
 | Repository | Role | Status | Boundary |
 |---|---|---|---|
@@ -159,6 +159,9 @@ GitHub-visible public repository count: **19**.
 | [`urf-verifier`](https://github.com/inaciovasquez2020/urf-verifier) | Deterministic verifier for URF certificates, provenance checks, and reproducible validation. | public; verifier infrastructure | `BOUNDARY := ¬ certificate_validation_implies_unstated_mathematical_claims` |
 | [`vasquez-index`](https://github.com/inaciovasquez2020/vasquez-index) | Canonical navigation index for repositories, artifacts, publications, and boundary status. | public; canonical index layer | `BOUNDARY := ¬ index_navigation_implies_repository_theorem_closure` |
 | [`zero_day_restricted_closures`](https://github.com/inaciovasquez2020/zero_day_restricted_closures) | Conditional Zero Day restricted-closure boundary surfaces. | public; restricted-closure boundary surface; unrestricted closure not claimed | `BOUNDARY := ¬ restricted_zero_day_closure_surface_implies_unrestricted_zero_day_closure` |
+| [`chronos-curated-release`](https://github.com/inaciovasquez2020/chronos-curated-release) | Conditional Chronos research and signed certificates. | public | Scope excludes unrestricted Chronos theorem closure. |
+| [`cslib`](https://github.com/inaciovasquez2020/cslib) | Fork of the Lean computer-science library. | public | Scope excludes a portfolio theorem claim. |
+| [`overlap-rigidity-oracle-release`](https://github.com/inaciovasquez2020/overlap-rigidity-oracle-release) | Hidden-assignment oracle information bound. | public | Scope excludes general SAT hardness. |
 
 `BOUNDARY := ¬ public_repository_inventory_implies_theorem_level_closure`
 <!-- PUBLIC_REPOSITORY_INVENTORY_END -->
