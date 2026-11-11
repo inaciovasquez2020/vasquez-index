@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0.0",
-  "generated_at_utc": "2026-10-15T09:49:41Z",
+  "generated_at_utc": "2026-11-11T02:09:25.925Z",
   "owner": "inaciovasquez2020",
   "source": "GitHub repository listing returned to the linked GitHub account",
   "scope": "point-in-time repository visibility snapshot; not a research-completeness or theorem-validation certificate",
-  "account_repository_count_observed": 70,
-  "public_repository_count_observed": 19,
-  "private_repository_count_observed": 51,
+  "account_repository_count_observed": 74,
+  "public_repository_count_observed": 22,
+  "private_repository_count_observed": 52,
   "invariant": "public_repository_inventory_implies_theorem_level_closure is false",
   "repositories": [
     {
@@ -33,6 +33,25 @@
       "root_metadata_interpretation": "presence/absence at repository root only; not a quality or correctness judgment"
     },
     {
+      "name": "chronos-curated-release",
+      "url": "https://github.com/inaciovasquez2020/chronos-curated-release",
+      "visibility": "public",
+      "default_branch": "main",
+      "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
+      "theorem_claim_validation": "not_assessed_by_this_inventory",
+      "github_releases_observed": null,
+      "recent_release_tags_observed": [],
+      "release_assets_hashes_reproducibility": "not_audited",
+      "root_metadata_observed": {
+        "readme_md": true,
+        "citation_cff": null,
+        "license_file": null,
+        "github_workflows_directory": null,
+        "tests_directory": null
+      },
+      "root_metadata_interpretation": "null indicates unassessed root metadata"
+    },
+    {
       "name": "chronos-urf-rr",
       "url": "https://github.com/inaciovasquez2020/chronos-urf-rr",
       "visibility": "public",
@@ -54,6 +73,25 @@
         "tests_directory": true
       },
       "root_metadata_interpretation": "presence/absence at repository root only; not a quality or correctness judgment"
+    },
+    {
+      "name": "cslib",
+      "url": "https://github.com/inaciovasquez2020/cslib",
+      "visibility": "public",
+      "default_branch": "main",
+      "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
+      "theorem_claim_validation": "not_assessed_by_this_inventory",
+      "github_releases_observed": null,
+      "recent_release_tags_observed": [],
+      "release_assets_hashes_reproducibility": "not_audited",
+      "root_metadata_observed": {
+        "readme_md": true,
+        "citation_cff": null,
+        "license_file": null,
+        "github_workflows_directory": null,
+        "tests_directory": null
+      },
+      "root_metadata_interpretation": "null indicates unassessed root metadata"
     },
     {
       "name": "cslib-fmt",
@@ -198,6 +236,25 @@
         "tests_directory": true
       },
       "root_metadata_interpretation": "presence/absence at repository root only; not a quality or correctness judgment"
+    },
+    {
+      "name": "overlap-rigidity-oracle-release",
+      "url": "https://github.com/inaciovasquez2020/overlap-rigidity-oracle-release",
+      "visibility": "public",
+      "default_branch": "main",
+      "artifact_reproducibility_audit": "not_assessed_by_this_inventory",
+      "theorem_claim_validation": "not_assessed_by_this_inventory",
+      "github_releases_observed": null,
+      "recent_release_tags_observed": [],
+      "release_assets_hashes_reproducibility": "not_audited",
+      "root_metadata_observed": {
+        "readme_md": true,
+        "citation_cff": null,
+        "license_file": null,
+        "github_workflows_directory": null,
+        "tests_directory": null
+      },
+      "root_metadata_interpretation": "null indicates unassessed root metadata"
     },
     {
       "name": "poincare-new-derivation",

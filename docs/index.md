@@ -27,6 +27,10 @@ This page is the public navigation layer for the Vasquez research portfolio. It 
 - [Research website source](https://github.com/inaciovasquez2020/inaciovasquez2020.github.io) — website and documentation hub.
 - [Vasquez Index](https://github.com/inaciovasquez2020/vasquez-index) — this registry and navigation layer.
 
+- [Chronos curated release](https://github.com/inaciovasquez2020/chronos-curated-release) — Conditional Chronos research and signed certificates.
+- [CSLib](https://github.com/inaciovasquez2020/cslib) — Fork of the Lean computer-science library.
+- [Overlap Rigidity Oracle Release](https://github.com/inaciovasquez2020/overlap-rigidity-oracle-release) — Hidden-assignment oracle information bound.
+
 ## Verification boundary
 Artifact names, releases, hashes, and verification instructions are repository-specific. Consult each repository's own README, release, and status documentation. A registry link, CI success, or certificate-validation pass does not by itself establish theorem-level closure.
 
