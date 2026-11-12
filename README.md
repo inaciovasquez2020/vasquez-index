@@ -37,6 +37,16 @@ This repository is the public registry surface for the small set of active publi
 ## Start here
 URF is a verification-first research program for organizing rigidity principles, locality constraints, entropy/capacity bounds, formal proof surfaces, executable certificates, and claim-status discipline.
 
+## Public Research Spiderweb — evidence connections (2026-11-12)
+
+[Explore the public 3D research network and 5D geometric bridge audit](https://inaciovasquez2020.github.io/research-network/) · [Inspect the dated public source snapshot](https://github.com/inaciovasquez2020/inaciovasquez2020.github.io/blob/main/research-network/public-connection-snapshot.json)
+
+The public-only visualization currently catalogues **21 public repositories** and **31 explicit connection edges**, including **7 candidate direct 5D edges** and **14 catalogued repositories without a direct 5D edge**. The edge count measures source documentation and proposed interfaces, **not** validated scientific unification; it is not the account-wide GitHub public repository count.
+
+Public biological-friction evidence: [PR #110](https://github.com/inaciovasquez2020/biological-friction-framework/pull/110) (five-state toy dynamics), [#111](https://github.com/inaciovasquez2020/biological-friction-framework/pull/111) (5-sphere face-count constraints), [#112](https://github.com/inaciovasquez2020/biological-friction-framework/pull/112) (rational-only dissipative relaxation), and [#113](https://github.com/inaciovasquez2020/biological-friction-framework/pull/113) (metric-scale identifiability obstruction). These are scoped mathematical/computational artifacts. The fifth physical dimension, measurable biological coupling, unrestricted topological move-transport theorem, and independent Poincaré derivation remain **OPEN**.
+
+The Spiderweb includes only public repositories and their permissible public evidence. Absence from the public graph does not establish absence of other research, and no private repository source or commit identifiers are published in this index.
+
 ## Scoped theorem results
 
 **Latest claim-status corrections (November 5, 2026):** [Portfolio Claim-Status Corrections](docs/status/PORTFOLIO_STATUS_CORRECTIONS_2026_11_05.md). The corrections supersede conflicting old classifications without rewriting historical dated snapshots.
