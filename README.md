@@ -47,6 +47,12 @@ Public biological-friction evidence: [PR #110](https://github.com/inaciovasquez2
 
 The Spiderweb includes only public repositories and their permissible public evidence. Absence from the public graph does not establish absence of other research, and no private repository source or commit identifiers are published in this index.
 
+## Chronos finite-stage CSG certificate (2026-11-16)
+
+[Source-linked research note](https://inaciovasquez2020.github.io/csg-finite-obstruction.html) · [Pinned certificate and verifier](https://github.com/inaciovasquez2020/chronos-urf-rr/blob/80287945952c83bb1fbf8cabf9aae3c20273c0df/research/event_first/CSG_INDEPENDENT_BOX_NONEXTENSION_20261116.md)
+
+Exact rational finite-state enumeration establishes, within a specified coupling box, that five-event expected pair-chain density exceeds 19/100 for all nonnegative t₄, whereas the four-event target is 1/10. **Status: COMPUTATION_PASS (box only); unrestricted statement CONDITIONAL on global four-event uniqueness, whose complete exact-source replay is INCOMPLETE. Lean NOT_RUN; novelty and independent review OPEN.** This index does not independently verify the mathematics or imply a continuum gravity result.
+
 ## Scoped theorem results
 
 **Latest claim-status corrections (November 5, 2026):** [Portfolio Claim-Status Corrections](docs/status/PORTFOLIO_STATUS_CORRECTIONS_2026_11_05.md). The corrections supersede conflicting old classifications without rewriting historical dated snapshots.
