@@ -47,6 +47,16 @@ Public biological-friction evidence: [PR #110](https://github.com/inaciovasquez2
 
 The Spiderweb includes only public repositories and their permissible public evidence. Absence from the public graph does not establish absence of other research, and no private repository source or commit identifiers are published in this index.
 
+## Verified URF entropy and transcript checkpoint (2026-11-20 UTC)
+
+[Exact source commit](https://github.com/inaciovasquez2020/urf-core/commit/47531c87ff8556f4c1b81a3adb713aa1fe7e1c14) · [PR #596](https://github.com/inaciovasquez2020/urf-core/pull/596) · [Successful integration CI](https://github.com/inaciovasquez2020/urf-core/actions/runs/44642702617)
+
+**LEAN_VERIFIED at the pinned PR revision:** for a finite graph over a finite field K, restriction of global cycle-space linear functionals to radius-one local cycles leaves conditional entropy at most dim H₁(Cl(G); K) log |K|, with equality for uniform input. The finite sequential mutual-information chain rule and transcript capacity bounds also compile. The Mac build completed 7,956 jobs and audited 15 imported declarations using only propext, Classical.choice and Quot.sound; all nine remote workflows passed.
+
+Source declarations: [SharpCliqueEntropy.lean](https://github.com/inaciovasquez2020/urf-core/blob/47531c87ff8556f4c1b81a3adb713aa1fe7e1c14/lean/URF/Foundation/SharpCliqueEntropy.lean) (radiusOne_entropy_le_cliqueH1_candidate, radiusOne_uniform_entropy_eq_cliqueH1_candidate); [FiniteTranscriptChainInduction.lean](https://github.com/inaciovasquez2020/urf-core/blob/47531c87ff8556f4c1b81a3adb713aa1fe7e1c14/lean/URF/Foundation/FiniteTranscriptChainInduction.lean) (transcript_mutual_information_eq_chain_cmi_sum).
+
+**Boundary:** PR revision, not a main-branch merge claim. Classical information identities and linear algebra are established; originality of the specific synthesis and formalization remains OPEN pending independent review. A direct graph-specific sequential observation theorem and global URF rigidity remain OPEN. This status surface does not independently prove the results.
+
 ## Chronos finite-stage CSG certificate (2026-11-16)
 
 [Source-linked research note](https://inaciovasquez2020.github.io/csg-finite-obstruction.html) · [Pinned certificate and verifier](https://github.com/inaciovasquez2020/chronos-urf-rr/blob/80287945952c83bb1fbf8cabf9aae3c20273c0df/research/event_first/CSG_INDEPENDENT_BOX_NONEXTENSION_20261116.md)
