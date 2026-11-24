@@ -47,6 +47,16 @@ Public biological-friction evidence: [PR #110](https://github.com/inaciovasquez2
 
 The Spiderweb includes only public repositories and their permissible public evidence. Absence from the public graph does not establish absence of other research, and no private repository source or commit identifiers are published in this index.
 
+## Public source checkpoints — 2026-11-24 UTC
+
+Dated navigation summary of inspected public main revisions; not independent proof, CI replay, or a complete account inventory.
+
+- **F10 epistemic resilience (PR #601):** [urf-core pinned source](https://github.com/inaciovasquez2020/urf-core/commit/b0f3aa7b0a64d9c9d72235d7e84f08ad8347a87f). Merged exploratory documentation; analytic models under stated assumptions, historical empirical results not replayed, Lean and clinical validation not established. F10 remains OPEN.
+- **Four-event Minkowski and inverse reconstruction (PR #1379):** [chronos-urf-rr pinned source](https://github.com/inaciovasquez2020/chronos-urf-rr/commit/657042fb9d1acdb6ee996ed60588d9e9785671dc). Symbolic/rational certificate reports M22 = 80π²/21 − 552689/14700 and p42 = 32π²/7 − 13239637/294000; geometric premises are paper-level. Low-order census non-identifiability is for abstract measured orders, not smooth Lorentzian manifolds. Lean and independent review OPEN.
+- **Radion spectral checkpoint (PR #348):** [dfm-mkc-cosmology pinned source](https://github.com/inaciovasquez2020/dfm-mkc-cosmology/commit/0ce698d302023e18eb765bb0d476fe5c7c00ee06). Conditional zero-mode potential analysis and exact arithmetic witnesses; renormalized retarded response of constrained nonzero bosonic KK sectors OPEN. No general 5D physical closure.
+- **Bounded Pachner reentry (PR #198):** [poincare-new-derivation pinned source](https://github.com/inaciovasquez2020/poincare-new-derivation/commit/0f1b2683edd2d89576c941d2b17b1110a42ef83d). Recorded 2,170 reachable six/seven-vertex states with no qualifying witness; eight-vertex search INCOMPLETE. Universal descent and independent global Poincaré derivation OPEN.
+- **Melanoma CD36 negative evidence (PR #115):** [biological-friction-framework pinned source](https://github.com/inaciovasquez2020/biological-friction-framework/commit/fda4049b2c829332307f7be88d6a888937f99903). Merged exploratory matched-baseline evidence and method reconciliation; no clinical prediction or causal mechanism established.
+
 ## Verified URF entropy and transcript checkpoint (2026-11-20 UTC)
 
 [Exact source commit](https://github.com/inaciovasquez2020/urf-core/commit/47531c87ff8556f4c1b81a3adb713aa1fe7e1c14) · [PR #596](https://github.com/inaciovasquez2020/urf-core/pull/596) · [Successful integration CI](https://github.com/inaciovasquez2020/urf-core/actions/runs/44642702617)
