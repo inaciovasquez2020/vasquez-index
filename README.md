@@ -47,6 +47,12 @@ Public biological-friction evidence: [PR #110](https://github.com/inaciovasquez2
 
 The Spiderweb includes only public repositories and their permissible public evidence. Absence from the public graph does not establish absence of other research, and no private repository source or commit identifiers are published in this index.
 
+## Four public merged research checkpoints — 2026-11-24 UTC
+
+[Exact source/merge-SHA ledger](docs/status/MERGED_VERIFICATION_CHECKPOINTS_2026_11_24.md) · [Public research website](https://inaciovasquez2020.github.io/research/merged-verification-checkpoints-20261124.html) (website update proposed in PR #65).
+
+URF Core #599 preserves six **LEAN_VERIFIED_ISOLATED** finite-rank theorems and a Mac-reported 6/6 permitted-axiom audit; **graph H1 remains OPEN**. Poincaré #197 carries **COMPUTATION_PASS** for 104 finite U(16) witness cases, not global descent. URF Core #602 and DFM-MKC #327 correct H1/FO-k semantics and observational-evidence boundaries. Two additional private-source merge actions are excluded from public identity-level status.
+
 ## Public source checkpoints — 2026-11-24 UTC
 
 Dated navigation summary of inspected public main revisions; not independent proof, CI replay, or a complete account inventory.
